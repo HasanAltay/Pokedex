@@ -6,27 +6,34 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Pokedex</title>
         <link rel="icon" href="./img/pokeball.png">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="details.css">
-        <script src="script.js"></script>
-        <script src="colors.js"></script>
-        <script src="details.js"></script>
-        <script src="contents.js"></script>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/details.css">
+        <link rel="stylesheet" href="./css/font.css">
+        <script src="./js/script.js"></script>
+        <script src="./js/colors.js"></script>
+        <script src="./js/details.js"></script>
+        <script src="./js/contents.js"></script>
     </head>
+
     <body onload="render()">
-        <div class="main">
-            <div class="navi" id="navi">
-                <img src="./img/arrow.png" onclick="goBack()" id="navi_btn_1">
-                <img src="./img/menu.png" id="navi_btn_2"></div>
-            <div class="title" id="title"></div>
-            <img class="pokeball_background" src="./img/pokeball.webp">
-            <div class="content" id="content">
-            </div>
-            <div class="details" id="details">
+        <div class="mainframe">
+            <div class="main">
+                <div class="navi" id="navi">
+                    <img src="./img/arrow.png" onclick="goBack()" id="navi_btn_1">
+                    <img src="./img/menu.png" id="navi_btn_2">
+                </div>
+                <div class="title" id="title"></div>
+                <img class="pokeball_background" src="./img/pokeball.webp">
+                <div class="content" id="content">
+                </div>
+                <div class="details" id="details">
+                </div>
             </div>
         </div>
-        &emsp;<a href="https://www.flaticon.com/free-icons/pokemon"
-            title="pokemon icons" style="font-size: 10px">Icons created by
-            Freepik - Flaticon</a>
+
+        <!-- &emsp;<a href="https://www.flaticon.com/free-icons/pokemon"
+        title="pokemon icons" style="font-size: 10px">Icons created by
+        Freepik - Flaticon</a> -->
     </body>
+
 </html>

@@ -1,0 +1,282 @@
+* {
+  
+  scroll-behavior: smooth;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+}
+
+body {
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: 'Baloo Da 2';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(56, 128, 128);
+}
+
+.mainframe {
+  max-width: 940px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 12px;
+}
+
+.navi {
+  position: fixed;
+  width: 100vw;
+  max-width: 940px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+  background-color: white;
+  // border-radius: 15px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.navi img {
+  width: 25px;
+  cursor: pointer;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 15px;
+  gap: 15px;
+}
+
+.box {
+  box-sizing: border-box;
+  position: relative;
+  height: 125px;
+  width: 170px;
+  min-width: 170px;
+  border-radius: 15px;
+  padding: 15px;
+  cursor: pointer;
+  transition: all 125ms ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+              rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+              rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.box:hover {
+  filter: brightness(105%);
+  transform: scale(105%);
+  transition: all 125ms ease-in-out;
+}
+
+.box:active {
+  filter: saturate(0);
+}
+
+.title {
+  padding-left: 20px;
+  padding-top: 100px;
+  padding-right: 20px;
+}
+
+.poke_names {
+  z-index: 5;
+  letter-spacing: 1px;
+}
+
+.ability-style {
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 40%;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 5px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, 
+              rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, 
+              rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+.counter {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  z-index: 3;
+}
+
+.poke_img {
+  position: absolute;
+  width: 70px;
+  bottom: 5px;
+  right: 10px;
+  z-index: 2;
+  max-height: 80px;
+}
+
+.ball_box {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  filter: opacity(30%) invert(1);
+  width: 100px;
+  padding: 7px;
+}
+
+.pokeball_background {
+  position: fixed;
+  filter: opacity(10%);
+  left: -200px;
+  top: 80px;
+  width: 400px;
+  z-index: -1;
+  /* clip: rect(10px 10px 10px 10px); */
+}
+
+.quantity_btn {
+  cursor: pointer;
+  padding: 7px;
+  background-color: rgb(104, 177, 104);
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.quantity_btn:hover {
+  filter: brightness(120%);
+}
+
+.slidecontainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  /* Width of the outside container */
+  justify-content: space-between;
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;
+  /* Override default CSS styles */
+  appearance: none;
+  width: 500px;
+  /* Full-width */
+  height: 25px;
+  /* Specified height */
+  background: #d3d3d385;
+  /* Grey background */
+  outline: none;
+  /* Remove outline */
+  opacity: 0.7;
+  /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s;
+  /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1;
+  /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) 
+and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* Override default look */
+  appearance: none;
+  width: 25px;
+  /* Set a specific slider handle width */
+  height: 25px;
+  /* Slider handle height */
+  background: #04AA6D;
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+  border-radius: 5px;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  /* Set a specific slider handle width */
+  height: 25px;
+  /* Slider handle height */
+  background: #04AA6D;
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+}
+
+
+@media (max-width: 500px) {
+
+  .content {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .navi img {
+    padding-right: 20px;
+  }
+
+  .box {
+    width: 130px;
+  }
+
+  .navi {
+    padding-top: 10px;
+    /* background-color: unset; */
+  }
+
+  body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    /* for Internet Explorer, Edge */
+    overflow-y: scroll;
+    /* for Firefox */
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+    /* for Chrome, Safari, and Opera */
+  }
+
+  .details_top_frame {
+    height: unset;
+    padding-top: 20px;
+  }
+}
+
+
+
+/* @media (max-height: 667px) {
+
+  .details_top_frame {
+      height: 35%;
+      padding-top: 20px;
+  }
+
+  .details_poke_img {
+      max-height: 180px;
+  }
+} */
