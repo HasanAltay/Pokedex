@@ -50,7 +50,6 @@
   height: 100%;
   background-color: white;
   z-index: 80;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .infos span {
   padding-left: 20px;
@@ -231,13 +230,64 @@
   }
 }
 
-#demo {
-  position: absolute;
-  top: 50px;
-  right: 240px;
-  font-size: 20px;
+@media (max-width: 1024px) {
+  body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    /* for Internet Explorer, Edge */
+    overflow-y: scroll;
+    /* for Firefox */
+  }
+  body::-webkit-scrollbar {
+    display: none;
+    /* for Chrome, Safari, and Opera */
+  }
+  .mainframe .main {
+    margin-bottom: unset;
+  }
+  .mainframe .main .content {
+    width: unset;
+  }
 }
-
+@media (max-width: 755px) {
+  .loader .pokeball_background {
+    width: 280px;
+  }
+  .loader a {
+    font-size: 38px;
+    width: 85px;
+    height: 85px;
+  }
+  .mainframe {
+    max-width: 100%;
+  }
+  .mainframe .main .content .box {
+    min-width: 160px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    max-width: 170px;
+  }
+  .mainframe .main .title {
+    padding-top: 70px;
+    padding-bottom: 40px;
+  }
+  .mainframe .main .title .slidecontainer {
+    flex-direction: column;
+  }
+  .mainframe .main .title .slidecontainer .slider_menu .slider {
+    width: 230px;
+  }
+}
+@media (max-width: 280px) {
+  .slider {
+    width: 150px;
+  }
+  .box {
+    width: 200px;
+    max-width: unset;
+  }
+}
 * {
   scroll-behavior: smooth;
   -moz-user-select: none;
@@ -246,19 +296,19 @@
           user-select: none;
   scrollbar-width: auto;
   /* Firefox */
-  scrollbar-color: #79acff #ffffff;
+  scrollbar-color: #ffffff #ffffff;
 }
 * ::-webkit-scrollbar {
   /* Chrome, Edge, and Safari */
   width: 20px;
 }
 * ::-webkit-scrollbar-track {
-  display: none;
+  background-color: #EBA055;
 }
 * ::-webkit-scrollbar-thumb {
-  background-color: #79acff;
+  background-color: #ffffff;
   border-radius: 10px;
-  border: 1px solid #ffffff;
+  border: 3px solid #EBA055;
 }
 
 body {
@@ -269,7 +319,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: linear-gradient(to right, #3DB7FF, #FF9A60);
+  background: linear-gradient(to right, #3DB7FF, #EBA055);
 }
 
 .mainframe {
@@ -322,6 +372,7 @@ body {
   padding-right: 15px;
   margin-bottom: 15px;
   gap: 15px;
+  width: 940px;
 }
 
 .box {
@@ -333,14 +384,15 @@ body {
   border-radius: 15px;
   padding: 15px;
   cursor: pointer;
-  transition: all 125ms ease-in-out;
+  transition: all 215ms ease-in-out;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .box:hover {
   filter: brightness(105%);
-  transform: scale(105%);
-  transition: all 125ms ease-in-out;
+  transform: scale(108%);
+  transition: all 215ms ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .box:active {
@@ -351,6 +403,8 @@ body {
   padding-left: 20px;
   padding-top: 100px;
   padding-right: 20px;
+  padding-bottom: 30px;
+  letter-spacing: 1px;
 }
 
 .poke_names {
@@ -406,15 +460,30 @@ body {
   border-radius: 5px;
   box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
   margin-left: 15px;
+  letter-spacing: 1px;
+  transition: all 215ms ease-in-out;
 }
-
 .quantity_btn:hover {
   filter: brightness(110%);
+  transition: all 215ms ease-in-out;
+}
+.quantity_btn:active {
+  background-color: #8E68FF;
+  transform: scale(90%);
 }
 
 .slider_menu {
+  position: relative;
   display: flex;
   align-items: center;
+}
+
+#demo {
+  position: absolute;
+  top: 33px;
+  color: grey;
+  right: calc(50% + 10px);
+  font-size: 20px;
 }
 
 .slidecontainer {
@@ -481,71 +550,4 @@ and -moz- (Firefox) to override default look) */
   /* Green background */
   cursor: pointer;
   /* Cursor on hover */
-}
-
-@media (max-width: 960px) {
-  body {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    /* for Internet Explorer, Edge */
-    overflow-y: scroll;
-    /* for Firefox */
-  }
-  body::-webkit-scrollbar {
-    display: none;
-    /* for Chrome, Safari, and Opera */
-  }
-  .content {
-    justify-content: center;
-  }
-  .title {
-    padding-bottom: 40px;
-  }
-  .main {
-    margin-bottom: unset;
-  }
-}
-@media (max-width: 600px) {
-  .loader .pokeball_background {
-    width: 280px;
-  }
-  .loader a {
-    font-size: 38px;
-    width: 85px;
-    height: 85px;
-  }
-  .mainframe {
-    max-width: 100%;
-  }
-  .slidecontainer {
-    flex-direction: column;
-  }
-  .title {
-    padding-top: 70px;
-    padding-bottom: 40px;
-  }
-  .slider {
-    width: 230px;
-  }
-  #demo {
-    position: absolute;
-    top: 110px;
-    right: calc(50% + 20px);
-  }
-  .box {
-    min-width: 160px;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    max-width: 170px;
-  }
-}
-@media (max-width: 280px) {
-  .slider {
-    width: 150px;
-  }
-  .box {
-    width: 200px;
-    max-width: unset;
-  }
 }/*# sourceMappingURL=style.css.map */

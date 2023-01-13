@@ -78,8 +78,8 @@ function addTitleItems() {
     document.getElementById('title').innerHTML = /*html*/`
     <div class="slidecontainer">
         <h2>Pokedex (${pokemonNames.length} Items)</h2>
-        <a id="demo"></a>
         <div class="slider_menu">
+            <a id="demo"></a>
             <input type="range" min="50" max="600" step="10" value="${sliderRange[0]}" id="myRange" class="slider">
             <button class="quantity_btn" onclick="quantity(sliderRange[0]);loader()"><b>SHOW</b></button>
         </div>

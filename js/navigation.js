@@ -60,5 +60,9 @@ function showInfos() {
 function closeInfos() {
   let infos = document.getElementById('infos');
   infos.style.display = 'none';
+}
 
+
+function scrollToTop() {
+  window.scrollTo(0, 0);
 }

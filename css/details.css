@@ -14,9 +14,11 @@
 }
 
 .details_top_frame {
-  height: 40%;
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   padding-top: 120px;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .details_bottom_frame {
@@ -48,9 +50,11 @@
 }
 
 .center {
+  position: relative;
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
+  height: 30vh;
 }
 
 .counter_details {
@@ -65,15 +69,19 @@
 
 .details_poke_img {
   display: flex;
+  position: absolute;
+  bottom: -20px;
+  left: 50% 50%;
   z-index: 90;
+  height: 100%;
 }
 
 .details_ball_box {
-  height: 40%;
-  position: fixed;
-  right: 25%;
-  top: 15%;
-  filter: invert(1) opacity(20%);
+  height: 140%;
+  position: absolute;
+  right: 50% 50%;
+  top: 0;
+  filter: invert(1) opacity(30%);
 }
 
 .details_background {
@@ -127,31 +135,4 @@
 
 .align_right {
   text-align: right;
-}
-
-@media (min-width: 900px) {
-  .details_bottom_frame {
-    padding-left: 120px;
-    padding-right: 120px;
-  }
-}
-@media (min-width: 1100px) {
-  .details_bottom_frame {
-    padding-left: 200px;
-    padding-right: 200px;
-  }
-  .details_poke_img {
-    height: 37vh;
-  }
-}
-@media (max-width: 500px) {
-  .details_poke_img {
-    max-height: 33vh;
-    max-width: 300px;
-  }
-}
-@media (max-width: 1024px) {
-  .details_poke_img {
-    height: 36vh;
-  }
 }/*# sourceMappingURL=details.css.map */

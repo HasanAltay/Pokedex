@@ -1,1 +1,58 @@
-/*# sourceMappingURL=responsive.css.map */
+@media (max-width: 1024px) {
+  body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    /* for Internet Explorer, Edge */
+    overflow-y: scroll;
+    /* for Firefox */
+  }
+  body::-webkit-scrollbar {
+    display: none;
+    /* for Chrome, Safari, and Opera */
+  }
+  .mainframe .main {
+    margin-bottom: unset;
+  }
+  .mainframe .main .content {
+    width: unset;
+  }
+}
+@media (max-width: 755px) {
+  .loader .pokeball_background {
+    width: 280px;
+  }
+  .loader a {
+    font-size: 38px;
+    width: 85px;
+    height: 85px;
+  }
+  .mainframe {
+    max-width: 100%;
+  }
+  .mainframe .main .content .box {
+    min-width: 160px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    max-width: 170px;
+  }
+  .mainframe .main .title {
+    padding-top: 70px;
+    padding-bottom: 40px;
+  }
+  .mainframe .main .title .slidecontainer {
+    flex-direction: column;
+  }
+  .mainframe .main .title .slidecontainer .slider_menu .slider {
+    width: 230px;
+  }
+}
+@media (max-width: 280px) {
+  .slider {
+    width: 150px;
+  }
+  .box {
+    width: 200px;
+    max-width: unset;
+  }
+}/*# sourceMappingURL=responsive.css.map */

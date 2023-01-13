@@ -34,8 +34,10 @@ function openDetails(i) {
                                 <div class="ab_details"></div>
                             </div>
                         </div>
-                        <div class="center"><img class="details_poke_img" src="${pokemonSprites[i]}"></div>
-                        <img class="details_ball_box" src="./img/pokeball.webp">
+                        <div class="center">
+                            <img class="details_poke_img" src="${pokemonSprites[i]}">
+                            <img class="details_ball_box" src="./img/pokeball.webp">
+                        </div>   
                     </div>
                 </div>
                 <div class="details_bottom_frame" id="details_bottom">
