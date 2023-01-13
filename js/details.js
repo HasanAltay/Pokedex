@@ -33,9 +33,7 @@ function openDetails(i) {
                                 <div id="ability2" class="ab_details">${capitalize(pokemonTypes2[i])}</div>
                                 <div class="ab_details"></div>
                             </div>
-                            
                         </div>
-
                         <div class="center"><img class="details_poke_img" src="${pokemonSprites[i]}"></div>
                         <img class="details_ball_box" src="./img/pokeball.webp">
                     </div>
@@ -47,13 +45,6 @@ function openDetails(i) {
     document.getElementById('details_bg').style.backgroundColor = boxColor;
     naviInvert();
     about();
-}
-
-
-function naviInvert() {
-    document.getElementById('navi_btn_1').style = "filter: invert(1)";
-    document.getElementById('navi_btn_2').style = "filter: invert(1)";
-    document.getElementById('navi').style.backgroundColor = "unset";
 }
 
 

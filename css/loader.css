@@ -1,0 +1,180 @@
+.loader {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.438);
+  z-index: 999;
+}
+.loader .pokeball_background {
+  display: flex;
+  width: 500px;
+  -webkit-animation-name: rotate;
+          animation-name: rotate;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loader a {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-size: 72px;
+  font-weight: bold;
+  background-color: #FF9A60;
+  border-radius: 100%;
+  width: 150px;
+  height: 150px;
+  padding: 1px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  -webkit-animation-name: color_change;
+          animation-name: color_change;
+  -webkit-animation-duration: 2500ms;
+          animation-duration: 2500ms;
+}
+@-webkit-keyframes color_change {
+  0% {
+    background-color: #DB8711;
+  }
+  6% {
+    background-color: #E15D58;
+  }
+  12% {
+    background-color: #8080FA;
+  }
+  18% {
+    background-color: #EAD900;
+  }
+  24% {
+    background-color: #A5C000;
+  }
+  30% {
+    background-color: #A5AC70;
+  }
+  36% {
+    background-color: #AC81FA;
+  }
+  42% {
+    background-color: #962BA8;
+  }
+  48% {
+    background-color: #E2568D;
+  }
+  54% {
+    background-color: #AFA700;
+  }
+  60% {
+    background-color: #D5C754;
+  }
+  66% {
+    background-color: #6A5A46;
+  }
+  72% {
+    background-color: #714E9E;
+  }
+  78% {
+    background-color: #BAB5D3;
+  }
+  84% {
+    background-color: #AC3627;
+  }
+  90% {
+    background-color: #A9D7D9;
+  }
+  96% {
+    background-color: #7C00FF;
+  }
+  100% {
+    background-color: #BA0087;
+  }
+}
+@keyframes color_change {
+  0% {
+    background-color: #DB8711;
+  }
+  6% {
+    background-color: #E15D58;
+  }
+  12% {
+    background-color: #8080FA;
+  }
+  18% {
+    background-color: #EAD900;
+  }
+  24% {
+    background-color: #A5C000;
+  }
+  30% {
+    background-color: #A5AC70;
+  }
+  36% {
+    background-color: #AC81FA;
+  }
+  42% {
+    background-color: #962BA8;
+  }
+  48% {
+    background-color: #E2568D;
+  }
+  54% {
+    background-color: #AFA700;
+  }
+  60% {
+    background-color: #D5C754;
+  }
+  66% {
+    background-color: #6A5A46;
+  }
+  72% {
+    background-color: #714E9E;
+  }
+  78% {
+    background-color: #BAB5D3;
+  }
+  84% {
+    background-color: #AC3627;
+  }
+  90% {
+    background-color: #A9D7D9;
+  }
+  96% {
+    background-color: #7C00FF;
+  }
+  100% {
+    background-color: #BA0087;
+  }
+}
+
+#demo {
+  position: absolute;
+  top: 50px;
+  right: 240px;
+  font-size: 20px;
+}/*# sourceMappingURL=loader.css.map */

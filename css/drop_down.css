@@ -6,25 +6,28 @@
   top: 60px;
   right: 10px;
   width: 120px;
-  height: 160px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   background-color: white;
   padding: 15px;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
 }
-.drop_down a {
+.drop_down div {
   color: black;
   text-decoration: none;
   font-size: 20px;
   text-indent: 20px;
   transition: all 125ms ease-in-out;
 }
-.drop_down a:hover {
+.drop_down div:hover {
   transition: all 125ms ease-in-out;
   background-color: rgb(120, 120, 209);
   color: white;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
   border-radius: 12px;
+  cursor: pointer;
 }
 
 .drop_down_back {

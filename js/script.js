@@ -6,7 +6,6 @@ let pokemonTypes1 = [];
 let pokemonTypes2 = [];
 let pokemonSprites = [];
 let pokemonColor = [];
-let sliderRange = [50];
 
 
 async function render() {
@@ -82,7 +81,7 @@ function addTitleItems() {
         <a id="demo"></a>
         <div class="slider_menu">
             <input type="range" min="50" max="600" step="10" value="${sliderRange[0]}" id="myRange" class="slider">
-            <button class="quantity_btn" onclick="quantity(sliderRange[0])"><b>SHOW</b></button>
+            <button class="quantity_btn" onclick="quantity(sliderRange[0]);loader()"><b>SHOW</b></button>
         </div>
     </div>
     `;
@@ -101,15 +100,6 @@ function addTitleItems() {
 }
 
 
-function goBack() {
-    let details = document.getElementById('details');
-    document.getElementById('navi_btn_1').style = "filter: invert(0)";
-    document.getElementById('navi_btn_2').style = "filter: invert(0)";
-    details.style.display = "none";
-    document.getElementById('navi').style.backgroundColor = "white";
-}
-
-
 function quantity(q) {
     let content = document.getElementById('content');
     content.innerHTML = '';
@@ -124,18 +114,4 @@ function quantity(q) {
     itemsQuantity.push(q);
     resource = ['https://pokeapi.co/api/v2/pokemon?limit='+ itemsQuantity +'&offset=0'];
     render();
-}
-
-
-function loader() {
-    let loader = document.getElementById('loader');
-
-    setInterval(() => {
-        if (pokemonNames.length == sliderRange[0]) {
-        setTimeout(() => {
-          loader.style.display = 'none';  
-        }, 900);
-        
-        }    
-    }, 100);
 }

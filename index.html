@@ -13,36 +13,42 @@
         <script src="./js/colors.js"></script>
         <script src="./js/details.js"></script>
         <script src="./js/contents.js"></script>
-        <script src="./js/drop_down.js"></script>
+        <script src="./js/navigation.js"></script>
     </head>
 
     <body onload="render(); loader()">
         <div class="mainframe">
             <div class="main">
                 <div class="navi" id="navi">
-                    <img src="./img/arrow.png" onclick="goBack()" id="navi_btn_1">
-                    <img src="./img/menu.png" onclick="showDropDown()" id="navi_btn_2">
+                    <img src="./img/arrow.png" onclick="goBack(); closeInfos()" id="navi_btn_1">
+                    <img src="./img/menu.png" onmousemove="showDropDown()" id="navi_btn_2">
                     <div id="drop_down_back" class="drop_down_back" onclick="showDropDown()"></div>
                     <div class="drop_down" id="drop_down">
-                        <a href="#">About</a>
-                        <a href="#">About</a>  
-                        <a href="#">About</a>  
-                        <a href="#">About</a>    
+                        <!-- <div>About</div>
+                        <div>About</div>  
+                        <div>About</div>   -->
+                        <div onclick="showInfos();showDropDown()">About</div>    
                     </div> 
                 </div>
                 <div class="loader" id="loader">
-                    <img class="pokeball_background" src="./img/pokeball.webp">
+                    <img class="pokeball_background" src="./img/loader.png">
                     <a id="loader_count"></a>
                 </div>
                 <div class="title" id="title"></div>
                 <div class="content" id="content"></div>
                 <div class="details" id="details"></div>
+                <div class="infos" id="infos">
+                    <span>Informations</span><br>
+                    <a href="https://www.flaticon.com/free-icons/pokemon"
+                    title="pokemon icons" style="font-size: 10px">Icons created by
+                    Freepik - Flaticon</a>
+                </div>
             </div>
+
+
         </div>
 
-        <!-- &emsp;<a href="https://www.flaticon.com/free-icons/pokemon"
-        title="pokemon icons" style="font-size: 10px">Icons created by
-        Freepik - Flaticon</a> -->
+
     </body>
 
 </html>
