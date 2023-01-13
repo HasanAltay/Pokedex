@@ -13,21 +13,30 @@
         <script src="./js/colors.js"></script>
         <script src="./js/details.js"></script>
         <script src="./js/contents.js"></script>
+        <script src="./js/drop_down.js"></script>
     </head>
 
-    <body onload="render()">
+    <body onload="render(); loader()">
         <div class="mainframe">
             <div class="main">
                 <div class="navi" id="navi">
                     <img src="./img/arrow.png" onclick="goBack()" id="navi_btn_1">
-                    <img src="./img/menu.png" id="navi_btn_2">
+                    <img src="./img/menu.png" onclick="showDropDown()" id="navi_btn_2">
+                    <div id="drop_down_back" class="drop_down_back" onclick="showDropDown()"></div>
+                    <div class="drop_down" id="drop_down">
+                        <a href="#">About</a>
+                        <a href="#">About</a>  
+                        <a href="#">About</a>  
+                        <a href="#">About</a>    
+                    </div> 
+                </div>
+                <div class="loader" id="loader">
+                    <img class="pokeball_background" src="./img/pokeball.webp">
+                    <a id="loader_count"></a>
                 </div>
                 <div class="title" id="title"></div>
-                <img class="pokeball_background" src="./img/pokeball.webp">
-                <div class="content" id="content">
-                </div>
-                <div class="details" id="details">
-                </div>
+                <div class="content" id="content"></div>
+                <div class="details" id="details"></div>
             </div>
         </div>
 

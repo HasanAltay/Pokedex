@@ -6,7 +6,7 @@ let pokemonTypes1 = [];
 let pokemonTypes2 = [];
 let pokemonSprites = [];
 let pokemonColor = [];
-let sliderRange = [];
+let sliderRange = [50];
 
 
 async function render() {
@@ -46,7 +46,7 @@ async function getInfosFromUrls(i) {
     }
     let sprite = responseJSON['sprites'];
     let pokemonSprite = sprite['other']['dream_world']['front_default']
-    console.log(pokemonSprite);
+    // console.log(pokemonSprite);
     pokemonSprites.push(pokemonSprite);
     getDetailsFromUrls(i);
 }
@@ -79,32 +79,25 @@ function addTitleItems() {
     document.getElementById('title').innerHTML = /*html*/`
     <div class="slidecontainer">
         <h2>Pokedex (${pokemonNames.length} Items)</h2>
-        <button class="quantity_btn" onclick="quantity(show)"><b>SHOW</b></button>
         <a id="demo"></a>
-        <input type="range" min="50" max="600" step="10" value="50" id="myRange" class="slider">
+        <div class="slider_menu">
+            <input type="range" min="50" max="600" step="10" value="${sliderRange[0]}" id="myRange" class="slider">
+            <button class="quantity_btn" onclick="quantity(sliderRange[0])"><b>SHOW</b></button>
+        </div>
     </div>
-    <!-- <button class="quantity_btn" onclick="quantity(49)"><b>49</b></button>
-    <button class="quantity_btn" onclick="quantity(199)"><b>199</b></button>
-    <button class="quantity_btn" onclick="quantity(666)"><b>666</b></button> -->
     `;
-
     var slider = document.getElementById("myRange");
     var output = document.getElementById("demo");
     output.innerHTML = slider.value; // Display the default slider value
-
-    // var show = output.innerHTML;
-
     // Update the current slider value (each time you drag the slider handle)
     slider.oninput = function() {
         output.innerHTML = this.value;
-        console.log(output.innerHTML);
+        // console.log(output.innerHTML);
+        sliderRange = [];
+        sliderRange.push(output.innerHTML);
+        console.log(sliderRange[0]);
     }
-
-    sliderRange.push(output.innerHTML);
-    console.log(slider[0]);
-
-
-
+    document.getElementById("loader_count").innerHTML = pokemonNames.length;
 }
 
 
@@ -131,4 +124,18 @@ function quantity(q) {
     itemsQuantity.push(q);
     resource = ['https://pokeapi.co/api/v2/pokemon?limit='+ itemsQuantity +'&offset=0'];
     render();
+}
+
+
+function loader() {
+    let loader = document.getElementById('loader');
+
+    setInterval(() => {
+        if (pokemonNames.length == sliderRange[0]) {
+        setTimeout(() => {
+          loader.style.display = 'none';  
+        }, 900);
+        
+        }    
+    }, 100);
 }
