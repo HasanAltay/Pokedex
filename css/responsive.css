@@ -29,12 +29,8 @@
   .mainframe {
     max-width: 100%;
   }
-  .mainframe .main .content .box {
-    min-width: 160px;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    max-width: 170px;
+  .mainframe .main {
+    border-radius: unset;
   }
   .mainframe .main .title {
     padding-top: 70px;
@@ -45,6 +41,18 @@
   }
   .mainframe .main .title .slidecontainer .slider_menu .slider {
     width: 230px;
+  }
+  .mainframe .main .content {
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+  .mainframe .main .content .box {
+    min-width: 160px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    max-width: 165px;
   }
 }
 @media (max-width: 280px) {

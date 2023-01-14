@@ -25,8 +25,8 @@
 
 @media (max-width: 755px) {
   .loader {
-      .pokeball_background {
-        width: 280px;
+    .pokeball_background {
+      width: 280px;
     }
 
     a {
@@ -39,29 +39,36 @@
   .mainframe {
     max-width: 100%;
     .main {
-
-     .content {
-      .box {
-        min-width: 160px;
-        width: fit-content;
-        max-width: 170px;
-      }
-     } 
-    
-    .title {
-      padding-top: 70px;
-      padding-bottom: 40px;
-
-      .slidecontainer {
-        flex-direction: column;
-        .slider_menu {        
-          .slider {
-          width: 230px;
+      border-radius: unset;
+      .title {
+        padding-top: 70px;
+        padding-bottom: 40px;
+  
+        .slidecontainer {
+          flex-direction: column;
+          .slider_menu {        
+            .slider {
+              width: 230px;
+            }
           }
         }
-      }
-    }
+      } 
+
+      .content {
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 40px;
+
+        .box {
+          min-width: 160px;
+          width: fit-content;
+          max-width: 165px;
+        }
+      } 
+    
+
   }
+
   }
 }
 
