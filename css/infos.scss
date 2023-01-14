@@ -1,17 +1,21 @@
 .infos {
-  margin-top: 90px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
   display: none;
   position: absolute;
   top: 0;
   left: 0;
-  width: 940px;
+  max-width: 940px;
   height: 100%;
-  background-color: white;
+  background-color: rgb(194, 158, 158);
   z-index: 80;
 
-  span {
+  .text {
+    display: flex;
+    flex-direction: column;    
     padding-left: 20px;
-    padding-top: 40px;
+    padding-right: 50px;
   }
 
 }

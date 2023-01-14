@@ -15,9 +15,13 @@
   }
   .mainframe .main .content {
     width: unset;
+    justify-content: center;
   }
 }
 @media (max-width: 755px) {
+  .infos .text {
+    padding-right: 20px;
+  }
   .loader .pokeball_background {
     width: 280px;
   }
@@ -32,6 +36,10 @@
   .mainframe .main {
     border-radius: unset;
   }
+  .mainframe .main .navi {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
   .mainframe .main .title {
     padding-top: 70px;
     padding-bottom: 40px;
@@ -44,23 +52,64 @@
   }
   .mainframe .main .content {
     justify-content: center;
-    gap: 10px;
+    gap: 9px;
     margin-bottom: 40px;
   }
   .mainframe .main .content .box {
     min-width: 160px;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    max-width: 165px;
+    width: auto;
+    max-width: 170px;
+  }
+  .mainframe .main .details .details_background .details_top_frame {
+    padding-top: 60px;
+  }
+  .mainframe .main .details .details_background .details_top_frame .ab_details {
+    margin-bottom: unset;
+  }
+  .mainframe .main .details .details_background .details_top_frame .details_infos .center .details_ball_box {
+    height: 120%;
+    top: 10px;
+  }
+  .mainframe .main .details .details_background .details_bottom_frame {
+    padding-top: 30px;
+  }
+  .mainframe .main .details .details_background .specs_navi {
+    margin-bottom: 10px;
   }
 }
 @media (max-width: 280px) {
-  .slider {
-    width: 150px;
+  .mainframe .main .title .slidecontainer .slider_menu .slider {
+    width: 130px;
   }
-  .box {
-    width: 200px;
-    max-width: unset;
+  .mainframe .main .content {
+    gap: 12px;
+  }
+  .mainframe .main .content .box {
+    min-width: 200px;
+    width: auto;
+    max-width: 220px;
+  }
+  .mainframe .main .details .details_background .details_top_frame {
+    padding-top: 45px;
+  }
+  .mainframe .main .details .details_background .details_top_frame .ab_details {
+    margin-bottom: unset;
+  }
+  .mainframe .main .details .details_background .details_top_frame .details_infos .center {
+    height: 23vh;
+  }
+  .mainframe .main .details .details_background .details_top_frame .details_infos .center .details_ball_box {
+    height: 120%;
+    top: 10px;
+  }
+  .mainframe .main .details .details_background .details_bottom_frame {
+    padding-top: 30px;
+  }
+  .mainframe .main .details .details_background .specs_navi {
+    margin-bottom: 10px;
+  }
+  .mainframe .main .details .details_background .specs_navi span {
+    letter-spacing: unset;
+    font-size: 13px;
   }
 }/*# sourceMappingURL=responsive.css.map */

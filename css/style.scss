@@ -1,3 +1,4 @@
+@import './fonts';
 @import './drop_down';
 @import './infos';
 @import './loader';
@@ -76,11 +77,11 @@ body {
   cursor: pointer;
   padding-left: 20px;
   padding-right: 20px;
-  // transition: all 125ms ease-in-out;
+  transition: all 125ms ease-in-out;
 
   &:hover {
     transform: scale(1.2);
-    // transition: all 125ms ease-in-out;
+    transition: all 125ms ease-in-out;
   }
 }
 
@@ -132,6 +133,32 @@ body {
   letter-spacing: 1px;
 }
 
+.dflex {
+  display: flex;
+  align-items: baseline;
+}
+
+.pokedex_logo {
+  filter: opacity(30%);
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+
+.logo_font {
+  color: #FFF;
+  font-family: "Kanit";
+  font-size: 45px;
+  margin: unset;
+  text-align: center;
+  padding-top: 20px;
+  
+  @include text3d(
+    adjust-color($primarycolour, $lightness: -8%), 
+    $depth: 6, 
+    $primaryshadowcolour: adjust-color($primarycolour, $lightness: -10%, $saturation: +20%),
+    $shadowopacity: .3);
+}
+
 .poke_names {
   z-index: 5;
   letter-spacing: 1px;
@@ -139,7 +166,7 @@ body {
 
 .ability-style {
   background-color: rgba(255, 255, 255, 0.3);
-  width: 40%;
+  width: 45%;
   border-radius: 10px;
   text-align: center;
   margin-top: 5px;
@@ -174,13 +201,13 @@ body {
   right: 0;
   z-index: 1;
   filter: opacity(30%) invert(1);
-  width: 100px;
+  width: 82px;
   padding: 7px;
 }
 
 .quantity_btn {
   cursor: pointer;
-  padding: 10px;
+  padding: 5px 12px 5px 12px;
   background-color: rgb(104, 177, 104);
   color: white;
   border: none;
@@ -191,6 +218,8 @@ body {
   margin-left: 15px;
   letter-spacing: 1px;
   transition: all 215ms ease-in-out;
+  font-family: 'Baloo Da 2';
+  font-size: 16px;
 
   &:hover {
     filter: brightness(110%);
@@ -216,6 +245,7 @@ body {
   color: grey;
   right: calc(50% + 10px);
   font-size: 20px;
+  letter-spacing: -1px;
 }
 
 .slidecontainer {

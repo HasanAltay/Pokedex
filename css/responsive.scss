@@ -18,12 +18,19 @@
 
       .content {
         width: unset;
+        justify-content: center;
       }
     }
   }
 }
 
 @media (max-width: 755px) {
+  .infos {
+    .text {
+      padding-right: 20px;
+    }
+  }
+
   .loader {
     .pokeball_background {
       width: 280px;
@@ -40,6 +47,12 @@
     max-width: 100%;
     .main {
       border-radius: unset;
+
+      .navi {
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+
       .title {
         padding-top: 70px;
         padding-bottom: 40px;
@@ -56,29 +69,98 @@
 
       .content {
         justify-content: center;
-        gap: 10px;
+        gap: 9px;
         margin-bottom: 40px;
 
         .box {
           min-width: 160px;
-          width: fit-content;
-          max-width: 165px;
+          width: auto;
+          max-width: 170px;
         }
-      } 
-    
-
-  }
-
+      }
+      
+      .details {
+        .details_background {
+          .details_top_frame {
+            padding-top: 60px;
+            .ab_details {
+              margin-bottom: unset;
+            }
+            .details_infos {
+              .center {
+                .details_ball_box {
+                  height: 120%;
+                  top: 10px
+                }
+              }
+            }
+          }
+          .details_bottom_frame {
+            padding-top: 30px;
+          }
+          .specs_navi {
+            margin-bottom: 10px;
+          }
+          }
+        }
+      }
   }
 }
 
 @media (max-width: 280px) {
-  .slider {
-    width: 150px;
+  .mainframe {
+    .main {
+      .title {
+        .slidecontainer {
+          .slider_menu {        
+            .slider {
+              width: 130px;
+            }
+          }
+        }
+      } 
+
+      .content {
+        gap: 12px;
+        .box {
+          min-width: 200px;
+          width: auto;
+          max-width: 220px;
+        }
+      }
+      
+      .details {
+        .details_background {
+          .details_top_frame {
+            padding-top: 45px;
+            .ab_details {
+              margin-bottom: unset;
+            }
+            .details_infos {
+              .center {
+                height: 23vh;
+                .details_ball_box {
+                  height: 120%;
+                  top: 10px
+                }
+              }
+            }
+          }
+          .details_bottom_frame {
+            padding-top: 30px;
+          }
+          .specs_navi {
+            margin-bottom: 10px;
+            span {
+              letter-spacing: unset;
+              font-size: 13px;
+            }
+          }
+          }
+        }
+      }
+
   }
 
-  .box {
-    width: 200px;
-    max-width: unset;
-  }
+
 }

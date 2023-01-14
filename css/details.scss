@@ -69,6 +69,7 @@
 .details_title {
   display: flex;
   justify-content: space-between;
+  letter-spacing: 1px;
 }
 
 .details_poke_img {
@@ -105,6 +106,7 @@
 .specs_navi span {
   padding-bottom: 15px;
   cursor: pointer;
+  letter-spacing: 1px;
 }
 
 .specs_navi span:hover {
