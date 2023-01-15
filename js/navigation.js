@@ -11,6 +11,9 @@ function showDropDown() {
   else if (drop_down.style.display = 'flex') {
     drop_down.style.display = 'none';
   }
+
+
+  
   if (drop_down_back.style.display == 'none') {
     drop_down_back.style.display = 'block';
   } 

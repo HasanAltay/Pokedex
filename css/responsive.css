@@ -17,6 +17,9 @@
     width: unset;
     justify-content: center;
   }
+  .infos {
+    padding-top: 100px;
+  }
 }
 @media (max-width: 755px) {
   .infos .text {
@@ -37,8 +40,8 @@
     border-radius: unset;
   }
   .mainframe .main .navi {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
   .mainframe .main .title {
     padding-top: 70px;
@@ -46,6 +49,10 @@
   }
   .mainframe .main .title .slidecontainer {
     flex-direction: column;
+  }
+  .mainframe .main .title .slidecontainer .pokedex_logo {
+    margin-left: unset;
+    margin-bottom: 30px;
   }
   .mainframe .main .title .slidecontainer .slider_menu .slider {
     width: 230px;
@@ -61,7 +68,10 @@
     max-width: 170px;
   }
   .mainframe .main .details .details_background .details_top_frame {
-    padding-top: 60px;
+    margin-top: unset;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 70px;
   }
   .mainframe .main .details .details_background .details_top_frame .ab_details {
     margin-bottom: unset;
@@ -72,12 +82,13 @@
   }
   .mainframe .main .details .details_background .details_bottom_frame {
     padding-top: 30px;
+    padding: 30px;
   }
   .mainframe .main .details .details_background .specs_navi {
     margin-bottom: 10px;
   }
 }
-@media (max-width: 280px) {
+@media (max-width: 375px) {
   .mainframe .main .title .slidecontainer .slider_menu .slider {
     width: 130px;
   }
@@ -90,7 +101,7 @@
     max-width: 220px;
   }
   .mainframe .main .details .details_background .details_top_frame {
-    padding-top: 45px;
+    padding-top: 70px;
   }
   .mainframe .main .details .details_background .details_top_frame .ab_details {
     margin-bottom: unset;

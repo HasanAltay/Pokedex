@@ -75,9 +75,10 @@ body {
 .navi img {
   width: 25px;
   cursor: pointer;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
   transition: all 125ms ease-in-out;
+  z-index: 999;
 
   &:hover {
     transform: scale(1.2);
@@ -90,10 +91,10 @@ body {
   flex-wrap: wrap;
   color: white;
   padding-top: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
   margin-bottom: 15px;
-  gap: 15px;
+  gap: 12px;
   width: 940px;
 }
 
@@ -139,8 +140,8 @@ body {
 }
 
 .pokedex_logo {
-  filter: opacity(30%);
-  margin-left: 5px;
+  filter: opacity(22%);
+  margin-left: 15px;
   margin-bottom: 10px;
 }
 
@@ -237,6 +238,7 @@ body {
   position: relative;
   display: flex;
   align-items: center;
+  margin-right: 15px;
 }
 
 #demo {
@@ -262,7 +264,7 @@ body {
   -webkit-appearance: none;
   /* Override default CSS styles */
   appearance: none;
-  width: 400px;
+  width: 380px;
   /* Full-width */
   height: 25px;
   /* Specified height */
