@@ -4,10 +4,6 @@ let species = [];
 let abilities1 = [];
 let abilities2 = [];
 let abilities3 = [];
-let genderMales = [];
-let genderFemales = [];
-let eggGroups = [];
-let eggCycles = [];
 let selected = [];
 
 

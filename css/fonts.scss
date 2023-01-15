@@ -313,13 +313,14 @@ $LIGHTING_FLAT: 3;
             $shadowopacity: .3);
         }
 
-        span {
+        span, a {
           color: #FFF;
           font-family: "Kanit";
           font-weight: 300;
           font-size: 20px;
           text-align: left;
           line-height: 110%;
+          text-decoration: none;
           
           @include text3d(
             adjust-color($primarycolour, $lightness: -8%), 

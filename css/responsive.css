@@ -76,6 +76,9 @@
   .mainframe .main .details .details_background .details_top_frame .ab_details {
     margin-bottom: unset;
   }
+  .mainframe .main .details .details_background .details_top_frame .details_infos .center .detail_poke_img {
+    width: 100%;
+  }
   .mainframe .main .details .details_background .details_top_frame .details_infos .center .details_ball_box {
     height: 120%;
     top: 10px;
@@ -116,11 +119,15 @@
   .mainframe .main .details .details_background .details_bottom_frame {
     padding-top: 30px;
   }
-  .mainframe .main .details .details_background .specs_navi {
+  .mainframe .main .details .details_background .details_bottom_frame .specs_navi {
     margin-bottom: 10px;
   }
-  .mainframe .main .details .details_background .specs_navi span {
+  .mainframe .main .details .details_background .details_bottom_frame .specs_navi span {
     letter-spacing: unset;
     font-size: 13px;
+  }
+  .mainframe .main .details .details_background .details_bottom_frame .content_details_bottom .details_table {
+    font-size: 13px;
+    color: grey;
   }
 }/*# sourceMappingURL=responsive.css.map */

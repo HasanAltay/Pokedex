@@ -101,6 +101,9 @@
             }
             .details_infos {
               .center {
+                .detail_poke_img {
+                  width: 100%;
+                }
                 .details_ball_box {
                   height: 120%;
                   top: 10px
@@ -162,14 +165,24 @@
           }
           .details_bottom_frame {
             padding-top: 30px;
-          }
-          .specs_navi {
-            margin-bottom: 10px;
-            span {
-              letter-spacing: unset;
-              font-size: 13px;
+            .specs_navi {
+              margin-bottom: 10px;
+              span {
+                letter-spacing: unset;
+                font-size: 13px;
+              }
+            }
+            .content_details_bottom {
+              .details_table {
+                font-size: 13px;
+                color: grey;
+              }
+
+
+
             }
           }
+
           }
         }
       }

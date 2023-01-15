@@ -5,6 +5,10 @@ let spAtks = [];
 let spDefs = [];
 let speeds = [];
 let totals = [];
+let genderMales = [];
+let genderFemales = [];
+let eggGroup1 = [];
+let eggGroup2 = [];
 
 
 async function getBaseStatsFromUrls(i) {
@@ -17,12 +21,26 @@ async function getBaseStatsFromUrls(i) {
     let spDef = responseJSON['stats'][4]['base_stat']; spDefs.push(spDef);
     let speed = responseJSON['stats'][5]['base_stat']; speeds.push(speed);
     let total = hp + attack + defense + spAtk + spDef + speed; totals.push(total);
+
+    let speciesURL = responseJSON['species']['url'];
+    let responseSP = await fetch(speciesURL);
+    let responseSP_JASON = await responseSP.json();
+
+    let eggGroups = responseSP_JASON['egg_groups'];
+    if (eggGroups.length == 2) {
+        let egg_group_1 = responseSP_JASON['egg_groups'][0]['name']; eggGroup1.push(egg_group_1);
+        let egg_group_2 = responseSP_JASON['egg_groups'][1]['name']; eggGroup2.push(egg_group_2);
+    }
+    else if (eggGroups.length == 1) {
+        let egg_group_1 = responseSP_JASON['egg_groups'][0]['name']; eggGroup1.push(egg_group_1);
+        eggGroup2.push('-');
+    }
 }
 
 
 function aboutContent() {
     document.getElementById('content_details_bottom').innerHTML = /*html*/`
-    <table>
+    <table class="details_table">
         <tr>
             <td style="color: grey">Species</td>
             <td>${capitalize(species[selected[0]])}</td>
@@ -36,11 +54,11 @@ function aboutContent() {
             <td>${weights[selected[0]]} hg (hectograms)</td>
         </tr>
         <tr>
-            <td style="color: grey">Abilities&emsp;&emsp;&emsp;</td>
+            <td style="color: grey">Abilities&emsp;&emsp;</td>
             <td>${capitalize(abilities1[selected[0]])}&emsp;${capitalize(abilities2[selected[0]])}&emsp;${capitalize(abilities3[selected[0]])}</td>
         </tr>
-        <!-- <tr>
-            <td class="padding"><b>Breeding&emsp;&emsp;&emsp; </b></td>
+        <tr>
+            <td class="padding"><b>Breeding&emsp;&emsp;</b></td>
             <td></td>
         </tr>
         <tr>
@@ -50,12 +68,12 @@ function aboutContent() {
         </tr>
         <tr>
             <td style="color: grey">Egg Groups</td>
-            <td></td>
+            <td>${capitalize(eggGroup1[selected[0]])}</td>
         </tr>
         <tr>
             <td style="color: grey">Egg Cycle</td>
-            <td></td>
-        </tr> -->
+            <td>${capitalize(eggGroup2[selected[0]])}</td>
+        </tr>
     </table>
 `;
 }
@@ -83,7 +101,7 @@ function baseContent() {
             </td>
         </tr>
         <tr>
-            <td style="color: grey">Defense</td>
+            <td style="color: grey">Defense&emsp;</td>
             <td style="text-align:right">${defenses[selected[0]]}</td>
             <td class="bar_width">
                 <div class="bar_background">
@@ -92,7 +110,7 @@ function baseContent() {
             </td>
         </tr>
         <tr>
-            <td style="color: grey">Sp.Atk</td>
+            <td style="color: grey">Sp. Atk</td>
             <td style="text-align:right">${spAtks[selected[0]]}</td>
             <td class="bar_width">
                 <div class="bar_background">
@@ -101,7 +119,7 @@ function baseContent() {
             </td>
         </tr>
         <tr>
-            <td style="color: grey">Sp.Def</td>
+            <td style="color: grey">Sp. Def</td>
             <td style="text-align:right">${spDefs[selected[0]]}</td>
             <td class="bar_width">
                 <div class="bar_background">

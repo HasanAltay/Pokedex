@@ -161,13 +161,14 @@
   line-height: 89%;
   text-shadow: 0 1px 0 #b88e8e, 0 2px 0 #b48888, 0 3px 0 #b08282, 0 4px 0 #ac7b7b, 0 5px 0 #a87575, 0 6px 0 #a56f6f, 0 0 5px rgba(197, 109, 109, 0.05), 0 -1px 3px rgba(197, 109, 109, 0.2), 0 9px 9px rgba(197, 109, 109, 0.3), 0 12px 12px rgba(197, 109, 109, 0.3), 0 15px 15px rgba(197, 109, 109, 0.3);
 }
-.mainframe .main .infos .text span {
+.mainframe .main .infos .text span, .mainframe .main .infos .text a {
   color: #FFF;
   font-family: "Kanit";
   font-weight: 300;
   font-size: 20px;
   text-align: left;
   line-height: 110%;
+  text-decoration: none;
   text-shadow: 0 1px 0 #be9898, 0 2px 0 #ba9191, 0 3px 0 #b68b8b, 0 0 5px rgba(197, 109, 109, 0.05), 0 -1px 3px rgba(197, 109, 109, 0.2), 0 9px 9px rgba(197, 109, 109, 0.3), 0 12px 12px rgba(197, 109, 109, 0.3), 0 15px 15px rgba(197, 109, 109, 0.3);
 }
 
@@ -486,6 +487,9 @@
   .mainframe .main .details .details_background .details_top_frame .ab_details {
     margin-bottom: unset;
   }
+  .mainframe .main .details .details_background .details_top_frame .details_infos .center .detail_poke_img {
+    width: 100%;
+  }
   .mainframe .main .details .details_background .details_top_frame .details_infos .center .details_ball_box {
     height: 120%;
     top: 10px;
@@ -526,12 +530,16 @@
   .mainframe .main .details .details_background .details_bottom_frame {
     padding-top: 30px;
   }
-  .mainframe .main .details .details_background .specs_navi {
+  .mainframe .main .details .details_background .details_bottom_frame .specs_navi {
     margin-bottom: 10px;
   }
-  .mainframe .main .details .details_background .specs_navi span {
+  .mainframe .main .details .details_background .details_bottom_frame .specs_navi span {
     letter-spacing: unset;
     font-size: 13px;
+  }
+  .mainframe .main .details .details_background .details_bottom_frame .content_details_bottom .details_table {
+    font-size: 13px;
+    color: grey;
   }
 }
 * {

@@ -44,8 +44,7 @@ async function getInfosFromUrls(i) {
         pokemonTypes2.push('');
     }
     let sprite = responseJSON['sprites'];
-    let pokemonSprite = sprite['other']['dream_world']['front_default']
-    // console.log(pokemonSprite);
+    let pokemonSprite = sprite['other']['dream_world']['front_default'];
     pokemonSprites.push(pokemonSprite);
     getDetailsFromUrls(i);
 }
