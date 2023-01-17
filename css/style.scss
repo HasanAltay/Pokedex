@@ -1,8 +1,8 @@
-@import './fonts';
-@import './drop_down';
-@import './infos';
-@import './loader';
-@import './responsive';
+@import '../scss/fonts';
+@import '../scss/drop_down';
+@import '../scss/infos';
+@import '../scss/loader';
+@import '../scss/responsive';
 
 * {
   scroll-behavior: smooth;
