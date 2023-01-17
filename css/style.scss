@@ -3,6 +3,10 @@
 @import '../scss/infos';
 @import '../scss/loader';
 @import '../scss/responsive';
+@import '../scss/slider';
+@import '../scss/details';
+@import '../scss/content';
+@import '../scss/navigation';
 
 * {
   scroll-behavior: smooth;
@@ -58,74 +62,6 @@ body {
     rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-.navi {
-  position: fixed;
-  width: 100vw;
-  max-width: 940px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  height: 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 999;
-  background-color: white;
-}
-
-.navi img {
-  width: 25px;
-  cursor: pointer;
-  padding-left: 30px;
-  padding-right: 30px;
-  transition: all 125ms ease-in-out;
-  z-index: 999;
-
-  &:hover {
-    transform: scale(1.2);
-    transition: all 125ms ease-in-out;
-  }
-}
-
-.content {
-  display: flex;
-  flex-wrap: wrap;
-  color: white;
-  padding-top: 10px;
-  padding-left: 25px;
-  padding-right: 25px;
-  margin-bottom: 15px;
-  gap: 12px;
-  width: 940px;
-}
-
-.box {
-  box-sizing: border-box;
-  position: relative;
-  height: 125px;
-  width: 170px;
-  min-width: 170px;
-  border-radius: 15px;
-  padding: 15px;
-  cursor: pointer;
-  transition: all 215ms ease-in-out;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
-    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-}
-
-.box:hover {
-  filter: brightness(105%);
-  transform: scale(108%);
-  transition: all 215ms ease-in-out;
-  box-shadow: rgba(0, 0, 0, 0.0) 0px 2px 4px,
-  rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
-  rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-}
-
-.box:active {
-  filter: saturate(0);
-}
-
 .title {
   padding-left: 20px;
   padding-top: 100px;
@@ -140,183 +76,25 @@ body {
 }
 
 .pokedex_logo {
-  filter: opacity(22%);
+  filter: opacity(30%);
   margin-left: 15px;
   margin-bottom: 10px;
 }
 
-.logo_font {
-  color: #FFF;
-  font-family: "Kanit";
-  font-size: 45px;
-  margin: unset;
-  text-align: center;
-  padding-top: 20px;
+// .logo_font {
+//   color: #FFF;
+//   font-family: "Kanit";
+//   font-size: 45px;
+//   margin: unset;
+//   text-align: center;
+//   padding-top: 20px;
   
-  @include text3d(
-    adjust-color($primarycolour, $lightness: -8%), 
-    $depth: 6, 
-    $primaryshadowcolour: adjust-color($primarycolour, $lightness: -10%, $saturation: +20%),
-    $shadowopacity: .3);
-}
+//   @include text3d(
+//     adjust-color($primarycolour, $lightness: -8%), 
+//     $depth: 6, 
+//     $primaryshadowcolour: adjust-color($primarycolour, $lightness: -10%, $saturation: +20%),
+//     $shadowopacity: .3);
+// }
 
-.poke_names {
-  z-index: 5;
-  letter-spacing: 1px;
-}
-
-.ability-style {
-  background-color: rgba(255, 255, 255, 0.3);
-  width: 45%;
-  border-radius: 10px;
-  text-align: center;
-  margin-top: 5px;
-  font-size: 12px;
-  letter-spacing: 1px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
-    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
-    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
-}
-
-.counter {
-  position: absolute;
-  top: 10px;
-  right: 12px;
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.7);
-  z-index: 3;
-}
-
-.poke_img {
-  position: absolute;
-  width: 70px;
-  bottom: 5px;
-  right: 10px;
-  z-index: 2;
-  max-height: 80px;
-}
-
-.ball_box {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  z-index: 1;
-  filter: opacity(30%) invert(1);
-  width: 82px;
-  padding: 7px;
-}
-
-.quantity_btn {
-  cursor: pointer;
-  padding: 5px 12px 5px 12px;
-  background-color: rgb(104, 177, 104);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
-    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
-    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-  margin-left: 15px;
-  letter-spacing: 1px;
-  transition: all 215ms ease-in-out;
-  font-family: 'Baloo Da 2';
-  font-size: 16px;
-
-  &:hover {
-    filter: brightness(110%);
-    transition: all 215ms ease-in-out;
-  }
-
-  &:active {
-    background-color: #8E68FF;
-    transform: scale(90%);
-  }
-
-}
-
-.slider_menu {
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin-right: 15px;
-}
-
-#demo {
-  position: absolute;
-  top: 33px;
-  color: grey;
-  right: calc(50% + 10px);
-  font-size: 20px;
-  letter-spacing: -1px;
-}
-
-.slidecontainer {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  /* Width of the outside container */
-  justify-content: space-between;
-}
-
-/* The slider itself */
-.slider {
-  -webkit-appearance: none;
-  /* Override default CSS styles */
-  appearance: none;
-  width: 380px;
-  /* Full-width */
-  height: 25px;
-  /* Specified height */
-  background: #d3d3d385;
-  /* Grey background */
-  outline: none;
-  /* Remove outline */
-  opacity: 0.7;
-  /* Set transparency (for mouse-over effects on hover) */
-  -webkit-transition: .2s;
-  /* 0.2 seconds transition on hover */
-  transition: opacity .2s;
-  border-radius: 5px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
-    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-}
-
-/* Mouse-over effects */
-.slider:hover {
-  opacity: 1;
-  /* Fully shown on mouse-over */
-}
-
-/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) 
-and -moz- (Firefox) to override default look) */
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  /* Override default look */
-  appearance: none;
-  width: 25px;
-  /* Set a specific slider handle width */
-  height: 35px;
-  /* Slider handle height */
-  background: #04AA6D;
-  /* Green background */
-  cursor: pointer;
-  /* Cursor on hover */
-  border-radius: 5px;
-  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
-    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
-    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-}
-
-.slider::-moz-range-thumb {
-  width: 25px;
-  /* Set a specific slider handle width */
-  height: 25px;
-  /* Slider handle height */
-  background: #04AA6D;
-  /* Green background */
-  cursor: pointer;
-  /* Cursor on hover */
-}
 
 

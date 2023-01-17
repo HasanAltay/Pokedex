@@ -1,12 +1,3 @@
-let weights = [];
-let heights = [];
-let species = [];
-let abilities1 = [];
-let abilities2 = [];
-let abilities3 = [];
-let selected = [];
-
-
 function openDetails(i) {
     selected = [];
     selected.push(i);
@@ -99,29 +90,3 @@ function moves() {
 }
 
 
-async function getDetailsFromUrls(i) {
-    let response = await fetch(pokemonURLs[i]);
-    let responseJSON = await response.json();
-    
-    let weight = responseJSON['weight']; weights.push(weight);
-    let height = responseJSON['height']; heights.push(height);
-    let specie = responseJSON['species']['name']; species.push(specie);
-
-    let ab = responseJSON['abilities'];
-    if (ab.length == 2) {
-        let ab1 = responseJSON['abilities'][0]['ability']['name']; abilities1.push(ab1);
-        let ab2 = responseJSON['abilities'][1]['ability']['name']; abilities2.push(ab2);
-        abilities3.push('');
-    }
-    else if (ab.length == 1) {
-        let ab1 = responseJSON['abilities'][0]['ability']['name']; abilities1.push(ab1);
-        abilities2.push('');
-        abilities3.push('');
-    }
-    else if (ab.length == 3) {
-        let ab1 = responseJSON['abilities'][0]['ability']['name']; abilities1.push(ab1);
-        let ab2 = responseJSON['abilities'][1]['ability']['name']; abilities2.push(ab2);
-        let ab3 = responseJSON['abilities'][2]['ability']['name']; abilities3.push(ab3);
-    }
-    getBaseStatsFromUrls(i);
-}

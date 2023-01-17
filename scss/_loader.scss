@@ -54,6 +54,7 @@
       rgba(0, 0, 0, 0.09) 0px 32px 16px;
     animation-name: color_change;
     animation-duration: 2500ms;
+    animation-iteration-count: infinite;
 
     @keyframes color_change {
       0% {

@@ -11,9 +11,6 @@ function showDropDown() {
   else if (drop_down.style.display = 'flex') {
     drop_down.style.display = 'none';
   }
-
-
-  
   if (drop_down_back.style.display == 'none') {
     drop_down_back.style.display = 'block';
   } 
@@ -41,12 +38,15 @@ function goBack() {
 
 function loader() {
   let loader = document.getElementById('loader');
+  let loader_count = document.getElementById('loader_count');
   loader.style.display = 'flex';
+  loader_count.style.animationPlayState = 'running';
 
   setInterval(() => {
       if (pokemonNames.length == sliderRange[0]) {
       setTimeout(() => {
-        loader.style.display = 'none';  
+        loader.style.display = 'none';
+        loader_count.style.animationPlayState = 'paused';
       }, 900);
       
       }    
