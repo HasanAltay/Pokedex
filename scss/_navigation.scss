@@ -1,55 +1,90 @@
 .navi {
   position: fixed;
   width: 100vw;
-  max-width: 940px;
+  max-width: 834px;
   padding-top: 20px;
   padding-bottom: 20px;
   height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 999;
+  z-index: 998;
   background-color: white;
 
-}
-
-.navi img {
-  width: 25px;
-  cursor: pointer;
-  padding-left: 30px;
-  padding-right: 30px;
-  transition: all 125ms ease-in-out;
-  z-index: 999;
-
-  &:hover {
-    transform: scale(1.2);
+  img {
+    width: 40px;
+    cursor: pointer;
+    padding-left: 30px;
+    padding-right: 30px;
     transition: all 125ms ease-in-out;
+    z-index: 999;
+  
+    &:hover {
+      transform: scale(92%);
+      transition: all 125ms ease-in-out;
+    }
   }
 }
 
 .quantity_btn {
   cursor: pointer;
-  padding: 5px 12px 5px 12px;
-  background-color: rgb(104, 177, 104);
+  padding: 6px 12px 6px 12px;
+  background-color: #8E68FF;
   color: white;
-  border: none;
-  border-radius: 5px;
-  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
-    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
-    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  border: 0;
+  border-radius: 8px;
   margin-left: 15px;
   letter-spacing: 1px;
   transition: all 215ms ease-in-out;
   font-family: 'Baloo Da 2';
   font-size: 16px;
+  text-transform: uppercase;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+  rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+  rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  width: var(--width);
+  --width: 100px;
+  --timing: 2s;
 
   &:hover {
-    filter: brightness(110%);
     transition: all 215ms ease-in-out;
+    background-image: linear-gradient(to right, rgb(250, 82, 82), 
+    rgb(250, 82, 82) 16.65%, rgb(190, 75, 219) 16.65%, 
+    rgb(190, 75, 219) 33.3%, rgb(76, 110, 245) 33.3%, 
+    rgb(76, 110, 245) 49.95%, rgb(64, 192, 87) 49.95%, 
+    rgb(64, 192, 87) 66.6%, rgb(250, 176, 5) 66.6%, 
+    rgb(250, 176, 5) 83.25%, rgb(253, 126, 20) 83.25%, 
+    rgb(253, 126, 20) 100%, rgb(250, 82, 82) 100%);
+    animation: var(--timing) linear dance6123 infinite;
+    transform: scale(1.1) translateY(-1px);
+
+    @keyframes dance6123 {
+      to {
+        background-position: var(--width);
+        }
+      }
   }
 
   &:active {
-    background-color: #8E68FF;
     transform: scale(90%);
   }
 }
+
+
+.up {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  .up_arrow {
+    width: 50px;
+    border-radius: 100%;
+    cursor: pointer;
+
+    &:active {
+      transform: scale(90%);
+    }
+  }
+}
+

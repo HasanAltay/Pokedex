@@ -8,6 +8,8 @@
 @import '../scss/content';
 @import '../scss/navigation';
 
+@import '../scss/evolution';
+
 * {
   scroll-behavior: smooth;
   -moz-user-select: none;
@@ -47,14 +49,15 @@ body {
 .mainframe {
   max-width: 940px;
   position: relative;
+  border-radius: 12px;
 }
 
 .main {
   display: flex;
   flex-direction: column;
   background-color: white;
-  border-radius: 12px;
-  margin-bottom: 50px;
+  border-radius: 0px 0px 12px 12px;
+  margin-bottom: 100px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px,
     rgba(0, 0, 0, 0.12) 0px 4px 6px,
@@ -76,25 +79,6 @@ body {
 }
 
 .pokedex_logo {
-  filter: opacity(30%);
-  margin-left: 15px;
-  margin-bottom: 10px;
+  margin-left: 0px;
+  margin-bottom: 0px;
 }
-
-// .logo_font {
-//   color: #FFF;
-//   font-family: "Kanit";
-//   font-size: 45px;
-//   margin: unset;
-//   text-align: center;
-//   padding-top: 20px;
-  
-//   @include text3d(
-//     adjust-color($primarycolour, $lightness: -8%), 
-//     $depth: 6, 
-//     $primaryshadowcolour: adjust-color($primarycolour, $lightness: -10%, $saturation: +20%),
-//     $shadowopacity: .3);
-// }
-
-
-

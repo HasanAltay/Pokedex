@@ -12,9 +12,9 @@ function showDropDown() {
     drop_down.style.display = 'none';
   }
   if (drop_down_back.style.display == 'none') {
-    drop_down_back.style.display = 'block';
+    drop_down_back.style.display = 'flex';
   } 
-  else if (drop_down_back.style.display = 'block') {
+  else if (drop_down_back.style.display = 'flex') {
     drop_down_back.style.display = 'none';
   }
 }
@@ -33,24 +33,6 @@ function goBack() {
   document.getElementById('navi_btn_2').style = "filter: invert(0)";
   details.style.display = "none";
   document.getElementById('navi').style.backgroundColor = "white";
-}
-
-
-function loader() {
-  let loader = document.getElementById('loader');
-  let loader_count = document.getElementById('loader_count');
-  loader.style.display = 'flex';
-  loader_count.style.animationPlayState = 'running';
-
-  setInterval(() => {
-      if (pokemonNames.length == sliderRange[0]) {
-      setTimeout(() => {
-        loader.style.display = 'none';
-        loader_count.style.animationPlayState = 'paused';
-      }, 900);
-      
-      }    
-  }, 100);
 }
 
 

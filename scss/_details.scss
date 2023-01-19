@@ -5,18 +5,19 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  height: 101vh;
+  height: 100vh;
   z-index: 899;
   align-items: center;
   justify-content: center;
-  max-width: 940px;
+  max-width: 834px;
   border: unset;
+  margin-top: -1px;
 }
 
 .details_top_frame {
   padding-left: 30px;
   padding-right: 30px;
-  padding-top: 120px;
+  // padding-top: 80px;
   display: flex;
   flex-direction: column-reverse;
 }
@@ -68,6 +69,7 @@
   display: flex;
   justify-content: space-between;
   letter-spacing: 1px;
+  padding-top: 80px;
 }
 
 .details_poke_img {

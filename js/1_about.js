@@ -5,6 +5,10 @@ let abilities1 = [];
 let abilities2 = [];
 let abilities3 = [];
 let selected = [];
+let genderMales = [];
+let genderFemales = [];
+let eggGroup1 = [];
+let eggGroup2 = [];
 
 
 async function getDetailsFromUrls(i) {
@@ -39,41 +43,42 @@ async function getDetailsFromUrls(i) {
 async function getBreedingStats(responseJSON) {
     let speciesURL = responseJSON['species']['url'];
     let responseSP = await fetch(speciesURL);
-    let responseSP_JASON = await responseSP.json();
+    let responseSP_JSON = await responseSP.json();
 
-    let eggGroups = responseSP_JASON['egg_groups'];
+    let eggGroups = responseSP_JSON['egg_groups'];
     if (eggGroups.length == 2) {
-        let egg_group_1 = responseSP_JASON['egg_groups'][0]['name']; eggGroup1.push(egg_group_1);
-        let egg_group_2 = responseSP_JASON['egg_groups'][1]['name']; eggGroup2.push(egg_group_2);
+        let egg_group_1 = responseSP_JSON['egg_groups'][0]['name']; eggGroup1.push(egg_group_1);
+        let egg_group_2 = responseSP_JSON['egg_groups'][1]['name']; eggGroup2.push(egg_group_2);
     }
     else if (eggGroups.length == 1) {
-        let egg_group_1 = responseSP_JASON['egg_groups'][0]['name']; eggGroup1.push(egg_group_1);
+        let egg_group_1 = responseSP_JSON['egg_groups'][0]['name']; eggGroup1.push(egg_group_1);
         eggGroup2.push('-');
     }
+    getEvolutionDetails(responseSP_JSON);
 }
 
 
 function aboutContent() {
     document.getElementById('content_details_bottom').innerHTML = /*html*/`
-    <table class="details_table">
+        <table class="details_table">
         <tr>
             <td style="color: grey">Species</td>
             <td>${capitalize(species[selected[0]])}</td>
         </tr>
         <tr>
             <td style="color: grey">Height</td>
-            <td>${heights[selected[0]]} dm (decimetres)</td>
+            <td style="line-height: 90%;">${heights[selected[0]]} dm (decimetres)</td>
         </tr>
         <tr>
             <td style="color: grey">Weight</td>
-            <td>${weights[selected[0]]} hg (hectograms)</td>
+            <td style="line-height: 90%;">${weights[selected[0]]} hg (hectograms)</td>
         </tr>
         <tr>
             <td style="color: grey">Abilities&emsp;&emsp;</td>
-            <td>${capitalize(abilities1[selected[0]])}&emsp;${capitalize(abilities2[selected[0]])}&emsp;${capitalize(abilities3[selected[0]])}</td>
+            <td style="line-height: 90%;">${capitalize(abilities1[selected[0]])}&emsp;${capitalize(abilities2[selected[0]])}&emsp;${capitalize(abilities3[selected[0]])}</td>
         </tr>
         <tr>
-            <td class="padding"><b>Breeding&emsp;&emsp;</b></td>
+            <td class="padding" style="line-height: 90%;"><b>Breeding&emsp;&emsp;</b></td>
             <td></td>
         </tr>
         <tr>

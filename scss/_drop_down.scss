@@ -20,6 +20,7 @@
       font-size: 20px;
       text-indent: 20px;
       transition: all 125ms ease-in-out;
+      
       &:hover {
         transition: all 125ms ease-in-out;
         background-color: rgb(120, 120, 209);
@@ -32,6 +33,7 @@
       }
     }
 }
+
 
 .drop_down_back {
   display: none;

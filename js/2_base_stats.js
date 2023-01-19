@@ -5,10 +5,7 @@ let spAtks = [];
 let spDefs = [];
 let speeds = [];
 let totals = [];
-let genderMales = [];
-let genderFemales = [];
-let eggGroup1 = [];
-let eggGroup2 = [];
+
 
 async function getBaseStatsFromUrls(responseJSON) {
   let hp = responseJSON['stats'][0]['base_stat']; hps.push(hp);

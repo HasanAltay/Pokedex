@@ -3,39 +3,41 @@
   flex-wrap: wrap;
   color: white;
   padding-top: 10px;
-  padding-left: 25px;
-  padding-right: 25px;
-  margin-bottom: 15px;
-  gap: 12px;
-  width: 940px;
+  padding-left: 27px;
+  padding-right: 27px;
+  margin-bottom: 27px;
+  gap: 20px;
+  max-width: 780px;
+  align-items: center;
+  justify-content: center;
 }
 
 .box {
   box-sizing: border-box;
   position: relative;
   height: 125px;
-  width: 170px;
-  min-width: 170px;
+  width: 180px;
+  min-width: 180px;
   border-radius: 15px;
-  padding: 15px;
+  padding: 16px;
   cursor: pointer;
-  transition: all 215ms ease-in-out;
+  transition: all 225ms ease-in-out;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
     rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-}
 
-.box:hover {
-  filter: brightness(105%);
-  transform: scale(108%);
-  transition: all 215ms ease-in-out;
-  box-shadow: rgba(0, 0, 0, 0.0) 0px 2px 4px,
-  rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
-  rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-}
-
-.box:active {
-  filter: saturate(0);
+    &:hover {
+      filter: brightness(105%);
+      transform: scale(94%);
+      transition: all 225ms ease-in-out;
+      box-shadow: rgba(0, 0, 0, 0.0) 0px 2px 4px,
+      rgba(0, 0, 0, 0.3) 2px 15px 13px 3px,
+      rgba(0, 0, 0, 0.2) 0px -5px 0px inset;
+    }
+    
+    &:active {
+      filter: saturate(0);
+    }
 }
 
 .poke_names {

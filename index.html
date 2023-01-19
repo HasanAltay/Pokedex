@@ -15,9 +15,28 @@
         <script src="./js/2_base_stats.js"></script>
         <script src="./js/3_evolution.js"></script>
         <script src="./js/4_moves.js"></script>
+        <script src="./js/loader.js"></script>
     </head>
 
     <body onload="render(); loader()">
+
+        <div id="loader" class="loader">
+            <div class="loader_child">
+                <div class="background_gradient" id="background_gradient"></div>
+                <div class="background_white" id="background_white"></div>
+                <div class="box_counter" id="box_counter">
+                    <a id="loader_count" class="loader_counter"></a>
+                </div>
+                <img class="box_top" src="./img/box_top.png" id="box_top">
+                <img class="box_bottom" src="./img/box_bottom.png" id="box_bottom">
+            </div>
+        </div>
+
+        <div class="fetch_loader" id="fetch_loader">
+            <a id="loader_counter_fetch" class="fetch_loader_counter"></a>
+            <img id="pokeball_loader" class="pokeball_loader" src="./img/loader.png">
+        </div>
+
         <div class="mainframe">
             <div class="main">
                 <div class="navi" id="navi">
@@ -25,13 +44,10 @@
                     <img src="./img/menu.png" onclick="showDropDown()" id="navi_btn_2">
                     <div id="drop_down_back" class="drop_down_back" onclick="showDropDown()"></div>
                     <div class="drop_down" id="drop_down">
-                        <div onclick="scrollToTop();goBack();showInfos();showDropDown();">About</div>    
+                        <div onclick="showDropDown();scrollToTop();goBack();showInfos();">About</div>    
                     </div> 
                 </div>
-                <div class="loader" id="loader">
-                    <img class="pokeball_background" src="./img/loader.png">
-                    <a id="loader_count"></a>
-                </div>
+
                 <div class="title" id="title"></div>
                 <div class="content" id="content"></div>
                 <div class="details" id="details"></div>
@@ -64,12 +80,12 @@
                     </span>
                     </div>
                 </div>
+                <div class="up">
+                    <img class="up_arrow" src="./img/up-arrow.png" onclick="scrollToTop()">
+                </div>
+                
             </div>
-
-
         </div>
-
-
     </body>
 
 </html>
