@@ -20,15 +20,40 @@
 
     <body onload="render(); loader()">
 
-        <div id="loader" class="loader">
-            <div class="loader_child">
-                <div class="background_gradient" id="background_gradient"></div>
-                <div class="background_white" id="background_white"></div>
-                <div class="box_counter" id="box_counter">
-                    <a id="loader_count" class="loader_counter"></a>
-                </div>
+        <!-- <div id="loader" class="loader">
+            <div class="background_gradient" id="background_gradient"></div>
+            <div class="background_white" id="background_white"></div>
+            
+            <div class="box_main" id="box_main">
+
                 <img class="box_top" src="./img/box_top.png" id="box_top">
                 <img class="box_bottom" src="./img/box_bottom.png" id="box_bottom">
+            </div>
+
+            <div class="box_counter" id="box_counter">
+                <a id="loader_count" class="loader_counter"></a>
+            </div>
+
+        </div> -->
+
+
+        <div id="loader" class="loader">
+            <div class="background_gradient" id="background_gradient"></div>
+            <div class="background_white" id="background_white"></div>
+            
+            <div class="box_main" id="box_main">
+                <img class="box_top" src="./img/box_top.png" id="box_top">
+                <div class="box_expanding" id="box_expanding"></div>
+                <img class="box_bottom" src="./img/box_bottom.png" id="box_bottom">
+            </div>
+
+            <div class="box_counter" id="box_counter">
+                <!-- <a id="loader_count" class="loader_counter"></a> -->
+                <div class="box_sizing">
+                    <div class="circle_colors"></div>
+                    <img src="./img/pokemox_circle.png" class="pokemox_circle">
+                    <a id="loader_count" class="loader_counter"></a>
+                </div>
             </div>
         </div>
 

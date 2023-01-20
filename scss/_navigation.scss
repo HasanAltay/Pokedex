@@ -8,17 +8,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 998;
+  z-index: 994;
   background-color: white;
-
   img {
     width: 40px;
     cursor: pointer;
     padding-left: 30px;
     padding-right: 30px;
     transition: all 125ms ease-in-out;
-    z-index: 999;
-  
     &:hover {
       transform: scale(92%);
       transition: all 125ms ease-in-out;
@@ -40,51 +37,47 @@
   font-size: 16px;
   text-transform: uppercase;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-  rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
-  rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   width: var(--width);
   --width: 100px;
   --timing: 2s;
-
   &:hover {
     transition: all 215ms ease-in-out;
-    background-image: linear-gradient(to right, rgb(250, 82, 82), 
-    rgb(250, 82, 82) 16.65%, rgb(190, 75, 219) 16.65%, 
-    rgb(190, 75, 219) 33.3%, rgb(76, 110, 245) 33.3%, 
-    rgb(76, 110, 245) 49.95%, rgb(64, 192, 87) 49.95%, 
-    rgb(64, 192, 87) 66.6%, rgb(250, 176, 5) 66.6%, 
-    rgb(250, 176, 5) 83.25%, rgb(253, 126, 20) 83.25%, 
-    rgb(253, 126, 20) 100%, rgb(250, 82, 82) 100%);
+    background-image: linear-gradient(to right, rgb(250, 82, 82),
+        rgb(250, 82, 82) 16.65%, rgb(190, 75, 219) 16.65%,
+        rgb(190, 75, 219) 33.3%, rgb(76, 110, 245) 33.3%,
+        rgb(76, 110, 245) 49.95%, rgb(64, 192, 87) 49.95%,
+        rgb(64, 192, 87) 66.6%, rgb(250, 176, 5) 66.6%,
+        rgb(250, 176, 5) 83.25%, rgb(253, 126, 20) 83.25%,
+        rgb(253, 126, 20) 100%, rgb(250, 82, 82) 100%);
     animation: var(--timing) linear dance6123 infinite;
     transform: scale(1.1) translateY(-1px);
-
     @keyframes dance6123 {
       to {
         background-position: var(--width);
-        }
       }
+    }
   }
-
   &:active {
     transform: scale(90%);
   }
 }
 
-
 .up {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
-
+  margin-bottom: 30px;
   .up_arrow {
     width: 50px;
     border-radius: 100%;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+      rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     cursor: pointer;
-
     &:active {
       transform: scale(90%);
     }
   }
 }
-

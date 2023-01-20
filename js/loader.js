@@ -1,8 +1,7 @@
 function loader() {
   let loader = document.getElementById('loader');
   let loader_count = document.getElementById('loader_count');
-  let box_top = document.getElementById('box_top');
-  let box_bottom = document.getElementById('box_bottom');
+  let box_expanding = document.getElementById('box_expanding');
   let background_gradient = document.getElementById('background_gradient');
   let background_white = document.getElementById('background_white');
   let box_counter = document.getElementById('box_counter');
@@ -10,14 +9,13 @@ function loader() {
   loader.style.display = 'flex';
   loader_count.style.animationPlayState = 'running';
 
-  let startPageLoadingInterval = setInterval(() => {
+  setInterval(() => {
       if (pokemonNames.length == sliderRange[0]) {
 
       setTimeout(() => {
-        box_top.style.animationPlayState = 'running';
-        box_bottom.style.animationPlayState = 'running';
+        box_expanding.style.animationPlayState = 'running';
         loader_count.style.animationIterationCount = 'inherit';
-      }, 2000);
+      }, 2200);
 
       setTimeout(() => {
         loader_count.style.animationPlayState = 'paused';
@@ -30,14 +28,11 @@ function loader() {
       }, 2400);
 
       setTimeout(() => {
-        box_top.style.animationPlayState = 'running';
         loader.style.display = 'none';
-        loader_count.style.animationPlayState = 'paused';
-      }, 6000);
+      }, 5000);
 
       }    
   }, 100);
-  clearLoaderIntervals(startPageLoadingInterval);
 }
 
 
@@ -51,7 +46,7 @@ function fetchLoader() {
   loader_counter_fetch.style.animationPlayState = 'running';
   pokeball_loader.style.animationPlayState = 'running';
 
-  let fetchLoadingInterval = setInterval(() => {
+  setInterval(() => {
     if (pokemonNames.length == sliderRange[0]) {
       loader_counter_fetch.style.animationIterationCount = 'inherit';
       loader_counter_fetch.style.animationPlayState = 'paused';
@@ -65,13 +60,4 @@ function fetchLoader() {
   
     }    
 }, 100);
-clearLoaderIntervals(fetchLoadingInterval);
-}
-
-
-function clearLoaderIntervals(intervals) {
-  setTimeout(() => {
-    clearInterval(intervals); 
-   }, 7000);
-
 }

@@ -21,9 +21,7 @@
     }
   }
 
-  .loader {
-    width: 120%;
-}
+
 }
 
 @media (max-width: 825px) {
@@ -37,27 +35,31 @@
       margin-right: unset;
     }
   }
+
+  .loader {
+    .box_counter {
+      .box_sizing {
+        .loader_counter {
+          margin-top: 80px;
+          font-size: 50px;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 755px) {
 
   .loader {
-    
-    .background_white {
-      width: unset;
-      left: 0;
-    }
-
-
     .box_counter {
-      .loader_counter {
-        font-size: 38px;
-        width: 85px;
-        height: 85px;
+      .box_sizing {
+        .loader_counter {
+          margin-top: 40px;
+          font-size: 24px;
+        }
       }
     }
-
-}
+  }
 
   .mainframe {
     max-width: 100%;
@@ -86,7 +88,7 @@
       .content {
         justify-content: center;
         gap: 9px;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         padding-left: 10px;
         padding-right: 10px;
 
