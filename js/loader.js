@@ -2,7 +2,7 @@ function loader() {
   let loader = document.getElementById('loader');
   let loader_count = document.getElementById('loader_count');
   let box_expanding = document.getElementById('box_expanding');
-  let background_gradient = document.getElementById('background_gradient');
+  let box_main = document.getElementById('box_main');
   let background_white = document.getElementById('background_white');
   let box_counter = document.getElementById('box_counter');
 
@@ -24,11 +24,7 @@ function loader() {
       }, 1900);
 
       setTimeout(() => {
-        background_gradient.style.animationPlayState = 'running';
-      }, 2400);
-
-      setTimeout(() => {
-        loader.style.display = 'none';
+        box_main.style.display = 'none';
       }, 5000);
 
       }    

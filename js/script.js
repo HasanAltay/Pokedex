@@ -75,7 +75,7 @@ function capitalize(str) {
 function addTitleItems() {
     document.getElementById('title').innerHTML = /*html*/`
     <div class="slidecontainer">
-        <img class="pokedex_logo" src="./img/poke_logo.png" alt="Pokedex-Logo">
+        <!-- <img class="pokedex_logo" src="./img/poke_logo.png" alt="Pokedex-Logo"> -->
         <!-- <div class="dflex"><h2>Pokédex&nbsp;&nbsp;</h2><h3>(${pokemonNames.length} Items)</h3></div> -->
         <div class="slider_menu">
             <a id="demo"></a>

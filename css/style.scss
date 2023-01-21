@@ -20,7 +20,7 @@
 
   ::-webkit-scrollbar {
     /* Chrome, Edge, and Safari */
-    width: 20px;
+    width: 10px;
   }
 
   ::-webkit-scrollbar-track {
@@ -35,7 +35,6 @@
 }
 
 body {
-  margin: 0;
   scroll-behavior: smooth;
   font-family: 'Baloo Da 2';
   display: flex;
@@ -49,6 +48,7 @@ body {
   max-width: 940px;
   position: relative;
   border-radius: 12px;
+  z-index: 99!important;
 }
 
 .main {
@@ -57,11 +57,12 @@ body {
   background-color: white;
   border-radius: 0px 0px 12px 12px;
   margin-bottom: 100px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px,
-    rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px,
-    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  // box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+  //   rgba(0, 0, 0, 0.12) 0px -12px 30px,
+  //   rgba(0, 0, 0, 0.12) 0px 4px 6px,
+  //   rgba(0, 0, 0, 0.17) 0px 12px 13px,
+  //   rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
 }
 
 .title {

@@ -245,7 +245,7 @@
   justify-content: center;
   width: 100%;
   height: 100%;
-  z-index: 995;
+  z-index: 90;
 }
 .loader .background_gradient {
   position: fixed;
@@ -262,7 +262,6 @@
           animation-play-state: paused;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  z-index: 996;
 }
 @-webkit-keyframes background_disappear {
   0% {
@@ -281,14 +280,15 @@
   }
 }
 .loader .background_white {
-  height: 40px;
+  overflow: hidden;
+  height: 0vh;
   display: block;
   position: absolute;
   left: 50% 50%;
   max-width: 834px;
   width: 100%;
   background-color: rgb(255, 255, 255);
-  border-radius: 50px;
+  border-radius: 0px;
   -webkit-animation-name: white_disappear;
           animation-name: white_disappear;
   -webkit-animation-duration: 4200ms;
@@ -298,38 +298,28 @@
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  z-index: 998;
+  z-index: 91 !important;
 }
 @-webkit-keyframes white_disappear {
   0% {
-    filter: opacity(100%);
-    height: 40px;
+    height: 0vh;
   }
-  25% {
-    filter: opacity(100%);
-  }
-  55% {
-    height: 1400px;
+  40% {
+    height: 100vh;
   }
   100% {
-    height: 1400px;
-    filter: opacity(0%);
+    height: 100vh;
   }
 }
 @keyframes white_disappear {
   0% {
-    filter: opacity(100%);
-    height: 40px;
+    height: 0vh;
   }
-  25% {
-    filter: opacity(100%);
-  }
-  55% {
-    height: 1400px;
+  40% {
+    height: 100vh;
   }
   100% {
-    height: 1400px;
-    filter: opacity(0%);
+    height: 100vh;
   }
 }
 .loader .box_main {
@@ -345,14 +335,14 @@
   display: flex;
   justify-content: baseline;
   width: 100%;
-  z-index: 998;
+  z-index: 93 !important;
   transform: scale(107%);
   transform-origin: bottom center;
 }
 .loader .box_main .box_expanding {
   display: block;
-  height: 0px;
-  width: 833px;
+  height: 0vh;
+  width: 834px;
   -webkit-animation-name: open_up;
           animation-name: open_up;
   -webkit-animation-duration: 3000ms;
@@ -362,22 +352,23 @@
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   background-color: transparent;
-  z-index: 998;
+  background-color: rgba(7, 1, 1, 0.466);
+  z-index: -1;
 }
 @-webkit-keyframes open_up {
   0% {
-    height: 0px;
+    height: 0vh;
   }
   100% {
-    height: 2000px;
+    height: 105vh;
   }
 }
 @keyframes open_up {
   0% {
-    height: 0px;
+    height: 0vh;
   }
   100% {
-    height: 2000px;
+    height: 105vh;
   }
 }
 .loader .box_main .box_bottom {
@@ -388,11 +379,12 @@
   transform: scale(107%);
   transform-origin: top center;
 }
-.loader .box_counter {
+.loader .box_main .box_counter {
   position: absolute;
   left: 50% 50%;
-  display: flex;
+  top: 0;
   width: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
   -webkit-animation-name: disappear_counter;
@@ -403,7 +395,7 @@
           animation-play-state: paused;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  z-index: 999;
+  z-index: 92;
 }
 @-webkit-keyframes disappear_counter {
   0% {
@@ -421,52 +413,27 @@
     filter: opacity(0%);
   }
 }
-.loader .box_counter .box_sizing {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  transform: scale(1.1);
-  transform-origin: center center;
-}
-.loader .box_counter .box_sizing .loader_counter {
+.loader .box_main .box_counter .box_color {
   position: absolute;
-  margin-top: 100px;
-  left: 50% 50%;
-  vertical-align: text-top;
-  text-align: center;
-  color: #F1DF00;
-  font-size: 3.2em;
-  font-weight: bolder;
-  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
-  z-index: 999;
-}
-.loader .box_counter .box_sizing .circle_colors {
-  position: absolute;
-  left: 50% 50%;
-  background-color: #3DB7FF;
-  width: 300px;
-  z-index: 999;
-}
-.loader .box_counter .box_sizing .pokemox_circle {
   display: flex;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  max-width: 900px;
-  overflow: hidden;
-  margin: -100px;
+  left: 50% 50%;
   border-radius: 100%;
-  width: 100%;
+  width: 300px;
+  height: 300px;
+  background-color: #A5C000;
+  z-index: 92;
+  -webkit-animation-name: color_change;
+          animation-name: color_change;
   -webkit-animation-duration: 2500ms;
           animation-duration: 2500ms;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  z-index: 999;
+}
+.loader .box_main .box_counter .box_color .crt {
+  background-image: url(./img/crt.png);
+  z-index: 92;
 }
 @-webkit-keyframes color_change {
   0% {
@@ -520,11 +487,8 @@
   96% {
     background-color: #7C00FF;
   }
-  99% {
-    background-color: #BA0087;
-  }
   100% {
-    background-color: #ffffff;
+    background-color: #BA0087;
   }
 }
 @keyframes color_change {
@@ -579,12 +543,39 @@
   96% {
     background-color: #7C00FF;
   }
-  99% {
+  100% {
     background-color: #BA0087;
   }
-  100% {
-    background-color: #ffffff;
-  }
+}
+.loader .box_main .box_counter .loader_counter {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 10%;
+  height: 10%;
+  letter-spacing: 1px;
+  margin-top: 11%;
+  margin-left: 0.5%;
+  left: 50% 50%;
+  text-align: center;
+  color: #F1DF00;
+  font-size: 5vw;
+  font-weight: bolder;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+  z-index: 93;
+}
+.loader .box_main .box_counter .pokemox_circle {
+  width: 100%;
+  height: 100%;
+  transform: scale(90%);
+  transform-origin: center center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  z-index: 93;
 }
 
 .fetch_loader {
@@ -596,7 +587,7 @@
   justify-content: center;
   width: 100%;
   height: 100%;
-  z-index: 999;
+  z-index: 90;
   background-color: rgba(0, 0, 0, 0.1568627451);
 }
 .fetch_loader .pokeball_loader {
@@ -811,7 +802,7 @@
   position: absolute;
   top: 33px;
   color: grey;
-  right: calc(50% + 10px);
+  left: 50%;
   font-size: 20px;
   letter-spacing: -1px;
 }
@@ -820,9 +811,9 @@
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 100%;
   /* Width of the outside container */
-  justify-content: space-between;
 }
 
 /* The slider itself */
@@ -1038,6 +1029,7 @@ and -moz- (Firefox) to override default look) */
   max-width: 780px;
   align-items: center;
   justify-content: center;
+  overflow: scroll !important;
 }
 
 .box {
@@ -1116,7 +1108,7 @@ and -moz- (Firefox) to override default look) */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 994;
+  z-index: 89 !important;
   background-color: white;
 }
 .navi img {
@@ -1213,7 +1205,7 @@ and -moz- (Firefox) to override default look) */
 }
 * ::-webkit-scrollbar {
   /* Chrome, Edge, and Safari */
-  width: 20px;
+  width: 10px;
 }
 * ::-webkit-scrollbar-track {
   background-color: #EBA055;
@@ -1225,7 +1217,6 @@ and -moz- (Firefox) to override default look) */
 }
 
 body {
-  margin: 0;
   scroll-behavior: smooth;
   font-family: "Baloo Da 2";
   display: flex;
@@ -1239,6 +1230,7 @@ body {
   max-width: 940px;
   position: relative;
   border-radius: 12px;
+  z-index: 99 !important;
 }
 
 .main {
@@ -1247,7 +1239,6 @@ body {
   background-color: white;
   border-radius: 0px 0px 12px 12px;
   margin-bottom: 100px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .title {

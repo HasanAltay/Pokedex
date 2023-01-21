@@ -7,7 +7,7 @@
   justify-content: center;
   width: 100%;
   height: 100%;
-  z-index: 995;
+  z-index: 90;
 
   .background_gradient {
     position: fixed;
@@ -20,8 +20,6 @@
     animation-duration: 2s;
     animation-play-state: paused;
     animation-fill-mode: forwards;
-    z-index: 996;
-
     @keyframes background_disappear {
       0% {
         filter: opacity(100%);
@@ -34,14 +32,15 @@
   }
 
   .background_white {
-    height: 40px;
+    overflow: hidden;
+    height: 0vh;
     display: block;
     position: absolute;
     left: 50% 50%;
     max-width: 834px;
     width: 100%;
     background-color: rgb(255, 255, 255);
-    border-radius: 50px;
+    border-radius: 0px;
     animation-name: white_disappear;
     animation-duration: 4200ms;
     animation-play-state: paused;
@@ -51,27 +50,19 @@
       rgba(0, 0, 0, 0.12) 0px 4px 6px,
       rgba(0, 0, 0, 0.17) 0px 12px 13px,
       rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    z-index: 998;
+    z-index: 91!important;
 
     @keyframes white_disappear {
       0% {
-        filter: opacity(100%);
-        height: 40px;
+        height: 0vh;
       }
 
-      25% {
-        filter: opacity(100%);
-      }
-
-      55% {
-        height: 1400px;
+      40% {
+        height: 100vh;
       }
 
       100% {
-
-        height: 1400px;
-        filter: opacity(0%);
-
+        height: 100vh;
       }
     }
   }
@@ -89,29 +80,30 @@
       display: flex;
       justify-content: baseline;
       width: 100%;
-      z-index: 998;
+      z-index: 93!important;
       transform: scale(107%);
       transform-origin: bottom center;
     }
 
     .box_expanding {
       display: block;
-      height: 0px;
-      width: 833px;
+      height: 0vh;
+      width: 834px;
       animation-name: open_up;
       animation-duration: 3000ms;
       animation-play-state: paused;
       animation-fill-mode: forwards;
       background-color: transparent;
-      z-index: 998;
+      background-color: rgba(7, 1, 1, 0.466);
+      z-index: -1;
 
       @keyframes open_up {
         0% {
-          height: 0px;
+          height: 0vh
         }
 
         100% {
-          height: 2000px;
+          height: 105vh;
 
         }
       }
@@ -125,168 +117,161 @@
       transform: scale(107%);
       transform-origin: top center;
     }
-  }
 
-  .box_counter {
-    position: absolute;
-    left: 50% 50%;
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    animation-name: disappear_counter;
-    animation-duration: 500ms;
-    animation-play-state: paused;
-    animation-fill-mode: forwards;
-    z-index: 999;
-    @keyframes disappear_counter {
-      0% {
-        filter: opacity(100%);
-      }
-
-      100% {
-        filter: opacity(0%);
-      }
-    }
-
-    .box_sizing {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    .box_counter {
+      position: absolute;
+      left: 50% 50%;
+      top: 0;
       width: 100%;
-      height: 100%;
-      transform: scale(1.1);
-      transform-origin: center center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation-name: disappear_counter;
+      animation-duration: 500ms;
+      animation-play-state: paused;
+      animation-fill-mode: forwards;
+      z-index: 92;
+
+      @keyframes disappear_counter {
+        0% {
+          filter: opacity(100%);
+        }
+
+        100% {
+          filter: opacity(0%);
+        }
+      }
+
+      .box_color {
+        .crt {
+          background-image: url(./img/crt.png);
+          z-index: 92;
+        }
+
+        position: absolute;
+        display: flex;
+        left: 50% 50%;
+        border-radius: 100%;
+        width: 300px;
+        height: 300px;
+        background-color: #A5C000;
+        z-index: 92;
+        animation-name: color_change;
+        animation-duration: 2500ms;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+
+        @keyframes color_change {
+          0% {
+              background-color: #DB8711;
+            }
+          
+            6% {
+              background-color: #E15D58;
+            }
+          
+            12% {
+              background-color: #8080FA;
+            }
+          
+            18% {
+              background-color: #EAD900;
+            }
+          
+            24% {
+              background-color: #A5C000;
+            }
+          
+            30% {
+              background-color: #A5AC70;
+            }
+          
+            36% {
+              background-color: #AC81FA;
+            }
+          
+            42% {
+              background-color: #962BA8;
+            }
+          
+            48% {
+              background-color: #E2568D;
+            }
+          
+            54% {
+              background-color: #AFA700;
+            }
+          
+            60% {
+              background-color: #D5C754;
+            }
+          
+            66% {
+              background-color: #6A5A46;
+            }
+          
+            72% {
+              background-color: #714E9E;
+            }
+          
+            78% {
+              background-color: #BAB5D3;
+            }
+          
+            84% {
+              background-color: #AC3627;
+            }
+          
+            90% {
+              background-color: #A9D7D9;
+            }
+          
+            96% {
+              background-color: #7C00FF;
+            }
+          
+            100% {
+              background-color: #BA0087;
+            }
+        }
+
+      }
 
       .loader_counter {
         position: absolute;
-        margin-top: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 10%;
+        height: 10%;
+        letter-spacing: 1px;
+        margin-top: 11%;
+        margin-left: 0.5%;
         left: 50% 50%;
-        vertical-align: text-top;
         text-align: center;
         color: #F1DF00;
-        font-size: 3.2em;
+        font-size: 5vw;
         font-weight: bolder;
         text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
           0px 8px 13px rgba(0, 0, 0, 0.1),
           0px 18px 23px rgba(0, 0, 0, 0.1);
-          z-index: 999;
+        z-index: 93;
       }
 
-      .circle_colors {
-        position: absolute;
-        left: 50% 50%;
-        background-color: #3DB7FF;
-        width: 300px;
-        z-index: 999;
-      }
-  
       .pokemox_circle {
+        width: 100%;
+        height: 100%;
+        transform: scale(90%);
+        transform-origin: center center;
         display: flex;
         align-items: center;
         text-align: center;
         justify-content: center;
-        max-width: 900px;
-        overflow: hidden;
-        margin: -100px;
-
-        // padding: 8px;
-        // background-color: #FF9A60;
-        border-radius: 100%;
-        width: 100%;
-        // height: 0%;
-        // animation-name: color_change;
-        animation-duration: 2500ms;
-        animation-iteration-count: infinite;
-        animation-fill-mode: forwards;
-        z-index: 999;
-  
-        @keyframes color_change {
-          0% {
-            background-color: #DB8711;
-          }
-  
-          6% {
-            background-color: #E15D58;
-          }
-  
-          12% {
-            background-color: #8080FA;
-          }
-  
-          18% {
-            background-color: #EAD900;
-          }
-  
-          24% {
-            background-color: #A5C000;
-          }
-  
-          30% {
-            background-color: #A5AC70;
-          }
-  
-          36% {
-            background-color: #AC81FA;
-          }
-  
-          42% {
-            background-color: #962BA8;
-          }
-  
-          48% {
-            background-color: #E2568D;
-          }
-  
-          54% {
-            background-color: #AFA700;
-          }
-  
-          60% {
-            background-color: #D5C754;
-          }
-  
-          66% {
-            background-color: #6A5A46;
-          }
-  
-          72% {
-            background-color: #714E9E;
-          }
-  
-          78% {
-            background-color: #BAB5D3;
-          }
-  
-          84% {
-            background-color: #AC3627;
-          }
-  
-          90% {
-            background-color: #A9D7D9;
-          }
-  
-          96% {
-            background-color: #7C00FF;
-          }
-  
-          99% {
-            background-color: #BA0087;
-          }
-  
-          100% {
-            background-color: #ffffff;
-          }
-        }
+        z-index: 93;
       }
     }
-
-
-    }
-
-    
-
+  }
 }
 
 .fetch_loader {
@@ -298,7 +283,7 @@
   justify-content: center;
   width: 100%;
   height: 100%;
-  z-index: 999;
+  z-index: 90;
   background-color: #00000028;
 
   .pokeball_loader {

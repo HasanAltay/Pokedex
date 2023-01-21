@@ -9,7 +9,7 @@
   position: absolute;
   top: 33px;
   color: grey;
-  right: calc(50% + 10px);
+  left: 50%;
   font-size: 20px;
   letter-spacing: -1px;
 }
@@ -18,10 +18,10 @@
   position: relative;
   display: flex;
   align-items: center;
-  // justify-content: center;
+  justify-content: center;
   width: 100%;
   /* Width of the outside container */
-  justify-content: space-between;
+  // justify-content: space-between;
 }
 
 /* The slider itself */
