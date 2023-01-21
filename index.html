@@ -20,41 +20,79 @@
 
     <body onload="render(); loader()">
 
-        <!-- <div id="loader" class="loader">
-            <div class="background_gradient" id="background_gradient"></div>
-            <div class="background_white" id="background_white"></div>
-            
-            <div class="box_main" id="box_main">
-
-                <img class="box_top" src="./img/box_top.png" id="box_top">
-                <img class="box_bottom" src="./img/box_bottom.png" id="box_bottom">
-            </div>
-
-            <div class="box_counter" id="box_counter">
-                <a id="loader_count" class="loader_counter"></a>
-            </div>
-
-        </div> -->
-
-
         <div id="loader" class="loader">
-            <div class="background_gradient" id="background_gradient"></div>
-            <div class="background_white" id="background_white"></div>
-            
-            <div class="box_main" id="box_main">
-                <img class="box_top" src="./img/box_top.png" id="box_top">
-                <div class="box_expanding" id="box_expanding"></div>
-                <img class="box_bottom" src="./img/box_bottom.png" id="box_bottom">
-            </div>
+                <div class="mainframe background_white" id="background_white">
+                    <div class="main">
 
-            <div class="box_counter" id="box_counter">
-                <!-- <a id="loader_count" class="loader_counter"></a> -->
-                <div class="box_sizing">
-                    <div class="circle_colors"></div>
+                        <div class="navi" id="navi">
+                            <img src="./img/arrow.png" onclick="goBack(); closeInfos()" id="navi_btn_1">
+                            <img src="./img/menu.png" onclick="showDropDown()" id="navi_btn_2">
+                            <div id="drop_down_back" class="drop_down_back" onclick="showDropDown()"></div>
+                            <div class="drop_down" id="drop_down">
+                                <div onclick="showDropDown();scrollToTop();goBack();showInfos();">About</div>    
+                            </div> 
+                        </div>
+        
+                        <div class="title" id="title"></div>
+                        <div class="content" id="content"></div>
+                        <div class="details" id="details"></div>
+                        <div class="infos" id="infos">
+                            <div class="text">
+                            <h2>About Pokédex API</h2>
+                            <span>
+                                Welcome to my portfolio website, featuring Pokémon characters 
+                                and information from the popular Pokémon franchise. 
+                                This website was built using the Pokédex API, which provides 
+                                access to a wealth of information about all of your favorite 
+                                Pokémon characters, including their names, abilities, moves, 
+                                and statistics. With this API, I was able to create a website 
+                                that showcases my skills as a developer, while also providing 
+                                a fun and interactive experience for visitors.
+                                Don't hesitate to check out the different sections of the website 
+                                to discover all features. Feel free to contact me if you have 
+                                any questions or feedback.
+                                A Pokédex API, also known as a Pokémon API, is a type 
+                                of web-based service that allows users to access and retrieve 
+                                information about the various Pokémon characters from the popular 
+                                Pokémon franchise. This information can include things like 
+                                Pokémon names, abilities, moves, and statistics. 
+                                These APIs can be used by developers to create a wide 
+                                range of applications and services, such as video games, 
+                                mobile apps, and websites. They can also be used by researchers 
+                                and data analysts to gather and analyze information about the 
+                                Pokémon franchise. The Pokédex API typically uses RESTful principles 
+                                and returns data in JSON format.
+                            </span>
+                            </div>
+                        </div>
+                        <div class="up">
+                            <img class="up_arrow" src="./img/up-arrow.png" onclick="scrollToTop()">
+                        </div>
+                        
+                    </div>
+                </div>
+
+            <div class="box_main" id="box_main">                
+                <div class="box_counter" id="box_counter">
+                    <div class="box_color">
+                        <img src="./img/crt.png" class="crt">
+                    </div>
                     <img src="./img/pokemox_circle.png" class="pokemox_circle">
                     <a id="loader_count" class="loader_counter"></a>
                 </div>
+                
+                <img class="box_top" src="./img/box_top.png" id="box_top">
+                <div class="box_expanding" id="box_expanding">
+
+
+
+
+
+                    
+                </div>
+                <img class="box_bottom" src="./img/box_bottom.png" id="box_bottom">
             </div>
+
         </div>
 
         <div class="fetch_loader" id="fetch_loader">
@@ -62,55 +100,7 @@
             <img id="pokeball_loader" class="pokeball_loader" src="./img/loader.png">
         </div>
 
-        <div class="mainframe">
-            <div class="main">
-                <div class="navi" id="navi">
-                    <img src="./img/arrow.png" onclick="goBack(); closeInfos()" id="navi_btn_1">
-                    <img src="./img/menu.png" onclick="showDropDown()" id="navi_btn_2">
-                    <div id="drop_down_back" class="drop_down_back" onclick="showDropDown()"></div>
-                    <div class="drop_down" id="drop_down">
-                        <div onclick="showDropDown();scrollToTop();goBack();showInfos();">About</div>    
-                    </div> 
-                </div>
-
-                <div class="title" id="title"></div>
-                <div class="content" id="content"></div>
-                <div class="details" id="details"></div>
-                <div class="infos" id="infos">
-                    <div class="text">
-                    <h2>About Pokédex API</h2>
-                    <span>
-                        Welcome to my portfolio website, featuring Pokémon characters 
-                        and information from the popular Pokémon franchise. 
-                        This website was built using the Pokédex API, which provides 
-                        access to a wealth of information about all of your favorite 
-                        Pokémon characters, including their names, abilities, moves, 
-                        and statistics. With this API, I was able to create a website 
-                        that showcases my skills as a developer, while also providing 
-                        a fun and interactive experience for visitors.
-                        Don't hesitate to check out the different sections of the website 
-                        to discover all features. Feel free to contact me if you have 
-                        any questions or feedback.
-                        A Pokédex API, also known as a Pokémon API, is a type 
-                        of web-based service that allows users to access and retrieve 
-                        information about the various Pokémon characters from the popular 
-                        Pokémon franchise. This information can include things like 
-                        Pokémon names, abilities, moves, and statistics. 
-                        These APIs can be used by developers to create a wide 
-                        range of applications and services, such as video games, 
-                        mobile apps, and websites. They can also be used by researchers 
-                        and data analysts to gather and analyze information about the 
-                        Pokémon franchise. The Pokédex API typically uses RESTful principles 
-                        and returns data in JSON format.
-                    </span>
-                    </div>
-                </div>
-                <div class="up">
-                    <img class="up_arrow" src="./img/up-arrow.png" onclick="scrollToTop()">
-                </div>
-                
-            </div>
-        </div>
+        
     </body>
 
 </html>
