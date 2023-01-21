@@ -11,26 +11,26 @@ function showDropDown() {
   else if (drop_down.style.display = 'flex') {
     drop_down.style.display = 'none';
   }
-  // if (drop_down_back.style.display == 'none') {
-  //   drop_down_back.style.display = 'flex';
-  // } 
-  // else if (drop_down_back.style.display === 'flex') {
-  //   drop_down_back.style.display = 'none';
-  // }
+  if (drop_down_back.style.display == 'none') {
+    drop_down_back.style.display = 'flex';
+  } 
+  else if (drop_down_back.style.display === 'flex') {
+    drop_down_back.style.display = 'none';
+  }
 }
 
 
 function naviInvert() {
-  document.getElementById('navi_btn_1').style = "filter: invert(1)";
-  document.getElementById('navi_btn_2').style = "filter: invert(1)";
+  // document.getElementById('navi_btn_1').style = "filter: invert(1)";
+  // document.getElementById('navi_btn_2').style = "filter: invert(1)";
   document.getElementById('navi').style.backgroundColor = "unset";
 }
 
 
 function goBack() {
   let details = document.getElementById('details');
-  document.getElementById('navi_btn_1').style = "filter: invert(0)";
-  document.getElementById('navi_btn_2').style = "filter: invert(0)";
+  // document.getElementById('navi_btn_1').style = "filter: invert(0)";
+  // document.getElementById('navi_btn_2').style = "filter: invert(0)";
   details.style.display = "none";
   document.getElementById('navi').style.backgroundColor = "white";
 }

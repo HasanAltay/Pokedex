@@ -123,16 +123,18 @@
 }
 
 .bars {
-  height: 4px;
-  background-color: #69C26A;
+  height: 6px;
+  background: linear-gradient(to right, #187c0b, #5bd813);
   border-radius: 3px;
+  max-width: 505px;
 }
 
 .bar_background {
   background-color: rgb(238, 228, 228);
-  height: 4px;
+  height: 6px;
   border-radius: 3px;
   margin-left: 15px;
+  max-width: 505px;
 }
 
 .bar_width {

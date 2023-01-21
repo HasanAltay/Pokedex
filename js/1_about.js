@@ -67,32 +67,27 @@ function aboutContent() {
         </tr>
         <tr>
             <td style="color: grey">Height</td>
-            <td style="line-height: 90%;">${heights[selected[0]]} dm (decimetres)</td>
+            <td style="line-height: 90%;">${heights[selected[0]]/10}m / ${((heights[selected[0]]*3.937).toFixed(2)).replace('.',',')}inch</td>
         </tr>
         <tr>
             <td style="color: grey">Weight</td>
-            <td style="line-height: 90%;">${weights[selected[0]]} hg (hectograms)</td>
+            <td style="line-height: 90%;">${weights[selected[0]]/10}kg / ${((weights[selected[0]]/4.536).toFixed(2)).replace('.',',')}lb </td>
         </tr>
         <tr>
-            <td style="color: grey">Abilities&emsp;&emsp;</td>
-            <td style="line-height: 90%;">${capitalize(abilities1[selected[0]])}&emsp;${capitalize(abilities2[selected[0]])}&emsp;${capitalize(abilities3[selected[0]])}</td>
+            <td style="color: grey">Abilities</td>
+            <td style="line-height: 90%;">${capitalize(abilities1[selected[0]])}</td>
         </tr>
         <tr>
-            <td class="padding" style="line-height: 90%;"><b>Breeding&emsp;&emsp;</b></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td style="color: grey">Gender</td>
-            <td></td>
-            <td></td>
+        <td style="color: grey">Hidden Abilities&emsp;&emsp;</td>
+        <td style="line-height: 90%;">${capitalize(abilities2[selected[0]])}&emsp;${capitalize(abilities3[selected[0]])}</td>
         </tr>
         <tr>
             <td style="color: grey">Egg Groups</td>
-            <td>${capitalize(eggGroup1[selected[0]])}</td>
+            <td>${capitalize(eggGroup1[selected[0]])}&emsp;${capitalize(eggGroup2[selected[0]])}</td>
         </tr>
         <tr>
-            <td style="color: grey">Egg Cycle</td>
-            <td>${capitalize(eggGroup2[selected[0]])}</td>
+            <td style="color: grey"></td>
+            <td></td>
         </tr>
     </table>
 `;

@@ -1004,16 +1004,18 @@ and -moz- (Firefox) to override default look) */
 }
 
 .bars {
-  height: 4px;
-  background-color: #69C26A;
+  height: 6px;
+  background: linear-gradient(to right, #187c0b, #5bd813);
   border-radius: 3px;
+  max-width: 505px;
 }
 
 .bar_background {
   background-color: rgb(238, 228, 228);
-  height: 4px;
+  height: 6px;
   border-radius: 3px;
   margin-left: 15px;
+  max-width: 505px;
 }
 
 .bar_width {
@@ -1185,15 +1187,18 @@ and -moz- (Firefox) to override default look) */
 }
 
 .evo_main {
-  margin-top: 20px;
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .evo_box {
   font-weight: bold;
   letter-spacing: 1px;
-  text-indent: 20px;
+  max-width: 240px;
+  text-align: center;
   border-radius: 15px;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px;
 }
 
 * {

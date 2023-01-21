@@ -53,9 +53,15 @@ function evolutionContent() {
   document.getElementById('content_details_bottom').innerHTML = /*html*/`
     <div class="evo_main">
 
-        <div class="evo_box"><h2>${capitalize(pokeEvolve1)}</h2></div>
+        <div class="evo_box">
+          <h2>${capitalize(pokeEvolve1)}</h2>
+          <div id="evo_poke_img_1"></div>
+        </div>
 
-        <div class="evo_box"><h2>${capitalize(pokeEvolve2)}</h2></div>
+        <div class="evo_box">
+          <h2>${capitalize(pokeEvolve2)}</h2>
+          <div id="evo_poke_img_2"></div>
+        </div>
 
 
     </div>
