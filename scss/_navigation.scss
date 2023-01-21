@@ -1,14 +1,14 @@
 .navi {
   position: fixed;
-  width: 100vw;
-  max-width: 834px;
+  width: 100%;
+  max-width: 890px;
   padding-top: 20px;
   padding-bottom: 20px;
   height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 89!important;
+  z-index: 99;
   background-color: white;
   img {
     width: 40px;
@@ -68,7 +68,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 30px;
+  padding-bottom: 100px;
   .up_arrow {
     width: 50px;
     border-radius: 100%;

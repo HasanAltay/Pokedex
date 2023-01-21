@@ -279,49 +279,6 @@
     filter: opacity(0%);
   }
 }
-.loader .background_white {
-  overflow: hidden;
-  height: 0vh;
-  display: block;
-  position: absolute;
-  left: 50% 50%;
-  max-width: 834px;
-  width: 100%;
-  background-color: rgb(255, 255, 255);
-  border-radius: 0px;
-  -webkit-animation-name: white_disappear;
-          animation-name: white_disappear;
-  -webkit-animation-duration: 4200ms;
-          animation-duration: 4200ms;
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  z-index: 91 !important;
-}
-@-webkit-keyframes white_disappear {
-  0% {
-    height: 0vh;
-  }
-  40% {
-    height: 100vh;
-  }
-  100% {
-    height: 100vh;
-  }
-}
-@keyframes white_disappear {
-  0% {
-    height: 0vh;
-  }
-  40% {
-    height: 100vh;
-  }
-  100% {
-    height: 100vh;
-  }
-}
 .loader .box_main {
   position: relative;
   display: flex;
@@ -340,9 +297,12 @@
   transform-origin: bottom center;
 }
 .loader .box_main .box_expanding {
-  display: block;
-  height: 0vh;
-  width: 834px;
+  display: flex;
+  justify-content: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
   -webkit-animation-name: open_up;
           animation-name: open_up;
   -webkit-animation-duration: 3000ms;
@@ -351,9 +311,9 @@
           animation-play-state: paused;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  background-color: transparent;
-  background-color: rgba(7, 1, 1, 0.466);
-  z-index: -1;
+  overflow: hidden;
+  overflow: scroll;
+  background-color: white;
 }
 @-webkit-keyframes open_up {
   0% {
@@ -375,7 +335,7 @@
   display: flex;
   justify-content: flex-start;
   width: 100%;
-  z-index: 998;
+  z-index: 99;
   transform: scale(107%);
   transform-origin: top center;
 }
@@ -395,7 +355,7 @@
           animation-play-state: paused;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  z-index: 92;
+  z-index: 100;
 }
 @-webkit-keyframes disappear_counter {
   0% {
@@ -413,141 +373,7 @@
     filter: opacity(0%);
   }
 }
-.loader .box_main .box_counter .box_color {
-  position: absolute;
-  display: flex;
-  left: 50% 50%;
-  border-radius: 100%;
-  width: 300px;
-  height: 300px;
-  background-color: #A5C000;
-  z-index: 92;
-  -webkit-animation-name: color_change;
-          animation-name: color_change;
-  -webkit-animation-duration: 2500ms;
-          animation-duration: 2500ms;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-.loader .box_main .box_counter .box_color .crt {
-  background-image: url(./img/crt.png);
-  z-index: 92;
-}
-@-webkit-keyframes color_change {
-  0% {
-    background-color: #DB8711;
-  }
-  6% {
-    background-color: #E15D58;
-  }
-  12% {
-    background-color: #8080FA;
-  }
-  18% {
-    background-color: #EAD900;
-  }
-  24% {
-    background-color: #A5C000;
-  }
-  30% {
-    background-color: #A5AC70;
-  }
-  36% {
-    background-color: #AC81FA;
-  }
-  42% {
-    background-color: #962BA8;
-  }
-  48% {
-    background-color: #E2568D;
-  }
-  54% {
-    background-color: #AFA700;
-  }
-  60% {
-    background-color: #D5C754;
-  }
-  66% {
-    background-color: #6A5A46;
-  }
-  72% {
-    background-color: #714E9E;
-  }
-  78% {
-    background-color: #BAB5D3;
-  }
-  84% {
-    background-color: #AC3627;
-  }
-  90% {
-    background-color: #A9D7D9;
-  }
-  96% {
-    background-color: #7C00FF;
-  }
-  100% {
-    background-color: #BA0087;
-  }
-}
-@keyframes color_change {
-  0% {
-    background-color: #DB8711;
-  }
-  6% {
-    background-color: #E15D58;
-  }
-  12% {
-    background-color: #8080FA;
-  }
-  18% {
-    background-color: #EAD900;
-  }
-  24% {
-    background-color: #A5C000;
-  }
-  30% {
-    background-color: #A5AC70;
-  }
-  36% {
-    background-color: #AC81FA;
-  }
-  42% {
-    background-color: #962BA8;
-  }
-  48% {
-    background-color: #E2568D;
-  }
-  54% {
-    background-color: #AFA700;
-  }
-  60% {
-    background-color: #D5C754;
-  }
-  66% {
-    background-color: #6A5A46;
-  }
-  72% {
-    background-color: #714E9E;
-  }
-  78% {
-    background-color: #BAB5D3;
-  }
-  84% {
-    background-color: #AC3627;
-  }
-  90% {
-    background-color: #A9D7D9;
-  }
-  96% {
-    background-color: #7C00FF;
-  }
-  100% {
-    background-color: #BA0087;
-  }
-}
-.loader .box_main .box_counter .loader_counter {
+.loader .box_main .loader_counter {
   position: absolute;
   display: flex;
   align-items: center;
@@ -556,7 +382,7 @@
   width: 10%;
   height: 10%;
   letter-spacing: 1px;
-  margin-top: 11%;
+  margin-top: 12%;
   margin-left: 0.5%;
   left: 50% 50%;
   text-align: center;
@@ -564,18 +390,18 @@
   font-size: 5vw;
   font-weight: bolder;
   text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
-  z-index: 93;
+  z-index: 81;
 }
-.loader .box_main .box_counter .pokemox_circle {
+.loader .box_main .pokemox_circle {
   width: 100%;
   height: 100%;
-  transform: scale(90%);
+  transform: scale(101%);
   transform-origin: center center;
   display: flex;
   align-items: center;
   text-align: center;
   justify-content: center;
-  z-index: 93;
+  z-index: 80;
 }
 
 .fetch_loader {
@@ -881,10 +707,10 @@ and -moz- (Firefox) to override default look) */
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100vh;
-  z-index: 899;
+  z-index: 90;
   align-items: center;
   justify-content: center;
-  max-width: 834px;
+  max-width: 900px;
   border: unset;
   margin-top: -1px;
 }
@@ -1029,7 +855,6 @@ and -moz- (Firefox) to override default look) */
   max-width: 780px;
   align-items: center;
   justify-content: center;
-  overflow: scroll !important;
 }
 
 .box {
@@ -1100,15 +925,15 @@ and -moz- (Firefox) to override default look) */
 
 .navi {
   position: fixed;
-  width: 100vw;
-  max-width: 834px;
+  width: 100%;
+  max-width: 890px;
   padding-top: 20px;
   padding-bottom: 20px;
   height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 89 !important;
+  z-index: 99;
   background-color: white;
 }
 .navi img {
@@ -1166,7 +991,7 @@ and -moz- (Firefox) to override default look) */
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 30px;
+  padding-bottom: 100px;
 }
 .up .up_arrow {
   width: 50px;
@@ -1208,12 +1033,13 @@ and -moz- (Firefox) to override default look) */
   width: 10px;
 }
 * ::-webkit-scrollbar-track {
-  background-color: #EBA055;
+  background-color: #ffffff;
+  margin-top: 90px;
 }
 * ::-webkit-scrollbar-thumb {
-  background-color: #ffffff;
+  background-color: #EECB00;
   border-radius: 10px;
-  border: 3px solid #EBA055;
+  border: 0px solid #000000;
 }
 
 body {
@@ -1229,16 +1055,14 @@ body {
 .mainframe {
   max-width: 940px;
   position: relative;
-  border-radius: 12px;
-  z-index: 99 !important;
+  z-index: 99;
 }
 
 .main {
   display: flex;
   flex-direction: column;
   background-color: white;
-  border-radius: 0px 0px 12px 12px;
-  margin-bottom: 100px;
+  align-items: center;
 }
 
 .title {

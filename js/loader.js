@@ -2,8 +2,6 @@ function loader() {
   let loader = document.getElementById('loader');
   let loader_count = document.getElementById('loader_count');
   let box_expanding = document.getElementById('box_expanding');
-  let box_main = document.getElementById('box_main');
-  let background_white = document.getElementById('background_white');
   let box_counter = document.getElementById('box_counter');
 
   loader.style.display = 'flex';
@@ -19,13 +17,12 @@ function loader() {
 
       setTimeout(() => {
         loader_count.style.animationPlayState = 'paused';
-        background_white.style.animationPlayState = 'running';
         box_counter.style.animationPlayState = 'running';
       }, 1900);
 
       setTimeout(() => {
-        box_main.style.display = 'none';
-      }, 5000);
+        box_counter.style.display = 'none';
+      }, 1000);
 
       }    
   }, 100);

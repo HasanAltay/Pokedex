@@ -6,10 +6,10 @@
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100vh;
-  z-index: 899;
+  z-index: 90;
   align-items: center;
   justify-content: center;
-  max-width: 834px;
+  max-width: 900px;
   border: unset;
   margin-top: -1px;
 }
@@ -17,7 +17,6 @@
 .details_top_frame {
   padding-left: 30px;
   padding-right: 30px;
-  // padding-top: 80px;
   display: flex;
   flex-direction: column-reverse;
 }

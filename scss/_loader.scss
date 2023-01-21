@@ -31,41 +31,41 @@
     }
   }
 
-  .background_white {
-    overflow: hidden;
-    height: 0vh;
-    display: block;
-    position: absolute;
-    left: 50% 50%;
-    max-width: 834px;
-    width: 100%;
-    background-color: rgb(255, 255, 255);
-    border-radius: 0px;
-    animation-name: white_disappear;
-    animation-duration: 4200ms;
-    animation-play-state: paused;
-    animation-fill-mode: forwards;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-      rgba(0, 0, 0, 0.12) 0px -12px 30px,
-      rgba(0, 0, 0, 0.12) 0px 4px 6px,
-      rgba(0, 0, 0, 0.17) 0px 12px 13px,
-      rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    z-index: 91!important;
+  // .background_white {
+  //   overflow: hidden;
+  //   height: 0vh;
+  //   display: block;
+  //   position: absolute;
+  //   left: 50% 50%;
+  //   max-width: 834px;
+  //   width: 100%;
+  //   background-color: rgb(255, 255, 255);
+  //   border-radius: 0px;
+  //   animation-name: white_disappear;
+  //   animation-duration: 4200ms;
+  //   animation-play-state: paused;
+  //   animation-fill-mode: forwards;
+  //   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+  //     rgba(0, 0, 0, 0.12) 0px -12px 30px,
+  //     rgba(0, 0, 0, 0.12) 0px 4px 6px,
+  //     rgba(0, 0, 0, 0.17) 0px 12px 13px,
+  //     rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  //   z-index: 91!important;
 
-    @keyframes white_disappear {
-      0% {
-        height: 0vh;
-      }
+  //   @keyframes white_disappear {
+  //     0% {
+  //       height: 0vh;
+  //     }
 
-      40% {
-        height: 100vh;
-      }
+  //     40% {
+  //       height: 100vh;
+  //     }
 
-      100% {
-        height: 100vh;
-      }
-    }
-  }
+  //     100% {
+  //       height: 100vh;
+  //     }
+  //   }
+  // }
 
   .box_main {
     position: relative;
@@ -74,7 +74,7 @@
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    max-width: 900px;
+    max-width: 900px; 
 
     .box_top {
       display: flex;
@@ -86,16 +86,17 @@
     }
 
     .box_expanding {
-      display: block;
-      height: 0vh;
-      width: 834px;
+      display: flex;
+      justify-content: center;
+      height: fit-content;
+      width: 100%;
       animation-name: open_up;
       animation-duration: 3000ms;
       animation-play-state: paused;
       animation-fill-mode: forwards;
-      background-color: transparent;
-      background-color: rgba(7, 1, 1, 0.466);
-      z-index: -1;
+      overflow: hidden;
+      overflow: scroll;
+      background-color: white;
 
       @keyframes open_up {
         0% {
@@ -104,7 +105,6 @@
 
         100% {
           height: 105vh;
-
         }
       }
     }
@@ -113,7 +113,7 @@
       display: flex;
       justify-content: flex-start;
       width: 100%;
-      z-index: 998;
+      z-index: 99;
       transform: scale(107%);
       transform-origin: top center;
     }
@@ -130,7 +130,7 @@
       animation-duration: 500ms;
       animation-play-state: paused;
       animation-fill-mode: forwards;
-      z-index: 92;
+      z-index: 100;
 
       @keyframes disappear_counter {
         0% {
@@ -142,98 +142,105 @@
         }
       }
 
-      .box_color {
-        .crt {
-          background-image: url(./img/crt.png);
-          z-index: 92;
-        }
+      // .box_color {
+      //   margin-top: 60px;
+      //   width: 23%;
 
-        position: absolute;
-        display: flex;
-        left: 50% 50%;
-        border-radius: 100%;
-        width: 300px;
-        height: 300px;
-        background-color: #A5C000;
-        z-index: 92;
-        animation-name: color_change;
-        animation-duration: 2500ms;
-        animation-iteration-count: infinite;
-        animation-fill-mode: forwards;
+      //   .crt {
+      //     background-image: url(./img/crt.png);
+      //     z-index: 80;
+      //     border-radius: 100%;
+      //     width: 100%;
+      //   }
 
-        @keyframes color_change {
-          0% {
-              background-color: #DB8711;
-            }
+      //   position: absolute;
+      //   display: flex;
+      //   align-items: center;
+      //   justify-content: center;
+      //   left: 50% 50%;
+      //   top: auto;
+      //   border-radius: 100%;
+
+      //   background-color: #A5C000;
+      //   z-index: 80;
+      //   animation-name: color_change;
+      //   animation-duration: 2500ms;
+      //   animation-iteration-count: infinite;
+      //   animation-fill-mode: forwards;
+
+      //   @keyframes color_change {
+      //     0% {
+      //         background-color: #DB8711;
+      //       }
           
-            6% {
-              background-color: #E15D58;
-            }
+      //       6% {
+      //         background-color: #E15D58;
+      //       }
           
-            12% {
-              background-color: #8080FA;
-            }
+      //       12% {
+      //         background-color: #8080FA;
+      //       }
           
-            18% {
-              background-color: #EAD900;
-            }
+      //       18% {
+      //         background-color: #EAD900;
+      //       }
           
-            24% {
-              background-color: #A5C000;
-            }
+      //       24% {
+      //         background-color: #A5C000;
+      //       }
           
-            30% {
-              background-color: #A5AC70;
-            }
+      //       30% {
+      //         background-color: #A5AC70;
+      //       }
           
-            36% {
-              background-color: #AC81FA;
-            }
+      //       36% {
+      //         background-color: #AC81FA;
+      //       }
           
-            42% {
-              background-color: #962BA8;
-            }
+      //       42% {
+      //         background-color: #962BA8;
+      //       }
           
-            48% {
-              background-color: #E2568D;
-            }
+      //       48% {
+      //         background-color: #E2568D;
+      //       }
           
-            54% {
-              background-color: #AFA700;
-            }
+      //       54% {
+      //         background-color: #AFA700;
+      //       }
           
-            60% {
-              background-color: #D5C754;
-            }
+      //       60% {
+      //         background-color: #D5C754;
+      //       }
           
-            66% {
-              background-color: #6A5A46;
-            }
+      //       66% {
+      //         background-color: #6A5A46;
+      //       }
           
-            72% {
-              background-color: #714E9E;
-            }
+      //       72% {
+      //         background-color: #714E9E;
+      //       }
           
-            78% {
-              background-color: #BAB5D3;
-            }
+      //       78% {
+      //         background-color: #BAB5D3;
+      //       }
           
-            84% {
-              background-color: #AC3627;
-            }
+      //       84% {
+      //         background-color: #AC3627;
+      //       }
           
-            90% {
-              background-color: #A9D7D9;
-            }
+      //       90% {
+      //         background-color: #A9D7D9;
+      //       }
           
-            96% {
-              background-color: #7C00FF;
-            }
+      //       96% {
+      //         background-color: #7C00FF;
+      //       }
           
-            100% {
-              background-color: #BA0087;
-            }
-        }
+      //       100% {
+      //         background-color: #BA0087;
+      //       }
+      //   }
 
       }
 
@@ -246,7 +253,7 @@
         width: 10%;
         height: 10%;
         letter-spacing: 1px;
-        margin-top: 11%;
+        margin-top: 12%;
         margin-left: 0.5%;
         left: 50% 50%;
         text-align: center;
@@ -256,23 +263,23 @@
         text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
           0px 8px 13px rgba(0, 0, 0, 0.1),
           0px 18px 23px rgba(0, 0, 0, 0.1);
-        z-index: 93;
+          z-index: 81;
       }
 
       .pokemox_circle {
         width: 100%;
         height: 100%;
-        transform: scale(90%);
+        transform: scale(101%);
         transform-origin: center center;
         display: flex;
         align-items: center;
         text-align: center;
         justify-content: center;
-        z-index: 93;
+        z-index: 80;
       }
     }
   }
-}
+
 
 .fetch_loader {
   position: fixed;

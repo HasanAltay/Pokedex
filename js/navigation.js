@@ -49,5 +49,5 @@ function closeInfos() {
 
 
 function scrollToTop() {
-  window.scrollTo(0, 0);
+  $("#box_expanding").animate({ scrollTop: 0 }, "fast");
 }
