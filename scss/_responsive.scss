@@ -1,13 +1,14 @@
 @media (max-width: 1024px) {
-  body {
+  .loader .box_main .box_expanding {
     -ms-overflow-style: none;
     scrollbar-width: none; /* for Internet Explorer, Edge */
     overflow-y: scroll; /* for Firefox */
+
+    &::-webkit-scrollbar {
+      display: none; /* for Chrome, Safari, and Opera */
   }
-  
-  body::-webkit-scrollbar {
-    display: none; /* for Chrome, Safari, and Opera */
-  }
+
+}
 
   .mainframe {
     .main {
@@ -147,20 +148,27 @@
   .mainframe {
     .main {
       .title {
+        padding-top: 20px;
         .slidecontainer {
-          .slider_menu {        
+          .slider_menu {    
+            flex-direction: column;    
             .slider {
-              width: 100px;
+              width: 240px;
+            }
+            .quantity_btn {
+              margin-top: 60px;
             }
           }
         }
       } 
 
       .content {
+        padding-left: 2px;
+        padding-right: 2px;
         .box {
-          min-width: 200px;
+          min-width: 175px;
           width: auto;
-          max-width: 220px;
+          max-width: 175px;
         }
       }
       
