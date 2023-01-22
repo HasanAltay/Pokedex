@@ -155,7 +155,7 @@
   flex-direction: column;
   display: none;
   position: fixed;
-  top: 0;
+  top: 23px;
   left: 50% 50%;
   max-width: 890px;
   width: 100%;
@@ -272,46 +272,42 @@
   display: flex;
   justify-content: flex-start;
   width: 100%;
-  z-index: 99;
+  z-index: 103;
   transform: scale(107%);
   transform-origin: top center;
 }
 .loader .box_main .box_counter {
   position: absolute;
   left: 50% 50%;
-  top: 0;
+  bottom: 0;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   -webkit-animation-name: disappear_counter;
           animation-name: disappear_counter;
-  -webkit-animation-duration: 500ms;
-          animation-duration: 500ms;
+  -webkit-animation-duration: 1200ms;
+          animation-duration: 1200ms;
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  z-index: 100;
+  z-index: 102;
 }
 @-webkit-keyframes disappear_counter {
   0% {
-    filter: opacity(100%);
-    top: 0;
+    bottom: 0;
   }
   100% {
-    filter: opacity(50%);
-    top: 1400px;
+    bottom: -140px;
   }
 }
 @keyframes disappear_counter {
   0% {
-    filter: opacity(100%);
-    top: 0;
+    bottom: 0;
   }
   100% {
-    filter: opacity(50%);
-    top: 1400px;
+    bottom: -140px;
   }
 }
 .loader .box_main .loader_counter {
@@ -475,7 +471,7 @@
     padding-bottom: 15px;
   }
   .mainframe .main .title {
-    padding-top: 90px;
+    padding-top: 10px;
     padding-bottom: 30px;
   }
   .mainframe .main .title .slidecontainer .slider_menu .slider {
@@ -518,8 +514,8 @@
   }
   .infos .text {
     padding-top: 70px;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 30px;
+    padding-left: 30px;
   }
 }
 @media (max-width: 375px) {
@@ -580,12 +576,11 @@
 }
 
 #demo {
-  position: absolute;
-  top: 33px;
   color: grey;
-  left: 50%;
   font-size: 20px;
-  letter-spacing: -1px;
+  letter-spacing: 1px;
+  color: rgba(0, 0, 0, 0.6);
+  text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.397), 0px -5px 35px rgba(255, 255, 255, 0.3);
 }
 
 .slidecontainer {
@@ -599,6 +594,7 @@
 
 /* The slider itself */
 .slider {
+  margin-top: 33px;
   -webkit-appearance: none;
   /* Override default CSS styles */
   -moz-appearance: none;
@@ -890,7 +886,7 @@ and -moz- (Firefox) to override default look) */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 199;
+  z-index: 100;
   background-color: white;
 }
 .navi .navi_btn {
@@ -904,7 +900,7 @@ and -moz- (Firefox) to override default look) */
   transform: scale(92%);
   transition: all 125ms ease-in-out;
 }
-.navi .burger:hover .drop_down, .navi .drop_down_back {
+.navi .burger:hover .drop_down {
   display: flex;
 }
 .navi .drop_down {
@@ -937,6 +933,9 @@ and -moz- (Firefox) to override default look) */
   box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
   border-radius: 12px;
   cursor: pointer;
+}
+.navi .drop_down div:hover:active .drop_down {
+  display: none;
 }
 
 .quantity_btn {
@@ -1071,6 +1070,16 @@ body {
 .dflex {
   display: flex;
   align-items: baseline;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .pokedex_logo {

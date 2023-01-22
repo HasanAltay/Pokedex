@@ -8,7 +8,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 199;
+  z-index: 100;
   background-color: white;
 
   .navi_btn {
@@ -24,7 +24,7 @@
     }
   }
 
-  .burger:hover .drop_down, .drop_down_back {
+  .burger:hover .drop_down {
     display: flex;
   }
 
@@ -60,6 +60,10 @@
           rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
           border-radius: 12px;
           cursor: pointer;
+
+        &:active .drop_down {
+          display: none;
+        }
         }
       }
   }

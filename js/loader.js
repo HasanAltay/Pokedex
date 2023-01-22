@@ -22,7 +22,7 @@ function loader() {
 
       setTimeout(() => {
         box_counter.style.display = 'none';
-      }, 1000);
+      }, 4000);
 
       }    
   }, 100);

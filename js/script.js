@@ -1,5 +1,5 @@
 let itemsQuantity = [50];
-let resource = ['https://pokeapi.co/api/v2/pokemon?limit='+ itemsQuantity +'&offset=0'];
+let resource = ['https://pokeapi.co/api/v2/pokemon?limit=' + itemsQuantity + '&offset=0'];
 let pokemonNames = [];
 let pokemonURLs = [];
 let pokemonTypes1 = [];
@@ -78,8 +78,10 @@ function addTitleItems() {
         <!-- <img class="pokedex_logo" src="./img/poke_logo.png" alt="Pokedex-Logo"> -->
         <!-- <div class="dflex"><h2>Pokédex&nbsp;&nbsp;</h2><h3>(${pokemonNames.length} Items)</h3></div> -->
         <div class="slider_menu">
-            <a id="demo"></a>
-            <input type="range" min="50" max="600" step="10" value="${sliderRange[0]}" id="myRange" class="slider">
+            <div class="center">
+                <input type="range" min="50" max="600" step="10" value="${sliderRange[0]}" id="myRange" class="slider">
+                <a id="demo"></a>
+            </div>
             <button class="quantity_btn" onclick="quantity(sliderRange[0]); fetchLoader()"><b>Fetch!</b></button>
         </div>
     </div>
@@ -88,7 +90,7 @@ function addTitleItems() {
     var output = document.getElementById("demo");
     output.innerHTML = slider.value; // Display the default slider value
     // Update the current slider value (each time you drag the slider handle)
-    slider.oninput = function() {
+    slider.oninput = function () {
         output.innerHTML = this.value;
         sliderRange = [];
         sliderRange.push(output.innerHTML);
@@ -107,10 +109,10 @@ function quantity(q) {
     pokemonTypes1 = [];
     pokemonTypes2 = [];
     pokemonSprites = [];
-    pokemonColor = [];    
+    pokemonColor = [];
     itemsQuantity = [];
     resource = [];
     itemsQuantity.push(q);
-    resource = ['https://pokeapi.co/api/v2/pokemon?limit='+ itemsQuantity +'&offset=0'];
+    resource = ['https://pokeapi.co/api/v2/pokemon?limit=' + itemsQuantity + '&offset=0'];
     render();
 }

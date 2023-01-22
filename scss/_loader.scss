@@ -77,7 +77,7 @@
       display: flex;
       justify-content: flex-start;
       width: 100%;
-      z-index: 99;
+      z-index: 103;
       transform: scale(107%);
       transform-origin: top center;
     }
@@ -85,26 +85,24 @@
     .box_counter {
       position: absolute;
       left: 50% 50%;
-      top: 0;
+      bottom: 0;
       width: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
       animation-name: disappear_counter;
-      animation-duration: 500ms;
+      animation-duration: 1200ms;
       animation-play-state: paused;
       animation-fill-mode: forwards;
-      z-index: 100;
+      z-index: 102;
 
       @keyframes disappear_counter {
         0% {
-          filter: opacity(100%);
-          top: 0;
+          bottom: 0;
         }
 
         100% {
-          filter: opacity(50%);
-          top: 1400px;
+          bottom: -140px;
         }
       }
 

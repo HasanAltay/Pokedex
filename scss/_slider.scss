@@ -6,12 +6,12 @@
 }
 
 #demo {
-  position: absolute;
-  top: 33px;
   color: grey;
-  left: 50%;
   font-size: 20px;
-  letter-spacing: -1px;
+  letter-spacing: 1px;
+  color: rgba(0,0,0,0.6);
+  text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.397),
+                   0px -5px 35px rgba(255,255,255,0.3);
 }
 
 .slidecontainer {
@@ -26,6 +26,7 @@
 
 /* The slider itself */
 .slider {
+  margin-top: 33px;
   -webkit-appearance: none;
   /* Override default CSS styles */
   appearance: none;
