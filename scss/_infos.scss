@@ -7,15 +7,18 @@
   left: 50% 50%;
   max-width: 900px;
   margin-left: 10px;
+
   width: 100%;
   height: 100%;
   background-color: rgb(255, 255, 255);
   z-index: 99;
+  overflow: scroll;
 
   .text {
-    padding-top: 120px;
+    padding-top: 80px;
     padding-left: 100px;
     padding-right: 100px;
+    padding-bottom: 40px;
 
     span {
       display: flex;

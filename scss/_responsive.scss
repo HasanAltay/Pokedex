@@ -62,14 +62,20 @@
 
 @media (max-width: 755px) {
 
-  .loader {
-    .box_counter {
-      .box_sizing {
-        .loader_counter {
-          margin-top: 40px;
-          font-size: 24px;
-        }
-      }
+  // .loader {
+  //   .box_counter {
+  //     .box_sizing {
+  //       .loader_counter {
+  //         margin-top: 140px;
+  //         font-size: 40px;
+  //       }
+  //     }
+  //   }
+  // }
+
+  .fetch_loader {
+    .fetch_loader_counter {
+      font-size: 40px;
     }
   }
 
@@ -79,7 +85,7 @@
       border-radius: unset;
 
       .navi {
-        padding-top: 15px;
+        padding-top: 40px;
         padding-bottom: 15px;
       }
 
@@ -112,6 +118,7 @@
       }
       
       .details {
+        margin-left: unset;
         .details_background {
           .details_top_frame {
             margin-top: unset;
@@ -159,7 +166,7 @@
   .mainframe {
     .main {
       .title {
-        padding-top: 20px;
+        padding-top: 0px;
         .slidecontainer {
           .slider_menu {    
             flex-direction: column;    
@@ -167,7 +174,7 @@
               width: 240px;
             }
             .quantity_btn {
-              margin-top: 60px;
+              margin-top: 40px;
             }
           }
         }
@@ -177,9 +184,9 @@
         padding-left: 2px;
         padding-right: 2px;
         .box {
-          min-width: 175px;
+          min-width: 170px;
           width: auto;
-          max-width: 175px;
+          max-width: 170px;
         }
       }
       

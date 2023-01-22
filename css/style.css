@@ -163,11 +163,13 @@
   height: 100%;
   background-color: rgb(255, 255, 255);
   z-index: 99;
+  overflow: scroll;
 }
 .infos .text {
-  padding-top: 120px;
+  padding-top: 80px;
   padding-left: 100px;
   padding-right: 100px;
+  padding-bottom: 40px;
 }
 .infos .text span {
   display: flex;
@@ -357,7 +359,7 @@
   position: absolute;
   top: 50% 50%;
   left: 50% 50%;
-  width: 360px;
+  max-width: 260px;
   -webkit-animation-name: rotate;
           animation-name: rotate;
   -webkit-animation-duration: 3600ms;
@@ -395,7 +397,7 @@
   align-items: center;
   text-align: center;
   justify-content: center;
-  font-size: 5vw;
+  font-size: 4.5vw;
   font-weight: bold;
   text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
   background-color: #FF9A60;
@@ -570,9 +572,8 @@
   }
 }
 @media (max-width: 755px) {
-  .loader .box_counter .box_sizing .loader_counter {
-    margin-top: 40px;
-    font-size: 24px;
+  .fetch_loader .fetch_loader_counter {
+    font-size: 40px;
   }
   .mainframe {
     max-width: 100%;
@@ -581,7 +582,7 @@
     border-radius: unset;
   }
   .mainframe .main .navi {
-    padding-top: 15px;
+    padding-top: 40px;
     padding-bottom: 15px;
   }
   .mainframe .main .title {
@@ -602,6 +603,9 @@
     min-width: 160px;
     width: auto;
     max-width: 170px;
+  }
+  .mainframe .main .details {
+    margin-left: unset;
   }
   .mainframe .main .details .details_background .details_top_frame {
     margin-top: unset;
@@ -634,7 +638,7 @@
 }
 @media (max-width: 375px) {
   .mainframe .main .title {
-    padding-top: 20px;
+    padding-top: 0px;
   }
   .mainframe .main .title .slidecontainer .slider_menu {
     flex-direction: column;
@@ -643,16 +647,16 @@
     width: 240px;
   }
   .mainframe .main .title .slidecontainer .slider_menu .quantity_btn {
-    margin-top: 60px;
+    margin-top: 40px;
   }
   .mainframe .main .content {
     padding-left: 2px;
     padding-right: 2px;
   }
   .mainframe .main .content .box {
-    min-width: 175px;
+    min-width: 170px;
     width: auto;
-    max-width: 175px;
+    max-width: 170px;
   }
   .mainframe .main .details .details_background .details_top_frame {
     padding-top: 0px;
