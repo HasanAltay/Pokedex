@@ -57,6 +57,7 @@ body {
   flex-direction: column;
   background-color: white;
   align-items: center;
+  position: relative; /// merk
 
 }
 
@@ -73,7 +74,7 @@ body {
   align-items: baseline;
 }
 
-.center {
+.center_pos {
   display: flex;
   justify-content: center;
   flex-direction: column;

@@ -78,7 +78,7 @@ function addTitleItems() {
         <!-- <img class="pokedex_logo" src="./img/poke_logo.png" alt="Pokedex-Logo"> -->
         <!-- <div class="dflex"><h2>Pokédex&nbsp;&nbsp;</h2><h3>(${pokemonNames.length} Items)</h3></div> -->
         <div class="slider_menu">
-            <div class="center">
+            <div class="center_pos">
                 <input type="range" min="50" max="600" step="10" value="${sliderRange[0]}" id="myRange" class="slider">
                 <a id="demo"></a>
             </div>

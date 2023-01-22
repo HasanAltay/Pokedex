@@ -1,13 +1,26 @@
+@media (min-width: 1024px) {
+  .fetch_loader {
+    .fetch_loader_counter {
+      font-size: 55px;
+    }
+  }
+
+  .loader_counter {
+    font-size: 55px;
+  }
+}
+
+
+
+
 @media (max-width: 1024px) {
   .loader .box_main .box_expanding {
     -ms-overflow-style: none;
     scrollbar-width: none; /* for Internet Explorer, Edge */
     overflow-y: scroll; /* for Firefox */
-
     &::-webkit-scrollbar {
       display: none; /* for Chrome, Safari, and Opera */
   }
-
 }
 
   .mainframe {
@@ -21,8 +34,6 @@
       }
     }
   }
-
-
 }
 
 @media (max-width: 825px) {

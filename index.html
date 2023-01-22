@@ -22,12 +22,8 @@
 
         <div id="loader" class="loader">
 
-
             <div class="box_main" id="box_main">
                 <div class="box_counter" id="box_counter">
-                    <!-- <div class="box_color">
-                        <img src="./img/crt.png" class="crt">
-                    </div> -->
                     <img src="./img/pokemox_circle.png" class="pokemox_circle">
                     <a id="loader_count" class="loader_counter"></a>
                 </div>
@@ -44,12 +40,11 @@
                             <div id="navi_btn_2" class="burger">
                                 <img src="./img/menu.png" class="navi_btn">
                                 <div class="drop_down" id="drop_down">
-                                    <div onclick="scrollToTop();showInfos();">About</div>
+                                    <div onclick="scrollToTop();showInfos()">About</div>
+                                    <div onclick="closeBrowserTab()">Exit</div>
                                 </div>
-
                             </div>
                         </div>
-
                         <div class="title" id="title"></div>
                         <div class="content" id="content"></div>
                         <div class="details" id="details"></div>
@@ -118,28 +113,18 @@
                             <img class="up_arrow" src="./img/up-arrow.png"
                                 onclick="scrollToTop()">
                         </div>
-
                     </div>
                 </div>
-
-
-
-
-
-
+                <div class="white_box"></div>
                 <img class="box_bottom" src="./img/box_bottom.png"
                     id="box_bottom">
             </div>
-
         </div>
 
         <div class="fetch_loader" id="fetch_loader">
             <a id="loader_counter_fetch" class="fetch_loader_counter"></a>
-            <img id="pokeball_loader" class="pokeball_loader"
-                src="./img/loader.png">
+            <img id="pokeball_loader" class="pokeball_loader" src="./img/loader.png">
         </div>
 
-
     </body>
-
 </html>

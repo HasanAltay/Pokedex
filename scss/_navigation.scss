@@ -28,6 +28,10 @@
     display: flex;
   }
 
+  .burger:active .drop_down {
+    display: flex;
+  }
+
   .drop_down {
     display: none;
     flex-direction: column;

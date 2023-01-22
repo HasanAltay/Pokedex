@@ -20,6 +20,7 @@
     animation-duration: 2s;
     animation-play-state: paused;
     animation-fill-mode: forwards;
+
     @keyframes background_disappear {
       0% {
         filter: opacity(100%);
@@ -38,13 +39,13 @@
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
-    max-width: 900px; 
+    max-width: 900px;
 
     .box_top {
       display: flex;
       justify-content: baseline;
       width: 100%;
-      z-index: 93!important;
+      z-index: 93 !important;
       transform: scale(107%);
       transform-origin: bottom center;
     }
@@ -52,7 +53,8 @@
     .box_expanding {
       display: flex;
       justify-content: center;
-      height: fit-content;
+      height: 100vh;
+      max-height: 100vh;
       width: 100%;
       animation-name: open_up;
       animation-duration: 3000ms;
@@ -105,145 +107,46 @@
           bottom: -140px;
         }
       }
+    }
 
-      // .box_color {
-      //   margin-top: 60px;
-      //   width: 23%;
+    .loader_counter {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 10%;
+      height: 10%;
+      letter-spacing: 1px;
+      margin-top: 12%;
+      margin-left: 0.5%;
+      left: 50% 50%;
+      text-align: center;
+      color: #F1DF00;
+      font-size: 5vw;
+      font-weight: bolder;
+      text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+        0px 8px 13px rgba(0, 0, 0, 0.1),
+        0px 18px 23px rgba(0, 0, 0, 0.1);
+      z-index: 81;
+    }
 
-      //   .crt {
-      //     background-image: url(./img/crt.png);
-      //     z-index: 80;
-      //     border-radius: 100%;
-      //     width: 100%;
-      //   }
-
-      //   position: absolute;
-      //   display: flex;
-      //   align-items: center;
-      //   justify-content: center;
-      //   left: 50% 50%;
-      //   top: auto;
-      //   border-radius: 100%;
-
-      //   background-color: #A5C000;
-      //   z-index: 80;
-      //   animation-name: color_change;
-      //   animation-duration: 2500ms;
-      //   animation-iteration-count: infinite;
-      //   animation-fill-mode: forwards;
-
-      //   @keyframes color_change {
-      //     0% {
-      //         background-color: #DB8711;
-      //       }
-          
-      //       6% {
-      //         background-color: #E15D58;
-      //       }
-          
-      //       12% {
-      //         background-color: #8080FA;
-      //       }
-          
-      //       18% {
-      //         background-color: #EAD900;
-      //       }
-          
-      //       24% {
-      //         background-color: #A5C000;
-      //       }
-          
-      //       30% {
-      //         background-color: #A5AC70;
-      //       }
-          
-      //       36% {
-      //         background-color: #AC81FA;
-      //       }
-          
-      //       42% {
-      //         background-color: #962BA8;
-      //       }
-          
-      //       48% {
-      //         background-color: #E2568D;
-      //       }
-          
-      //       54% {
-      //         background-color: #AFA700;
-      //       }
-          
-      //       60% {
-      //         background-color: #D5C754;
-      //       }
-          
-      //       66% {
-      //         background-color: #6A5A46;
-      //       }
-          
-      //       72% {
-      //         background-color: #714E9E;
-      //       }
-          
-      //       78% {
-      //         background-color: #BAB5D3;
-      //       }
-          
-      //       84% {
-      //         background-color: #AC3627;
-      //       }
-          
-      //       90% {
-      //         background-color: #A9D7D9;
-      //       }
-          
-      //       96% {
-      //         background-color: #7C00FF;
-      //       }
-          
-      //       100% {
-      //         background-color: #BA0087;
-      //       }
-      //   }
-
-      }
-
-      .loader_counter {
-        position: absolute;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        width: 10%;
-        height: 10%;
-        letter-spacing: 1px;
-        margin-top: 12%;
-        margin-left: 0.5%;
-        left: 50% 50%;
-        text-align: center;
-        color: #F1DF00;
-        font-size: 5vw;
-        font-weight: bolder;
-        text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
-          0px 8px 13px rgba(0, 0, 0, 0.1),
-          0px 18px 23px rgba(0, 0, 0, 0.1);
-          z-index: 81;
-      }
-
-      .pokemox_circle {
-        width: 100%;
-        height: 100%;
-        transform: scale(101%);
-        transform-origin: center center;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        justify-content: center;
-        z-index: 80;
-      }
+    .pokemox_circle {
+      width: 100%;
+      height: 100%;
+      transform: scale(101%);
+      transform-origin: center center;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      z-index: 80;
     }
   }
+}
 
+
+// loader after pressing FETCH Button!
 
 .fetch_loader {
   position: fixed;
@@ -254,29 +157,25 @@
   justify-content: center;
   width: 100%;
   height: 100%;
-  z-index: 90;
+  z-index: 999;
   background-color: #00000028;
 
   .pokeball_loader {
-    transform: scale(40%);
     position: absolute;
     top: 50% 50%;
     left: 50% 50%;
-    width: 500px;
+    width: 360px;
     animation-name: rotate;
     animation-duration: 3600ms;
     animation-iteration-count: infinite;
     animation-play-state: paused;
     animation-fill-mode: forwards;
-
     @keyframes rotate {
       0% {
-        transform: scale(40%);
         transform: rotate(0deg);
       }
 
       100% {
-        transform: scale(40%);
         transform: rotate(360deg);
       }
     }
@@ -292,7 +191,7 @@
     align-items: center;
     text-align: center;
     justify-content: center;
-    font-size: 72px;
+    font-size: 5vw;
     font-weight: bold;
     text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
       0px 8px 13px rgba(0, 0, 0, 0.1),
@@ -302,18 +201,84 @@
     width: 200px;
     height: 200px;
     padding: 1px;
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
-      rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
-      rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
-      rgba(0, 0, 0, 0.06) 0px 2px 1px,
-      rgba(0, 0, 0, 0.09) 0px 4px 2px,
-      rgba(0, 0, 0, 0.09) 0px 8px 4px,
-      rgba(0, 0, 0, 0.09) 0px 16px 8px,
-      rgba(0, 0, 0, 0.09) 0px 32px 16px;
     animation-name: color_change;
     animation-duration: 2500ms;
     animation-iteration-count: infinite;
     animation-play-state: paused;
     animation-fill-mode: forwards;
+
+    @keyframes color_change {
+      0% {
+        background-color: #DB8711;
+      }
+
+      6% {
+        background-color: #E15D58;
+      }
+
+      12% {
+        background-color: #8080FA;
+      }
+
+      18% {
+        background-color: #EAD900;
+      }
+
+      24% {
+        background-color: #A5C000;
+      }
+
+      30% {
+        background-color: #A5AC70;
+      }
+
+      36% {
+        background-color: #AC81FA;
+      }
+
+      42% {
+        background-color: #962BA8;
+      }
+
+      48% {
+        background-color: #E2568D;
+      }
+
+      54% {
+        background-color: #AFA700;
+      }
+
+      60% {
+        background-color: #D5C754;
+      }
+
+      66% {
+        background-color: #6A5A46;
+      }
+
+      72% {
+        background-color: #714E9E;
+      }
+
+      78% {
+        background-color: #BAB5D3;
+      }
+
+      84% {
+        background-color: #AC3627;
+      }
+
+      90% {
+        background-color: #A9D7D9;
+      }
+
+      96% {
+        background-color: #7C00FF;
+      }
+
+      100% {
+        background-color: #BA0087;
+      }
+    }
   }
 }

@@ -34,7 +34,6 @@ function fetchLoader() {
   let fetch_loader = document.getElementById('fetch_loader');
   let loader_counter_fetch = document.getElementById('loader_counter_fetch');
   let pokeball_loader = document.getElementById('pokeball_loader');
-
   fetch_loader.style.display = 'flex';
   loader_counter_fetch.style.animationPlayState = 'running';
   pokeball_loader.style.animationPlayState = 'running';
@@ -49,7 +48,7 @@ function fetchLoader() {
         loader_counter_fetch.style.animationPlayState = 'paused';
         pokeball_loader.style.animationPlayState = 'paused';
         fetch_loader.style.display = 'none';
-      }, 1600);
+      }, 1000);
   
     }    
 }, 100);

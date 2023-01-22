@@ -26,3 +26,8 @@ function scrollToTop() {
   let container = document.getElementById('box_expanding');
   container.scrollTo(0, 0);
 }
+
+
+function closeBrowserTab() {
+  window.close('./index.html');
+}
