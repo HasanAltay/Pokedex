@@ -13,7 +13,7 @@ function loader() {
       setTimeout(() => {
         box_expanding.style.animationPlayState = 'running';
         loader_count.style.animationIterationCount = 'inherit';
-      }, 2200);
+      }, 1900);
 
       setTimeout(() => {
         loader_count.style.animationPlayState = 'paused';

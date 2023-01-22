@@ -3,14 +3,14 @@ function openDetails(i) {
     selected.push(i);
     let details = document.getElementById('details');
     details.style.display = "block";
-    let boxColor = document.getElementById('box'+ i).style.backgroundColor;
+    let boxColor = document.getElementById('box' + i).style.backgroundColor;
     document.getElementById('details').innerHTML = /*html*/ `
     <div class="details_background" id="details_bg">
                 <div class="details_top_frame" id="details_top">
                     <div class="details_infos">
                         <div class="details_title">
                             <span>${capitalize(pokemonNames[i])}</span>
-                            <div class="counter_details" id="counter">#${i+1}</div>
+                            <div class="counter_details" id="counter">#${(i + 1).toString().padStart(3, '0')}</div>
                         </div>
                         <div class="flex">
                             <div class="details_abilities">

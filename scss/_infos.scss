@@ -1,22 +1,25 @@
 .infos {
   display: flex;
   flex-direction: column;
-  padding-top: 120px;
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
-  left: 0;
-  max-width: 940px;
+  left: 50% 50%;
+  max-width: 890px;
+  width: 100%;
   height: 100%;
-  background-color: rgb(194, 158, 158);
-  z-index: 80;
+  background-color: rgb(255, 255, 255);
+  z-index: 99;
 
   .text {
-    display: flex;
-    flex-direction: column;    
+    padding-top: 120px;
     padding-left: 100px;
     padding-right: 100px;
-    line-height: 120%;
-  }
 
+    span {
+      display: flex;
+      flex-direction: column;
+      line-height: 130%;
+    }
+  }
 }

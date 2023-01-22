@@ -1,5 +1,4 @@
 @import '../scss/fonts';
-@import '../scss/drop_down';
 @import '../scss/infos';
 @import '../scss/loader';
 @import '../scss/responsive';
@@ -63,7 +62,7 @@ body {
 
 .title {
   padding-left: 20px;
-  padding-top: 100px;
+  margin-top: 100px;
   padding-right: 20px;
   padding-bottom: 30px;
   letter-spacing: 1px;

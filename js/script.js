@@ -58,7 +58,7 @@ function addBoxes(i) {
         <b class="poke_names">${capitalize(pokemonNames[i])}</b>
         <div id="ability1" class="ability-style">${capitalize(pokemonTypes1[i])}</div>
         <div id="ability2" class="ability-style">${capitalize(pokemonTypes2[i])}</div>
-        <div class="counter" id="counter">#${i+1}</div>
+        <div class="counter" id="counter">#${(i + 1).toString().padStart(3, '0')}</div>
         <img class="ball_box" src="./img/pokeball.webp">
     </div>
     `;
