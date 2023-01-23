@@ -19,6 +19,7 @@ function closeWindow() {
 function showInfos() {
  let infos = document.getElementById('infos');
  infos.style.display = 'flex';
+ renderAbout();
 }
 
 

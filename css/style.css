@@ -188,37 +188,6 @@
   height: 100%;
   z-index: 90;
 }
-.loader .background_gradient {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -webkit-animation-name: background_disappear;
-          animation-name: background_disappear;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-@-webkit-keyframes background_disappear {
-  0% {
-    filter: opacity(100%);
-  }
-  100% {
-    filter: opacity(0%);
-  }
-}
-@keyframes background_disappear {
-  0% {
-    filter: opacity(100%);
-  }
-  100% {
-    filter: opacity(0%);
-  }
-}
 .loader .box_main {
   position: relative;
   display: flex;
