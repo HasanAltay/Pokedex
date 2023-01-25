@@ -36,6 +36,10 @@
   }
 }
 
+.details {
+  margin-left: unset!important;
+}
+
 @media (max-width: 825px) {
   .slidecontainer {
     flex-direction: column;
@@ -162,6 +166,10 @@
 }
 
 @media (max-width: 375px) {
+
+  .evolution_container {
+    justify-content: space-between!important;
+  }
 
   .mainframe {
     .main {

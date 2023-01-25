@@ -17,6 +17,7 @@ async function render() {
         let pokeURL = datasheet[i]['url'];
         addToArrays(pokeName, pokeURL);
         await getInfosFromUrls(i);
+        // await fetchEvolutionChain(i);
         addBoxes(i);
     }
 }

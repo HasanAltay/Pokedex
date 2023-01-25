@@ -3,7 +3,6 @@ function loader() {
   let loader_count = document.getElementById('loader_count');
   let box_expanding = document.getElementById('box_expanding');
   let box_counter = document.getElementById('box_counter');
-
   loader.style.display = 'flex';
   loader_count.style.animationPlayState = 'running';
 
@@ -30,7 +29,6 @@ function loader() {
 
 
 function fetchLoader() {
-
   let fetch_loader = document.getElementById('fetch_loader');
   let loader_counter_fetch = document.getElementById('loader_counter_fetch');
   let pokeball_loader = document.getElementById('pokeball_loader');

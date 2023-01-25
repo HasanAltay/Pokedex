@@ -54,7 +54,8 @@ async function getBreedingStats(responseJSON) {
         let egg_group_1 = responseSP_JSON['egg_groups'][0]['name']; eggGroup1.push(egg_group_1);
         eggGroup2.push('-');
     }
-    getEvolutionDetails(responseSP_JSON);
+    // getEvolutionDetails(responseSP_JSON);
+    displayEvolution(responseSP_JSON);
 }
 
 

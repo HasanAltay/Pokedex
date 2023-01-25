@@ -9,29 +9,6 @@
   height: 100%;
   z-index: 90;
 
-  // .background_gradient {
-  //   position: fixed;
-  //   top: 0;
-  //   left: 0;
-  //   width: 100%;
-  //   height: 100%;
-  //   // background: linear-gradient(to right, #3DB7FF, #EBA055);
-  //   animation-name: background_disappear;
-  //   animation-duration: 2s;
-  //   animation-play-state: paused;
-  //   animation-fill-mode: forwards;
-
-  //   @keyframes background_disappear {
-  //     0% {
-  //       filter: opacity(100%);
-  //     }
-
-  //     100% {
-  //       filter: opacity(0%);
-  //     }
-  //   }
-  // }
-
   .box_main {
     position: relative;
     display: flex;
@@ -92,21 +69,21 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      animation-name: disappear_counter;
-      animation-duration: 1200ms;
-      animation-play-state: paused;
-      animation-fill-mode: forwards;
+      // animation-name: disappear_counter;
+      // animation-duration: 1200ms;
+      // animation-play-state: paused;
+      // animation-fill-mode: forwards;
       z-index: 102;
 
-      @keyframes disappear_counter {
-        0% {
-          bottom: 0;
-        }
+      // @keyframes disappear_counter {
+      //   0% {
+      //     bottom: 0;
+      //   }
 
-        100% {
-          bottom: -140px;
-        }
-      }
+      //   100% {
+      //     bottom: -140px;
+      //   }
+      // }
     }
 
     .loader_counter {
@@ -144,7 +121,6 @@
     }
   }
 }
-
 
 // loader after pressing FETCH Button!
 
