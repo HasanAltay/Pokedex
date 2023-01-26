@@ -17,18 +17,18 @@
   /* Firefox */
   scrollbar-color: #ffffff #ffffff;
 
-  ::-webkit-scrollbar {
+  &::-webkit-scrollbar {
     /* Chrome, Edge, and Safari */
     width: 10px;
 
   }
 
-  ::-webkit-scrollbar-track {
+  &::-webkit-scrollbar-track {
     background-color: #ffffff;
     margin-top: 90px;
   }
 
-  ::-webkit-scrollbar-thumb {
+  &::-webkit-scrollbar-thumb {
     background-color: #EECB00;
     border-radius: 10px;
     border: 0px solid #000000;
