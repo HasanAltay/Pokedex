@@ -3,8 +3,6 @@
   flex-direction: column;
   display: none;
   position: fixed;
-  // top: 23px;
-  // left: 50% 50%;
   top: calc(50% + 23px);
   left: 50%;
   transform: translate(-50%,-50%);
@@ -16,7 +14,7 @@
   overflow: scroll;
 
   .text {
-    padding-top: 80px;
+    padding-top: 100px;
     padding-left: 100px;
     padding-right: 100px;
     padding-bottom: 40px;

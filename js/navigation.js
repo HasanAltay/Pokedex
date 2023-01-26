@@ -21,7 +21,14 @@ function showInfos() {
   let infos = document.getElementById('infos');
   infos.style.display = 'flex';
   renderAbout();
+  hideDropdown();
 }
+
+
+// function hideDropdown(){
+//   let drop_down = document.getElementById('drop_down');
+//   drop_down.classList.add("hidden");
+// }
 
 
 function scrollToTop() {
@@ -36,7 +43,6 @@ function closeBrowserTab() {
 
 
 function addTitleItems() {
-
   document.getElementById('title').innerHTML = /*html*/`
   <div class="slidecontainer">
       <div class="slider_menu">
@@ -75,7 +81,6 @@ function sliderPositionCalibrate() {
   slider_position = sliderRange[0]; 
   output.innerHTML = slider_position;
   output.style.left = `${((slider_position -50) / 550) * 91.5}%`;
-  console.log(output.style.left);
   }
 
 

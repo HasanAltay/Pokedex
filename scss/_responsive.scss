@@ -53,6 +53,10 @@
 
 @media (max-width: 755px) {
 
+  .drop_down {
+    top: 80px!important;
+  }
+
   .fetch_loader {
     .fetch_loader_counter {
       font-size: 40px;
@@ -125,7 +129,7 @@
 
   .infos {
     .text {
-      padding-top: 70px;
+      padding-top: 90px;
       padding-right: 30px;
       padding-left: 30px;
     }
@@ -146,13 +150,10 @@
   .mainframe {
     .main {
       .title {
-        padding-top: 0px;
+        padding-top: 50px;
         .slidecontainer {
           .slider_menu {    
             flex-direction: column;    
-            .slider {
-              width: 240px;
-            }
             .quantity_btn {
               margin-top: 40px;
             }
