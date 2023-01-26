@@ -10,9 +10,6 @@
   }
 }
 
-
-
-
 @media (max-width: 1024px) {
   .loader .box_main .box_expanding {
     -ms-overflow-style: none;
@@ -41,16 +38,6 @@
 }
 
 @media (max-width: 825px) {
-  .slidecontainer {
-    flex-direction: column;
-    margin-bottom: 30px;
-    .pokedex_logo {
-      margin-bottom: 30px;
-    }
-    .slider_menu {
-      margin-right: unset;
-    }
-  }
 
   .loader {
     .box_counter {
@@ -65,17 +52,6 @@
 }
 
 @media (max-width: 755px) {
-
-  // .loader {
-  //   .box_counter {
-  //     .box_sizing {
-  //       .loader_counter {
-  //         margin-top: 140px;
-  //         font-size: 40px;
-  //       }
-  //     }
-  //   }
-  // }
 
   .fetch_loader {
     .fetch_loader_counter {
@@ -96,15 +72,6 @@
       .title {
         padding-top: 10px;
         padding-bottom: 30px;
-  
-        .slidecontainer {
-
-          .slider_menu {        
-            .slider {
-              width: 200px;
-            }
-          }
-        }
       } 
 
       .content {
@@ -169,6 +136,11 @@
 
   .evolution_container {
     justify-content: space-between!important;
+
+    div {
+      padding-left: unset!important;
+      padding-right: unset!important;
+    }
   }
 
   .mainframe {

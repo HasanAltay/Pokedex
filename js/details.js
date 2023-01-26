@@ -43,7 +43,6 @@ function about() {
             <span onclick="about()" id="about" style="border-bottom: blue solid"><b>About</b></span>
             <span onclick="base(),baseContent()" id="base" style="color: grey">Base Stats</span>
             <span onclick="evolution(),displayEvolutionChain()" id="evolution" style="color: grey">Evolution</span>
-            <!-- <span onclick="moves()" id="moves" style="color: grey">Moves</span> -->
         </div>
         <div id="content_details_bottom"></div>
     `;
@@ -57,7 +56,6 @@ function base() {
         <span onclick="about()" id="about" style="color: grey">About</span>
         <span onclick="base(),baseContent()" id="base" style="border-bottom: blue solid"><b>Base Stats</b></span>
         <span onclick="evolution(),displayEvolutionChain()" id="evolution" style="color: grey">Evolution</span>
-        <!-- <span onclick="moves()" id="moves" style="color: grey">Moves</span> -->
     </div>
     <div id="content_details_bottom"></div>
 `;
@@ -70,23 +68,9 @@ function evolution() {
         <span onclick="about()" id="about" style="color: grey">About</span>
         <span onclick="base(),baseContent()" id="base" style="color: grey">Base Stats</span>
         <span onclick="evolution(),displayEvolutionChain()" id="evolution" style="border-bottom: blue solid"><b>Evolution</b></span>
-        <!-- <span onclick="moves()" id="moves" style="color: grey">Moves</span> -->
     </div>
     <div id="content_details_bottom"></div>
 `;
 }
-
-
-// function moves() {
-//     document.getElementById('details_bottom').innerHTML = /*html*/`
-//     <div class="specs_navi">
-//         <span onclick="about()" id="about" style="color: grey">About</span>
-//         <span onclick="base(),baseContent()" id="base" style="color: grey">Base Stats</span>
-//         <span onclick="evolution(),displayEvolutionChain()" id="evolution" style="color: grey">Evolution</span>
-//         <span onclick="moves()" id="moves" style="border-bottom: blue solid"><b>Moves</b></span>
-//     </div>
-//     <div id="content_details_bottom"></div>
-// `;
-// }
 
 

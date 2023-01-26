@@ -10,27 +10,29 @@
   align-items: center;
   z-index: 100;
   background-color: white;
-
   .navi_btn {
+    display: flex;
     width: 40px;
     cursor: pointer;
     padding-left: 30px;
     padding-right: 25px;
     transition: all 125ms ease-in-out;
-
     &:hover {
       transform: scale(92%);
       transition: all 125ms ease-in-out;
     }
   }
 
+
   .burger:hover .drop_down {
     display: flex;
   }
 
+
   .burger:active .drop_down {
     display: flex;
   }
+
 
   .drop_down {
     display: none;
@@ -72,7 +74,6 @@
       }
   }
 }
-
 
 
 .quantity_btn {

@@ -16,15 +16,19 @@ function loader() {
 
       setTimeout(() => {
         loader_count.style.animationPlayState = 'paused';
-        box_counter.style.animationPlayState = 'running';
+
       }, 1900);
 
       setTimeout(() => {
+        box_counter.style.animationPlayState = 'running';
+      }, 3900);
+
+      setTimeout(() => {
         box_counter.style.display = 'none';
-      }, 4000);
+      }, 4300);
 
       }    
-  }, 100);
+  }, 90);
 }
 
 
@@ -50,4 +54,5 @@ function fetchLoader() {
   
     }    
 }, 100);
+
 }

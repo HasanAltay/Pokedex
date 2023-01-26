@@ -26,7 +26,7 @@ function baseContent() {
           <td style="text-align:right">${hps[selected[0]]}</td>
           <td class="bar_width">
               <div class="bar_background">
-                  <div class="bars" style="width: ${hps[selected[0]]}%"></div>
+                  <div class="bars" style="width: ${(hps[selected[0]]/255)*100}%"></div>
               </div>
           </td>
       </tr>
@@ -35,7 +35,7 @@ function baseContent() {
           <td style="text-align:right">${attacks[selected[0]]}</td>
           <td class="bar_width">
               <div class="bar_background">
-                  <div class="bars" style="width: ${attacks[selected[0]]}%"></div>
+                  <div class="bars" style="width: ${(attacks[selected[0]]/255)*100}%"></div>
               </div>
           </td>
       </tr>
@@ -44,7 +44,7 @@ function baseContent() {
           <td style="text-align:right">${defenses[selected[0]]}</td>
           <td class="bar_width">
               <div class="bar_background">
-                  <div class="bars" style="width: ${defenses[selected[0]]}%"></div>
+                  <div class="bars" style="width: ${(defenses[selected[0]]/255)*100}%"></div>
               </div>
           </td>
       </tr>
@@ -53,7 +53,7 @@ function baseContent() {
           <td style="text-align:right">${spAtks[selected[0]]}</td>
           <td class="bar_width">
               <div class="bar_background">
-                  <div class="bars" style="width: ${spAtks[selected[0]]}%"></div>
+                  <div class="bars" style="width: ${(spAtks[selected[0]]/255)*100}%"></div>
               </div>
           </td>
       </tr>
@@ -62,7 +62,7 @@ function baseContent() {
           <td style="text-align:right">${spDefs[selected[0]]}</td>
           <td class="bar_width">
               <div class="bar_background">
-                  <div class="bars" style="width: ${spDefs[selected[0]]}%"></div>
+                  <div class="bars" style="width: ${(spDefs[selected[0]]/255)*100}%"></div>
               </div>
           </td>
       </tr>
@@ -71,7 +71,7 @@ function baseContent() {
           <td style="text-align:right">${speeds[selected[0]]}</td>
           <td class="bar_width">
               <div class="bar_background">
-                  <div class="bars" style="width: ${speeds[selected[0]]}%"></div>
+                  <div class="bars" style="width: ${(speeds[selected[0]]/255)*100}%"></div>
               </div>
           </td>
       </tr>
@@ -80,7 +80,7 @@ function baseContent() {
           <td style="text-align:right">${totals[selected[0]]}</td>
           <td class="bar_width">
               <div class="bar_background">
-                  <div class="bars" style="width: ${totals[selected[0]]*100/600}%"></div>
+                  <div class="bars" style="width: ${(totals[selected[0]]/999)*100}%"></div>
               </div>
           </td>
       </tr>

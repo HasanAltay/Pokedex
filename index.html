@@ -10,6 +10,7 @@
         <script src="./js/loader.js"></script>
         <script src="./js/colors.js"></script>
         <script src="./js/details.js"></script>
+        <script src="./js/infos.js"></script>
         <script src="./js/navigation.js"></script>
         <script src="./js/0_main.js"></script>
         <script src="./js/1_about.js"></script>
@@ -17,7 +18,7 @@
         <script src="./js/3_evolution.js"></script>
     </head>
 
-    <body onload="render(); loader()">
+    <body onload="render(); loader();">
         <div id="loader" class="loader">
             <div class="box_main" id="box_main">
                 <div class="box_counter" id="box_counter">
@@ -42,15 +43,13 @@
                         <div class="title" id="title"></div>
                         <div class="content" id="content"></div>
                         <div class="details" id="details"></div>
-                        <div class="infos" id="infos">
-                        </div>
+                        <div class="infos" id="infos"></div>
                         <div class="up">
                             <img class="up_arrow" src="./img/up-arrow.png"
                                 onclick="scrollToTop()">
                         </div>
                     </div>
                 </div>
-                <div class="white_box"></div>
                 <img class="box_bottom" src="./img/box_bottom.png"
                     id="box_bottom">
             </div>

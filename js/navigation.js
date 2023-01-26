@@ -1,6 +1,7 @@
 let sliderRange = [50];
 
 
+
 function naviInvert() {
   document.getElementById('navi').style.backgroundColor = "unset";
 }
@@ -17,9 +18,9 @@ function closeWindow() {
 
 
 function showInfos() {
- let infos = document.getElementById('infos');
- infos.style.display = 'flex';
- renderAbout();
+  let infos = document.getElementById('infos');
+  infos.style.display = 'flex';
+  renderAbout();
 }
 
 
@@ -32,3 +33,52 @@ function scrollToTop() {
 function closeBrowserTab() {
   window.close('./index.html');
 }
+
+
+function addTitleItems() {
+
+  document.getElementById('title').innerHTML = /*html*/`
+  <div class="slidecontainer">
+      <div class="slider_menu">
+          <div class="slider_child">
+          <a id="demo" class="demo"></a>
+          <input type="range" min="50" max="600" step="1" 
+            value="${sliderRange[0]}" id="myRange" class="slider">
+          </div>
+          <button class="quantity_btn" 
+            onclick="quantity(sliderRange[0]); fetchLoader();"><b>Fetch!</b></button>
+      </div>
+  </div>
+  `;
+
+  var slider = document.getElementById("myRange");
+  var output = document.getElementById("demo");
+  output.innerHTML = slider.value; 
+  // Display the default slider value
+  // Update the current slider value (each time you drag the slider handle)
+  slider.oninput = function () {
+    output.innerHTML = this.value;
+    sliderRange = [];
+    sliderRange.push(output.innerHTML);
+    output.innerHTML = slider.value;
+    slider_position = slider.value - 50;
+    output.style.left = `${(slider_position / 550) * 91.5}%`;
+
+  }
+  document.getElementById("loader_count").innerHTML = pokemonNames.length;
+  document.getElementById("loader_counter_fetch").innerHTML = pokemonNames.length;
+}
+
+
+function sliderPositionCalibrate() {
+  var output = document.getElementById("demo");
+  slider_position = sliderRange[0]; 
+  output.innerHTML = slider_position;
+  output.style.left = `${((slider_position -50) / 550) * 91.5}%`;
+  console.log(output.style.left);
+  }
+
+
+window.addEventListener('load', function() {
+  addTitleItems(); 
+});

@@ -1,38 +1,62 @@
+.title {
+  padding-left: 20px;
+  margin-top: 100px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+  width: 80%;
+}
+
 .slider_menu {
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin-right: 15px;
-}
-
-#demo {
-  color: grey;
-  font-size: 20px;
-  letter-spacing: 1px;
-  color: rgba(0,0,0,0.6);
-  text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.397),
-                   0px -5px 35px rgba(255,255,255,0.3);
-}
-
-.slidecontainer {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
+  height: 100px;
+  margin-top: 40px;
+}
+
+
+.slider_child {
+  position: relative;
+    width: 100%;
+}
+
+
+.demo {
+  position: absolute;
+  width: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  text-align: center;
+  left: 0%;
+  bottom: 48px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  background-color: #04AA6D;
+  text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.397);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+  rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+  rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.slidecontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   /* Width of the outside container */
-  // justify-content: space-between;
+  justify-content: space-between;
 }
 
 /* The slider itself */
 .slider {
-  margin-top: 33px;
   -webkit-appearance: none;
   /* Override default CSS styles */
   appearance: none;
-  width: 380px;
+  width: 100%;
   /* Full-width */
-  height: 25px;
+  height: 10px;
   /* Specified height */
   background: #d3d3d385;
   /* Grey background */
@@ -46,6 +70,7 @@
   border-radius: 5px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  margin: 0;
 }
 
 /* Mouse-over effects */
@@ -60,26 +85,26 @@ and -moz- (Firefox) to override default look) */
   -webkit-appearance: none;
   /* Override default look */
   appearance: none;
-  width: 25px;
+  width: 50px;
   /* Set a specific slider handle width */
-  height: 35px;
+  height: 40px;
   /* Slider handle height */
-  background: #04AA6D;
+  background: #C98F00;
   /* Green background */
   cursor: pointer;
   /* Cursor on hover */
-  border-radius: 5px;
-  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
-    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
-    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+  rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+  rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .slider::-moz-range-thumb {
-  width: 25px;
+  width: 40px;
   /* Set a specific slider handle width */
-  height: 25px;
+  height: 40px;
   /* Slider handle height */
-  background: #04AA6D;
+  background: #C98F00;
   /* Green background */
   cursor: pointer;
   /* Cursor on hover */

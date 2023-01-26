@@ -17,7 +17,6 @@ async function render() {
         let pokeURL = datasheet[i]['url'];
         addToArrays(pokeName, pokeURL);
         await getInfosFromUrls(i);
-        // await fetchEvolutionChain(i);
         addBoxes(i);
     }
 }
@@ -65,40 +64,12 @@ function addBoxes(i) {
     `;
     boxColor(pokemonTypes1, i);
     addTitleItems();
+    sliderPositionCalibrate();
 }
 
 
 function capitalize(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
-}
-
-
-function addTitleItems() {
-    document.getElementById('title').innerHTML = /*html*/`
-    <div class="slidecontainer">
-        <!-- <img class="pokedex_logo" src="./img/poke_logo.png" alt="Pokedex-Logo"> -->
-        <!-- <div class="dflex"><h2>Pokédex&nbsp;&nbsp;</h2><h3>(${pokemonNames.length} Items)</h3></div> -->
-        <div class="slider_menu">
-            <div class="center_pos">
-                <input type="range" min="50" max="600" step="10" value="${sliderRange[0]}" id="myRange" class="slider">
-                <a id="demo"></a>
-            </div>
-            <button class="quantity_btn" onclick="quantity(sliderRange[0]); fetchLoader()"><b>Fetch!</b></button>
-        </div>
-    </div>
-    `;
-    var slider = document.getElementById("myRange");
-    var output = document.getElementById("demo");
-    output.innerHTML = slider.value; // Display the default slider value
-    // Update the current slider value (each time you drag the slider handle)
-    slider.oninput = function () {
-        output.innerHTML = this.value;
-        sliderRange = [];
-        sliderRange.push(output.innerHTML);
-        console.log(sliderRange[0]);
-    }
-    document.getElementById("loader_count").innerHTML = pokemonNames.length;
-    document.getElementById("loader_counter_fetch").innerHTML = pokemonNames.length;
 }
 
 

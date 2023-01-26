@@ -1,18 +1,15 @@
 let evolveSpecies1 = [];
 let evolveSpecies2 = [];
 
-evolutionNames = [];
-evolutionIds = [];
-evolutionSprites = [];
-
-nextPokemons = [];
+let evolutionNames = [];
+let evolutionIds = [];
+let evolutionSprites = [];
+let nextPokemons = [];
 
 
 function evolutionContent() {
 
   const nextPokemon = nextPokemons[selected[0]];
-  console.log(nextPokemon);
-
   // let nextPokemon = evolutionDetails[i]['species'];
   let nextName = nextPokemon['name'];                   
   let nextId = nextPokemon['url'].split("/")[6];
@@ -21,8 +18,6 @@ function evolutionContent() {
   evolutionNames.push(nextName);  
   evolutionIds.push(nextId);  
   evolutionSprites.push(nextSprite);  
-
-
 
   let content_details_bottom = document.getElementById('content_details_bottom');
   content_details_bottom.innerHTML = /*html*/`

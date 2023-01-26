@@ -155,10 +155,10 @@
   flex-direction: column;
   display: none;
   position: fixed;
-  top: 23px;
-  left: 50% 50%;
+  top: calc(50% + 23px);
+  left: 50%;
+  transform: translate(-50%, -50%);
   max-width: 900px;
-  margin-left: 5px;
   width: 100%;
   height: 100%;
   background-color: rgb(255, 255, 255);
@@ -255,7 +255,31 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  -webkit-animation-name: disappear_counter;
+          animation-name: disappear_counter;
+  -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   z-index: 102;
+}
+@-webkit-keyframes disappear_counter {
+  0% {
+    bottom: 0;
+  }
+  100% {
+    bottom: -140px;
+  }
+}
+@keyframes disappear_counter {
+  0% {
+    bottom: 0;
+  }
+  100% {
+    bottom: -140px;
+  }
 }
 .loader .box_main .loader_counter {
   position: absolute;
@@ -342,7 +366,7 @@
   align-items: center;
   text-align: center;
   justify-content: center;
-  font-size: 4.5vw;
+  font-size: 4vw;
   font-weight: bold;
   text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
   background-color: #FF9A60;
@@ -505,16 +529,6 @@
 }
 
 @media (max-width: 825px) {
-  .slidecontainer {
-    flex-direction: column;
-    margin-bottom: 30px;
-  }
-  .slidecontainer .pokedex_logo {
-    margin-bottom: 30px;
-  }
-  .slidecontainer .slider_menu {
-    margin-right: unset;
-  }
   .loader .box_counter .box_sizing .loader_counter {
     margin-top: 80px;
     font-size: 50px;
@@ -537,9 +551,6 @@
   .mainframe .main .title {
     padding-top: 10px;
     padding-bottom: 30px;
-  }
-  .mainframe .main .title .slidecontainer .slider_menu .slider {
-    width: 200px;
   }
   .mainframe .main .content {
     justify-content: center;
@@ -588,6 +599,10 @@
 @media (max-width: 375px) {
   .evolution_container {
     justify-content: space-between !important;
+  }
+  .evolution_container div {
+    padding-left: unset !important;
+    padding-right: unset !important;
   }
   .mainframe .main .title {
     padding-top: 0px;
@@ -638,40 +653,62 @@
     color: grey;
   }
 }
+.title {
+  padding-left: 20px;
+  margin-top: 100px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+  width: 80%;
+}
+
 .slider_menu {
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin-right: 15px;
-}
-
-#demo {
-  color: grey;
-  font-size: 20px;
-  letter-spacing: 1px;
-  color: rgba(0, 0, 0, 0.6);
-  text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.397), 0px -5px 35px rgba(255, 255, 255, 0.3);
-}
-
-.slidecontainer {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
+  height: 100px;
+  margin-top: 40px;
+}
+
+.slider_child {
+  position: relative;
+  width: 100%;
+}
+
+.demo {
+  position: absolute;
+  width: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  text-align: center;
+  left: 0%;
+  bottom: 48px;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  background-color: #04AA6D;
+  text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.397);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.slidecontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   /* Width of the outside container */
+  justify-content: space-between;
 }
 
 /* The slider itself */
 .slider {
-  margin-top: 33px;
   -webkit-appearance: none;
   /* Override default CSS styles */
   -moz-appearance: none;
        appearance: none;
-  width: 380px;
+  width: 100%;
   /* Full-width */
-  height: 25px;
+  height: 10px;
   /* Specified height */
   background: rgba(211, 211, 211, 0.5215686275);
   /* Grey background */
@@ -683,6 +720,7 @@
   transition: opacity 0.2s;
   border-radius: 5px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  margin: 0;
 }
 
 /* Mouse-over effects */
@@ -697,24 +735,24 @@ and -moz- (Firefox) to override default look) */
   -webkit-appearance: none;
   /* Override default look */
   appearance: none;
-  width: 25px;
+  width: 50px;
   /* Set a specific slider handle width */
-  height: 35px;
+  height: 40px;
   /* Slider handle height */
-  background: #04AA6D;
+  background: #C98F00;
   /* Green background */
   cursor: pointer;
   /* Cursor on hover */
-  border-radius: 5px;
-  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .slider::-moz-range-thumb {
-  width: 25px;
+  width: 40px;
   /* Set a specific slider handle width */
-  height: 25px;
+  height: 40px;
   /* Slider handle height */
-  background: #04AA6D;
+  background: #C98F00;
   /* Green background */
   cursor: pointer;
   /* Cursor on hover */
@@ -723,15 +761,15 @@ and -moz- (Firefox) to override default look) */
 .details {
   display: none;
   position: fixed;
-  left: 50% 50%;
+  top: calc(50% + 22px);
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
   height: 100vh;
   z-index: 89;
   align-items: center;
   justify-content: center;
   max-width: 900px;
-  border: unset;
-  margin-left: 10px;
 }
 
 .details_top_frame {
@@ -983,6 +1021,7 @@ and -moz- (Firefox) to override default look) */
   background-color: white;
 }
 .navi .navi_btn {
+  display: flex;
   width: 40px;
   cursor: pointer;
   padding-left: 30px;
@@ -1126,7 +1165,9 @@ and -moz- (Firefox) to override default look) */
   flex-direction: column;
   background-color: #ecf1f3;
   border-radius: 20px;
-  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
 }
 .evolution_container div p {
   margin-top: unset;
@@ -1178,14 +1219,6 @@ body {
   background-color: white;
   align-items: center;
   position: relative;
-}
-
-.title {
-  padding-left: 20px;
-  margin-top: 100px;
-  padding-right: 20px;
-  padding-bottom: 30px;
-  letter-spacing: 1px;
 }
 
 .dflex {
