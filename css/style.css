@@ -1092,6 +1092,7 @@ and -moz- (Firefox) to override default look) */
   border: 0;
   border-radius: 8px;
   margin-left: 15px;
+  margin-bottom: 10px;
   letter-spacing: 1px;
   transition: all 215ms ease-in-out;
   font-family: "Baloo Da 2";
