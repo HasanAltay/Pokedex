@@ -1,13 +1,13 @@
 let sliderRange = [50];
 
 
-
 function naviInvert() {
   document.getElementById('navi').style.backgroundColor = "unset";
 }
 
 
 function closeWindow() {
+  document.getElementById('navi_btn_1').style.visibility = 'hidden';
   let details = document.getElementById('details');
   let infos = document.getElementById('infos');
   let navi = document.getElementById('navi');
@@ -18,17 +18,11 @@ function closeWindow() {
 
 
 function showInfos() {
+  document.getElementById('navi_btn_1').style.visibility = 'visible';
   let infos = document.getElementById('infos');
   infos.style.display = 'flex';
   renderAbout();
-  hideDropdown();
 }
-
-
-// function hideDropdown(){
-//   let drop_down = document.getElementById('drop_down');
-//   drop_down.classList.add("hidden");
-// }
 
 
 function scrollToTop() {
@@ -67,11 +61,11 @@ function addTitleItems() {
     sliderRange = [];
     sliderRange.push(output.innerHTML);
     output.innerHTML = slider.value;
-    slider_position = slider.value - 50;
-    output.style.left = `${(slider_position / 550) * 91.5}%`;
+    slider_position = slider.value;
+    output.style.left = Math.round((slider_position - 50) *1.56) / 10 + '%';
 
   }
-  document.getElementById("loader_count").innerHTML = pokemonNames.length;
+  document.getElementById("loader_count").innerHTML = pokemonNames.length * 2 + '%';
   document.getElementById("loader_counter_fetch").innerHTML = pokemonNames.length;
 }
 
@@ -80,7 +74,7 @@ function sliderPositionCalibrate() {
   var output = document.getElementById("demo");
   slider_position = sliderRange[0]; 
   output.innerHTML = slider_position;
-  output.style.left = `${((slider_position -50) / 550) * 91.5}%`;
+  output.style.left = Math.round((slider_position - 50) *1.56) / 10 + '%';
   }
 
 

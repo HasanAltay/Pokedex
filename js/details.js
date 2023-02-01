@@ -32,6 +32,7 @@ function openDetails(i) {
             </div>
     `;
     document.getElementById('details_bg').style.backgroundColor = boxColor;
+    document.getElementById('navi_btn_1').style.visibility = 'visible';
     naviInvert();
     about();
 }

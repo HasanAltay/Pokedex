@@ -1,13 +1,8 @@
 let evolveSpecies1 = [];
 let evolveSpecies2 = [];
-// let evolutionNames = [];
-// let evolutionIds = [];
-// let evolutionSprites = [];
-// let nextPokemons = [];
 
 
 async function displayEvolutionChain() {
-
   let content_details_bottom = document.getElementById('content_details_bottom');
   content_details_bottom.innerHTML = /*html*/`
     <div id="evolution_container" class="evolution_container"></div>

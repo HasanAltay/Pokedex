@@ -1,16 +1,25 @@
 @media (min-width: 1024px) {
+
+
+  
+
   .fetch_loader {
     .fetch_loader_counter {
-      font-size: 55px;
+      font-size: 40px!important;
     }
   }
 
   .loader_counter {
-    font-size: 55px;
+    font-size: 40px!important;
   }
 }
 
 @media (max-width: 1024px) {
+
+  .details {
+    top: calc(50% + 2vw)!important;
+  }
+
   .loader .box_main .box_expanding {
     -ms-overflow-style: none;
     scrollbar-width: none; /* for Internet Explorer, Edge */
