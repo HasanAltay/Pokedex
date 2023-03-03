@@ -211,25 +211,13 @@
   height: 100vh;
   max-height: 100vh;
   width: 100%;
-  -webkit-animation-name: open_up;
-          animation-name: open_up;
-  -webkit-animation-duration: 3000ms;
-          animation-duration: 3000ms;
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-name: open_up;
+  animation-duration: 3000ms;
+  animation-play-state: paused;
+  animation-fill-mode: forwards;
   overflow: hidden;
   overflow: scroll;
   background-color: white;
-}
-@-webkit-keyframes open_up {
-  0% {
-    height: 0vh;
-  }
-  100% {
-    height: 100vh;
-  }
 }
 @keyframes open_up {
   0% {
@@ -255,23 +243,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  -webkit-animation-name: disappear_counter;
-          animation-name: disappear_counter;
-  -webkit-animation-duration: 1000ms;
-          animation-duration: 1000ms;
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-name: disappear_counter;
+  animation-duration: 1000ms;
+  animation-play-state: paused;
+  animation-fill-mode: forwards;
   z-index: 102;
-}
-@-webkit-keyframes disappear_counter {
-  0% {
-    bottom: 0;
-  }
-  100% {
-    bottom: -140px;
-  }
 }
 @keyframes disappear_counter {
   0% {
@@ -329,24 +305,11 @@
   top: 50% 50%;
   left: 50% 50%;
   max-width: 260px;
-  -webkit-animation-name: rotate;
-          animation-name: rotate;
-  -webkit-animation-duration: 3600ms;
-          animation-duration: 3600ms;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-@-webkit-keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  animation-name: rotate;
+  animation-duration: 3600ms;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+  animation-fill-mode: forwards;
 }
 @keyframes rotate {
   0% {
@@ -374,72 +337,11 @@
   width: 200px;
   height: 200px;
   padding: 1px;
-  -webkit-animation-name: color_change;
-          animation-name: color_change;
-  -webkit-animation-duration: 2500ms;
-          animation-duration: 2500ms;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-@-webkit-keyframes color_change {
-  0% {
-    background-color: #DB8711;
-  }
-  6% {
-    background-color: #E15D58;
-  }
-  12% {
-    background-color: #8080FA;
-  }
-  18% {
-    background-color: #EAD900;
-  }
-  24% {
-    background-color: #A5C000;
-  }
-  30% {
-    background-color: #A5AC70;
-  }
-  36% {
-    background-color: #AC81FA;
-  }
-  42% {
-    background-color: #962BA8;
-  }
-  48% {
-    background-color: #E2568D;
-  }
-  54% {
-    background-color: #AFA700;
-  }
-  60% {
-    background-color: #D5C754;
-  }
-  66% {
-    background-color: #6A5A46;
-  }
-  72% {
-    background-color: #714E9E;
-  }
-  78% {
-    background-color: #BAB5D3;
-  }
-  84% {
-    background-color: #AC3627;
-  }
-  90% {
-    background-color: #A9D7D9;
-  }
-  96% {
-    background-color: #7C00FF;
-  }
-  100% {
-    background-color: #BA0087;
-  }
+  animation-name: color_change;
+  animation-duration: 2500ms;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+  animation-fill-mode: forwards;
 }
 @keyframes color_change {
   0% {
@@ -507,6 +409,19 @@
   }
 }
 @media (max-width: 1024px) {
+  .evolution_container {
+    gap: 10px !important;
+  }
+  .evolution_container div {
+    padding-left: unset !important;
+    padding-right: unset !important;
+  }
+  .evolution_container div img {
+    transform: scale(0.8);
+  }
+  .evolution_container div p {
+    margin-top: -20px !important;
+  }
   .details {
     top: calc(50% + 2vw) !important;
   }
@@ -532,12 +447,27 @@
 }
 
 @media (max-width: 825px) {
+  .title {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center !important;
+    margin-top: 100px;
+    padding-bottom: 30px;
+    max-width: 760px;
+    width: 100%;
+  }
   .loader .box_counter .box_sizing .loader_counter {
     margin-top: 80px;
     font-size: 50px;
   }
 }
 @media (max-width: 755px) {
+  .search_bar {
+    max-width: unset !important;
+    align-items: center !important;
+    justify-content: center;
+  }
   .drop_down {
     top: 80px !important;
   }
@@ -603,13 +533,6 @@
   }
 }
 @media (max-width: 375px) {
-  .evolution_container {
-    justify-content: space-between !important;
-  }
-  .evolution_container div {
-    padding-left: unset !important;
-    padding-right: unset !important;
-  }
   .mainframe .main .title {
     padding-top: 50px;
   }
@@ -617,7 +540,9 @@
     flex-direction: column;
   }
   .mainframe .main .title .slidecontainer .slider_menu .quantity_btn {
-    margin-top: 40px;
+    margin-top: 10px;
+    margin-left: unset;
+    margin-bottom: 40px;
   }
   .mainframe .main .content {
     padding-left: 2px;
@@ -656,14 +581,6 @@
     color: grey;
   }
 }
-.title {
-  padding-left: 20px;
-  margin-top: 100px;
-  padding-right: 20px;
-  padding-bottom: 30px;
-  width: 80%;
-}
-
 .slider_menu {
   display: flex;
   align-items: center;
@@ -706,11 +623,10 @@
 }
 
 .slidecontainer {
+  width: 320px;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Width of the outside container */
-  justify-content: space-between;
 }
 
 /* The slider itself */
@@ -898,21 +814,10 @@ and -moz- (Firefox) to override default look) */
   border-radius: 3px;
   max-width: 570px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-  -webkit-animation-name: bars;
-          animation-name: bars;
-  -webkit-animation-duration: 1200ms;
-          animation-duration: 1200ms;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-name: bars;
+  animation-duration: 1200ms;
+  animation-fill-mode: forwards;
   z-index: 102;
-}
-@-webkit-keyframes bars {
-  0% {
-    max-width: 0px;
-  }
-  100% {
-    max-width: 570px;
-  }
 }
 @keyframes bars {
   0% {
@@ -1020,6 +925,16 @@ and -moz- (Firefox) to override default look) */
   padding: 7px;
 }
 
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 100px;
+  padding-bottom: 30px;
+  max-width: 760px;
+  width: 100%;
+}
+
 .navi {
   position: fixed;
   width: 100%;
@@ -1060,7 +975,6 @@ and -moz- (Firefox) to override default look) */
   top: 60px;
   right: 20px;
   width: 120px;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   background-color: white;
@@ -1087,7 +1001,7 @@ and -moz- (Firefox) to override default look) */
 .quantity_btn {
   cursor: pointer;
   padding: 6px 12px 6px 12px;
-  background-color: #8E68FF;
+  background-color: #8e68ff;
   color: white;
   border: 0;
   border-radius: 8px;
@@ -1106,14 +1020,8 @@ and -moz- (Firefox) to override default look) */
 .quantity_btn:hover {
   transition: all 215ms ease-in-out;
   background-image: linear-gradient(to right, rgb(250, 82, 82), rgb(250, 82, 82) 16.65%, rgb(190, 75, 219) 16.65%, rgb(190, 75, 219) 33.3%, rgb(76, 110, 245) 33.3%, rgb(76, 110, 245) 49.95%, rgb(64, 192, 87) 49.95%, rgb(64, 192, 87) 66.6%, rgb(250, 176, 5) 66.6%, rgb(250, 176, 5) 83.25%, rgb(253, 126, 20) 83.25%, rgb(253, 126, 20) 100%, rgb(250, 82, 82) 100%);
-  -webkit-animation: var(--timing) linear dance6123 infinite;
-          animation: var(--timing) linear dance6123 infinite;
+  animation: var(--timing) linear dance6123 infinite;
   transform: scale(1.1) translateY(-1px);
-}
-@-webkit-keyframes dance6123 {
-  to {
-    background-position: var(--width);
-  }
 }
 @keyframes dance6123 {
   to {
@@ -1144,6 +1052,53 @@ and -moz- (Firefox) to override default look) */
   transform: scale(80%);
 }
 
+.search_bar {
+  max-width: 280px;
+  width: 100%;
+  display: flex;
+}
+.search_bar div {
+  max-width: 280px;
+  position: relative;
+}
+.search_bar div input {
+  border-radius: 10px;
+  border: 1px solid rgb(204, 204, 204);
+  height: 40px;
+  max-height: 40px;
+  max-width: 200px;
+  min-width: 200px;
+  width: 100%;
+  font-family: "Kanit";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 16px;
+  padding-right: 50px;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  text-indent: 20px;
+}
+.search_bar div input::-moz-placeholder {
+  color: rgb(204, 204, 204);
+  text-indent: 20px;
+}
+.search_bar div input::placeholder {
+  color: rgb(204, 204, 204);
+  text-indent: 20px;
+}
+.search_bar div input:focus-visible {
+  outline: 1px solid #29abe2;
+}
+.search_bar div img {
+  position: absolute;
+  width: 24px;
+  min-width: 24px;
+  top: 10px;
+  right: 10px;
+  padding-left: 10px;
+  border-left: 1px solid rgb(219, 213, 213);
+  filter: opacity(50%);
+}
+
 .evo_main {
   margin-top: 0px;
   display: flex;
@@ -1161,35 +1116,33 @@ and -moz- (Firefox) to override default look) */
 
 .evolution_container {
   display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   text-align: center;
   padding-top: 10px;
   width: 100%;
-  font-weight: 700;
-  letter-spacing: 1px;
-  background-image: url(../img/right-arrow.png);
-  background-repeat: no-repeat;
-  background-position: center;
+  font-weight: 600;
+  font-size: 14px;
 }
 .evolution_container div {
   display: flex;
   flex-direction: column;
   background-color: #ecf1f3;
   border-radius: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
 }
 .evolution_container div p {
-  margin-top: unset;
+  margin-top: -10px;
 }
 
 * {
   scroll-behavior: smooth;
   -moz-user-select: none;
   -webkit-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   scrollbar-width: auto;
   /* Firefox */
@@ -1243,7 +1196,6 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }

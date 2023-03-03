@@ -15,30 +15,33 @@
 
 .evolution_container {
   display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   text-align: center;
   padding-top: 10px;
   width: 100%;
-  font-weight: 700;
-  letter-spacing: 1px;
-  background-image: url(../img/right-arrow.png);
-  background-repeat: no-repeat;
-  background-position: center;
+  font-weight: 600;
+  font-size: 14px;
+  // letter-spacing: 1px;
+  // background-image: url(../img/right-arrow.png);
+  // background-repeat: no-repeat;
+  // background-position: center;
   
   div {
     display: flex;
     flex-direction: column;
     background-color: #ecf1f3;
     border-radius: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
     rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
     rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
 
     p {
-      margin-top: unset;
+      margin-top: -10px;
     }
   }
 
