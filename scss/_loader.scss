@@ -24,7 +24,7 @@
       width: 100%;
       z-index: 93 !important;
       transform: scale(107%);
-      transform-origin: bottom center;
+      transform-origin: center bottom;
     }
 
     .box_expanding {
@@ -38,7 +38,6 @@
       animation-play-state: paused;
       animation-fill-mode: forwards;
       overflow: hidden;
-      overflow: scroll;
       background-color: white;
 
       @keyframes open_up {

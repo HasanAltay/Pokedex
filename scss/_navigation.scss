@@ -2,16 +2,15 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin-top: 100px;
-    padding-bottom: 30px;
-    max-width: 760px;
+    margin-top: 80px;
+    max-width: 780px;
     width: 100%;
 }
 
 .navi {
     position: fixed;
     width: 100%;
-    max-width: 890px;
+    max-width: 900px;
     padding-top: 20px;
     padding-bottom: 20px;
     height: 50px;
@@ -26,10 +25,10 @@
         cursor: pointer;
         padding-left: 30px;
         padding-right: 25px;
-        transition: all 125ms ease-in-out;
+        transition: all 100ms ease-in-out;
         &:hover {
             transform: scale(92%);
-            transition: all 125ms ease-in-out;
+            transition: all 100ms ease-in-out;
         }
     }
 
@@ -63,15 +62,14 @@
             text-decoration: none;
             font-size: 20px;
             text-indent: 20px;
-            transition: all 125ms ease-in-out;
+            border-radius: 12px;
             &:hover {
-                transition: all 125ms ease-in-out;
+                transition: all 100ms ease-in-out;
                 background-color: rgb(120, 120, 209);
                 color: white;
                 box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
                     rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
                     rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
-                border-radius: 12px;
                 cursor: pointer;
             }
         }
@@ -133,17 +131,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 100px;
+    padding: 25px;
+    margin-bottom: 20px;
     .up_arrow {
-        width: 50px;
+        width: 32px;
         border-radius: 100%;
+        filter: opacity(20%);
         cursor: pointer;
         transition: all 125ms ease-in-out;
         &:hover {
             transform: scale(93%);
-            transition: all 125ms ease-in-out;
+            filter: opacity(100%);
+                transition: all 125ms ease-in-out;
             &:active {
                 transform: scale(80%);
+                filter: opacity(100%);
             }
         }
     }
@@ -169,12 +171,10 @@
             font-weight: 200;
             font-size: 16px;
             padding-right: 50px;
-            box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
-                rgba(17, 17, 26, 0.1) 0px 0px 8px;
             text-indent: 20px;
 
             &::placeholder {
-                color: rgb(204, 204, 204);
+                color: rgb(184, 173, 173);
                 text-indent: 20px;
             }
             &:focus-visible {
@@ -188,8 +188,8 @@
             top: 10px;
             right: 10px;
             padding-left: 10px;
-            border-left: 1px solid rgb(219, 213, 213);
-            filter: opacity(50%);
+            border-left: 2px solid rgb(184, 173, 173);
+            filter: opacity(30%);
         }
     }
 }

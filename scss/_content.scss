@@ -2,14 +2,37 @@
   display: flex;
   flex-wrap: wrap;
   color: white;
-  padding-top: 10px;
-  padding-left: 27px;
-  padding-right: 27px;
-  margin-bottom: 27px;
-  gap: 20px;
-  max-width: 780px;
+  // padding-top: 10px;
+  // padding-left: 27px;
+  // padding-right: 27px;
+  padding-bottom: 25px;
+  gap: 15px;
+  max-width: 800px;
   align-items: center;
   justify-content: center;
+  overflow-y: scroll;
+
+  
+  /* Firefox */
+  scrollbar-color: #EECB00 #ffffff;
+  scrollbar-width: 16px;
+
+  /* Chrome, Edge, and Safari */
+  &::-webkit-scrollbar {  
+    width: 16px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #ffffff;
+    // margin-top: 10px;
+    // margin-bottom: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #EECB00;
+    border-radius: 10px;
+    border: 4px solid #ffffff;
+  }
 }
 
 .box {
@@ -67,18 +90,23 @@
   z-index: 3;
 }
 
-.poke_img {
+.poke_img_frame {
   position: absolute;
-  width: 70px;
-  bottom: 5px;
-  right: 10px;
+  bottom: 0;
+  right: 0;
+  width: 55%;
+  height: 80%;
+  max-width: 55%;
+  max-height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 2;
-  max-height: 80px;
 }
 
 .ball_box {
   position: absolute;
-  bottom: 0;
+  bottom: 2px;
   right: 0;
   z-index: 1;
   filter: opacity(30%) invert(1);

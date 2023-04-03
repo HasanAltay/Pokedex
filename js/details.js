@@ -28,9 +28,7 @@ function openDetails(i) {
                             </div>
                         </div>
                         <div class="center">
-                            <img class="details_poke_img" src="${
-                                pokemonSprites[i]
-                            }">
+                            <div id="poke_img_hd"></div>
                             <img class="details_ball_box" src="./img/pokeball.webp">
                         </div>   
                     </div>
@@ -43,6 +41,18 @@ function openDetails(i) {
     document.getElementById("navi_btn_1").style.visibility = "visible";
     naviInvert();
     about();
+    getHDSprite(i);
+}
+
+async function getHDSprite(i) {
+    let response = await fetch(pokemonURLs[i]);
+    let responseJSON = await response.json();
+    let sprite = responseJSON["sprites"];
+    let pokemonSpriteHD = sprite["other"]["dream_world"]["front_default"];
+    document.getElementById('poke_img_hd').innerHTML = `
+    <img class="details_poke_img" src="${pokemonSpriteHD}">
+    `;
+    console.log(pokemonSpriteHD);
 }
 
 function about() {

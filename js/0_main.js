@@ -74,7 +74,10 @@ async function getInfosFromUrls(i) {
         pokemonTypes2.push("");
     }
     let sprite = responseJSON["sprites"];
-    let pokemonSprite = sprite["other"]["dream_world"]["front_default"];
+    // old code to load high res static png sprites
+    // let pokemonSprite = sprite["other"]["dream_world"]["front_default"];
+    // pokemonSprites.push(pokemonSprite);
+    let pokemonSprite = sprite["versions"]["generation-v"]["black-white"]["animated"]["front_default"];
     pokemonSprites.push(pokemonSprite);
     getDetailsFromUrls(i);
 }
@@ -83,7 +86,9 @@ function addBoxes(i) {
     let content = document.getElementById("content");
     content.innerHTML += /*html*/ `
     <div class="box" id="box${i}" onclick="openDetails(${i})">
-        <img class="poke_img" src="${pokemonSprites[i]}">
+        <div class="poke_img_frame">
+            <img src="${pokemonSprites[i]}">
+        </div>
         <b id="poke_names" class="poke_names">${capitalize(pokemonNames[i])}</b>
         <div id="ability1" class="ability-style">${capitalize(
             pokemonTypes1[i]

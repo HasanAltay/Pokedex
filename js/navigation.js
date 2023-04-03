@@ -22,8 +22,8 @@ function showInfos() {
 }
 
 function scrollToTop() {
-    let container = document.getElementById("box_expanding");
-    container.scrollTo(0, 0);
+    let content = document.getElementById("content");
+    content.scrollTo(0, 0);
 }
 
 function closeBrowserTab() {
@@ -34,7 +34,7 @@ function addTitleItems() {
     document.getElementById("title").innerHTML = /*html*/ `
     <div class="search_bar">
       <div>
-        <input type="text" placeholder="Search your Pokemon">
+        <input type="text" placeholder="Search your Pokémon">
         <img src="./img/lupe.png">
       </div>
     </div>
@@ -63,7 +63,7 @@ function addTitleItems() {
         output.innerHTML = slider.value;
         slider_position = slider.value;
         output.style.left =
-            Math.round((slider_position - 50) * 1.56) / 10 + "%";
+            Math.round((slider_position - 50) * 1.56) / 11 + "%";
     };
     document.getElementById("loader_count").innerHTML =
         pokemonNames.length * 2 + "%";

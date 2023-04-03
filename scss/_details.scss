@@ -1,9 +1,9 @@
 .details {
   display: none;
   position: fixed;
-  top: calc(50% + 22px);
-  left: 50%;
-  transform: translate(-50%,-50%);
+  // top: calc(50% + 23px);
+  // left: 50%;
+  // transform: translate(-50%,-50%);
   width: 100%;
   height: 100vh;
   z-index: 89;
@@ -13,8 +13,8 @@
 }
 
 .details_top_frame {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 100px;
+  padding-right: 80px;
   display: flex;
   flex-direction: column-reverse;
 }
@@ -59,8 +59,7 @@
 
 .counter_details {
   color: white;
-  margin-right: 10px;
-  font-size: 20px;
+  font-size: 28px;
 }
 
 .details_title {
@@ -74,10 +73,27 @@
 .details_poke_img {
   display: flex;
   position: absolute;
-  bottom: -20px;
-  left: 50% 50%;
+  top: calc(50% + 10px); 
+  left: 50%; 
+  transform: translate(-50%, -50%);
   z-index: 90;
   height: 100%;
+  filter: opacity(0%);
+  animation-name: appearance;
+  animation-delay: 200ms;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes appearance {
+  0% {
+    left: 35%;
+    filter: brightness(500%);
+  }
+  100% {
+    left: 50%;
+    filter: brightness(100%);
+  }
 }
 
 .details_ball_box {
@@ -123,7 +139,7 @@
 
 .bars {
   height: 6px;
-  background: linear-gradient(to right, #73B500, #609900);
+  background: linear-gradient(to right, #b8badd, #319a9e);
   border-radius: 3px;
   max-width: 570px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
