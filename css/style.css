@@ -438,22 +438,14 @@
   .evolution_container div p {
     margin-top: -20px !important;
   }
-  .content {
-    overflow-y: hidden;
-  }
   .mainframe .main {
     margin-bottom: unset;
     border-radius: unset;
   }
   .mainframe .main .content {
     gap: 15px;
-    margin-bottom: 25px;
   }
 }
-.details {
-  margin-left: unset !important;
-}
-
 @media (max-width: 825px) {
   .title {
     display: flex;
@@ -552,14 +544,10 @@
     margin-left: unset;
     margin-bottom: 40px;
   }
-  .mainframe .main .content {
-    padding-left: 2px;
-    padding-right: 2px;
-  }
   .mainframe .main .content .box {
-    min-width: 170px;
+    min-width: 165px;
     width: auto;
-    max-width: 170px;
+    max-width: 165px;
   }
   .mainframe .main .details .details_background .details_top_frame {
     padding-top: 0px;
@@ -1072,7 +1060,7 @@ and -moz- (Firefox) to override default look) */
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 25px;
+  padding: 5px;
   margin-bottom: 20px;
 }
 .up .up_arrow {

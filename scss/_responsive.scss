@@ -26,25 +26,21 @@
         }
     }
 
-    .content {
-        overflow-y: hidden;
-    }
-
     .mainframe {
         .main {
             margin-bottom: unset;
             border-radius: unset;
             .content {
                 gap: 15px;
-                margin-bottom: 25px;
+                // overflow-y: hidden;
             }
         }
     }
 }
 
-.details {
-    margin-left: unset !important;
-}
+// .details {
+//     margin-left: unset !important;
+// }
 
 @media (max-width: 825px) {
     .title {
@@ -178,12 +174,12 @@
             }
 
             .content {
-                padding-left: 2px;
-                padding-right: 2px;
+                // padding-left: 2px;
+                // padding-right: 2px;
                 .box {
-                    min-width: 170px;
+                    min-width: 165px;
                     width: auto;
-                    max-width: 170px;
+                    max-width: 165px;
                 }
             }
 
