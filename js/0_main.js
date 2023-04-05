@@ -77,7 +77,10 @@ async function getInfosFromUrls(i) {
     // old code to load high res static png sprites
     // let pokemonSprite = sprite["other"]["dream_world"]["front_default"];
     // pokemonSprites.push(pokemonSprite);
-    let pokemonSprite = sprite["versions"]["generation-v"]["black-white"]["animated"]["front_default"];
+    let pokemonSprite =
+        sprite["versions"]["generation-v"]["black-white"]["animated"][
+            "front_default"
+        ];
     pokemonSprites.push(pokemonSprite);
     getDetailsFromUrls(i);
 }

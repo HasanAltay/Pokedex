@@ -26,6 +26,7 @@
                     <a id="loader_count" class="loader_counter"></a>
                 </div>
                 <img class="box_top" src="./img/box_top.png" id="box_top">
+
                 <div class="mainframe box_expanding" id="box_expanding">
                     <div class="main">
                         <div class="navi" id="navi">
@@ -40,16 +41,19 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="title" id="title"></div>
-                        <div class="content" id="content"></div>
+                        <div id="child_frame" class="child_frame">
+                            <div class="title" id="title"></div>
+                            <div class="content" id="content"></div>
+                            <div class="up">
+                                <img class="up_arrow" src="./img/up-arrow.png"
+                                    onclick="scrollToTop()">
+                            </div>
+                        </div>
                         <div class="details" id="details"></div>
                         <div class="infos" id="infos"></div>
-                        <div class="up">
-                            <img class="up_arrow" src="./img/up-arrow.png"
-                                onclick="scrollToTop()">
-                        </div>
                     </div>
                 </div>
+
                 <img class="box_bottom" src="./img/box_bottom.png"
                     id="box_bottom">
             </div>

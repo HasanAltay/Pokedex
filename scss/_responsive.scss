@@ -10,7 +10,23 @@
     }
 }
 
+@media (min-width: 825px) {
+    .title {
+        min-width: 760px !important;
+    }
+}
+
 @media (max-width: 1024px) {
+    .child_frame,
+    .infos {
+        overflow: hidden;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
     .evolution_container {
         gap: 10px !important;
         div {
@@ -32,15 +48,10 @@
             border-radius: unset;
             .content {
                 gap: 15px;
-                // overflow-y: hidden;
             }
         }
     }
 }
-
-// .details {
-//     margin-left: unset !important;
-// }
 
 @media (max-width: 825px) {
     .title {
@@ -48,10 +59,8 @@
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center !important;
-        margin-top: 100px;
         padding-bottom: 30px;
         max-width: 760px;
-        width: 100%;
     }
 
     .loader {
@@ -68,9 +77,15 @@
 
 @media (max-width: 755px) {
     .search_bar {
-        max-width: unset !important;
+        max-width: 100% !important;
+        width: 100% !important;
         align-items: center !important;
         justify-content: center;
+
+        div input {
+            max-width: 100% !important;
+            width: 100% !important;
+        }
     }
 
     .drop_down {
@@ -99,11 +114,7 @@
             }
 
             .content {
-                justify-content: center;
-                gap: 9px;
-                margin-bottom: 20px;
-                padding-left: 10px;
-                padding-right: 10px;
+                justify-content: space-evenly;
 
                 .box {
                     min-width: 160px;
@@ -174,8 +185,6 @@
             }
 
             .content {
-                // padding-left: 2px;
-                // padding-right: 2px;
                 .box {
                     min-width: 165px;
                     width: auto;

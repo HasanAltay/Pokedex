@@ -165,7 +165,7 @@
   z-index: 99;
   overflow-y: scroll;
   /* Firefox */
-  scrollbar-color: #EECB00 #ffffff;
+  scrollbar-color: #e7e6e0 #ffffff;
   scrollbar-width: 16px;
   /* Chrome, Edge, and Safari */
 }
@@ -174,11 +174,10 @@
 }
 .infos::-webkit-scrollbar-track {
   background-color: #ffffff;
-  margin-top: 90px;
-  margin-bottom: 30px;
+  margin-top: 100px;
 }
 .infos::-webkit-scrollbar-thumb {
-  background-color: #EECB00;
+  background-color: #e7e6e0;
   border-radius: 10px;
   border: 4px solid #ffffff;
 }
@@ -424,7 +423,22 @@
     font-size: 40px !important;
   }
 }
+@media (min-width: 825px) {
+  .title {
+    min-width: 760px !important;
+  }
+}
 @media (max-width: 1024px) {
+  .child_frame,
+  .infos {
+    overflow: hidden;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+  .child_frame::-webkit-scrollbar,
+  .infos::-webkit-scrollbar {
+    display: none;
+  }
   .evolution_container {
     gap: 10px !important;
   }
@@ -452,10 +466,8 @@
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center !important;
-    margin-top: 100px;
     padding-bottom: 30px;
     max-width: 760px;
-    width: 100%;
   }
   .loader .box_counter .box_sizing .loader_counter {
     margin-top: 80px;
@@ -464,9 +476,14 @@
 }
 @media (max-width: 755px) {
   .search_bar {
-    max-width: unset !important;
+    max-width: 100% !important;
+    width: 100% !important;
     align-items: center !important;
     justify-content: center;
+  }
+  .search_bar div input {
+    max-width: 100% !important;
+    width: 100% !important;
   }
   .drop_down {
     top: 80px !important;
@@ -489,11 +506,7 @@
     padding-bottom: 30px;
   }
   .mainframe .main .content {
-    justify-content: center;
-    gap: 9px;
-    margin-bottom: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
+    justify-content: space-evenly;
   }
   .mainframe .main .content .box {
     min-width: 160px;
@@ -862,22 +875,6 @@ and -moz- (Firefox) to override default look) */
   max-width: 800px;
   align-items: center;
   justify-content: center;
-  overflow-y: scroll;
-  /* Firefox */
-  scrollbar-color: #EECB00 #ffffff;
-  scrollbar-width: 16px;
-  /* Chrome, Edge, and Safari */
-}
-.content::-webkit-scrollbar {
-  width: 16px;
-}
-.content::-webkit-scrollbar-track {
-  background-color: #ffffff;
-}
-.content::-webkit-scrollbar-thumb {
-  background-color: #EECB00;
-  border-radius: 10px;
-  border: 4px solid #ffffff;
 }
 
 .box {
@@ -951,12 +948,39 @@ and -moz- (Firefox) to override default look) */
   padding: 7px;
 }
 
+.child_frame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  border: 0;
+  padding: 10px;
+  /* Firefox */
+  scrollbar-color: #e7e6e0 #ffffff;
+  scrollbar-width: 16px;
+  /* Chrome, Edge, and Safari */
+}
+.child_frame::-webkit-scrollbar {
+  width: 16px;
+}
+.child_frame::-webkit-scrollbar-track {
+  background-color: #ffffff;
+  margin-bottom: 80px;
+  margin-top: 220px;
+}
+.child_frame::-webkit-scrollbar-thumb {
+  background-color: #e7e6e0;
+  border-radius: 10px;
+  border: 4px solid #ffffff;
+}
+
 .title {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   margin-top: 80px;
-  max-width: 780px;
+  max-width: 760px;
   width: 100%;
 }
 
@@ -979,11 +1003,9 @@ and -moz- (Firefox) to override default look) */
   cursor: pointer;
   padding-left: 30px;
   padding-right: 25px;
-  transition: all 100ms ease-in-out;
 }
 .navi .navi_btn:hover {
   transform: scale(92%);
-  transition: all 100ms ease-in-out;
 }
 .navi .burger:hover .drop_down {
   visibility: visible;
@@ -1061,7 +1083,7 @@ and -moz- (Firefox) to override default look) */
   align-items: center;
   justify-content: center;
   padding: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 80px;
 }
 .up .up_arrow {
   width: 32px;
@@ -1081,21 +1103,16 @@ and -moz- (Firefox) to override default look) */
 }
 
 .search_bar {
-  max-width: 280px;
   width: 100%;
   display: flex;
-}
-.search_bar div {
-  max-width: 280px;
   position: relative;
+  max-width: 280px;
 }
-.search_bar div input {
+.search_bar input {
   border-radius: 10px;
   border: 1px solid rgb(204, 204, 204);
   height: 40px;
   max-height: 40px;
-  max-width: 200px;
-  min-width: 200px;
   width: 100%;
   font-family: "Kanit";
   font-style: normal;
@@ -1104,18 +1121,18 @@ and -moz- (Firefox) to override default look) */
   padding-right: 50px;
   text-indent: 20px;
 }
-.search_bar div input::-moz-placeholder {
+.search_bar input::-moz-placeholder {
   color: rgb(184, 173, 173);
   text-indent: 20px;
 }
-.search_bar div input::placeholder {
+.search_bar input::placeholder {
   color: rgb(184, 173, 173);
   text-indent: 20px;
 }
-.search_bar div input:focus-visible {
+.search_bar input:focus-visible {
   outline: 1px solid #29abe2;
 }
-.search_bar div img {
+.search_bar img {
   position: absolute;
   width: 24px;
   min-width: 24px;
@@ -1181,7 +1198,6 @@ and -moz- (Firefox) to override default look) */
 }
 
 body {
-  scroll-behavior: smooth;
   font-family: "Baloo Da 2";
   display: flex;
   justify-content: center;

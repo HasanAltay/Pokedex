@@ -22,8 +22,8 @@ function showInfos() {
 }
 
 function scrollToTop() {
-    let content = document.getElementById("content");
-    content.scrollTo(0, 0);
+    let child_frame = document.getElementById("child_frame");
+    child_frame.scrollTo(0, 0);
 }
 
 function closeBrowserTab() {
@@ -33,10 +33,8 @@ function closeBrowserTab() {
 function addTitleItems() {
     document.getElementById("title").innerHTML = /*html*/ `
     <div class="search_bar">
-      <div>
         <input type="text" placeholder="Search your Pokémon">
         <img src="./img/lupe.png">
-      </div>
     </div>
     <div class="slidecontainer">
         <div class="slider_menu">
@@ -80,4 +78,5 @@ function sliderPositionCalibrate() {
 
 window.addEventListener("load", function () {
     addTitleItems();
+    // addSearchAndSlider();
 });

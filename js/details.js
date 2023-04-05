@@ -49,10 +49,9 @@ async function getHDSprite(i) {
     let responseJSON = await response.json();
     let sprite = responseJSON["sprites"];
     let pokemonSpriteHD = sprite["other"]["dream_world"]["front_default"];
-    document.getElementById('poke_img_hd').innerHTML = `
+    document.getElementById("poke_img_hd").innerHTML = `
     <img class="details_poke_img" src="${pokemonSpriteHD}">
     `;
-    console.log(pokemonSpriteHD);
 }
 
 function about() {
