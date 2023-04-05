@@ -558,9 +558,9 @@
     margin-bottom: 40px;
   }
   .mainframe .main .content .box {
-    min-width: 165px;
+    min-width: 160px;
     width: auto;
-    max-width: 165px;
+    max-width: 160px;
   }
   .mainframe .main .details .details_background .details_top_frame {
     padding-top: 0px;
