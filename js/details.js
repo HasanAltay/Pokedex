@@ -1,3 +1,6 @@
+const LEFT_ARROW_KEYCODE = 37;
+const RIGHT_ARROW_KEYCODE = 39;
+
 function openDetails(i) {
     selected = [];
     selected.push(i);
@@ -37,7 +40,7 @@ function openDetails(i) {
             </div>
         </div>
         <div class="left_right_navigation" id="left_right_navigation">
-            <button onclick="showNextOrPrevious(${i-1})"><img class="left_btn" src="./img/up-arrow.png"></button>
+            <button onkeypress="" onclick="showNextOrPrevious(${i-1})"><img class="left_btn" src="./img/up-arrow.png"></button>
             <button onclick="showNextOrPrevious(${i+1})"><img class="right_btn" src="./img/up-arrow.png"></button>
         </div
     `;
@@ -59,6 +62,18 @@ function showNextOrPrevious(i) {
     }
     openDetails(i);
 }
+
+document.addEventListener("keydown", (event) => {
+    if (event.keyCode == LEFT_ARROW_KEYCODE) {
+        let current = selected[0];
+        let previous = current == 0 ? itemsQuantity[0] - 1 : current - 1;
+        showNextOrPrevious(previous);
+    } else if (event.keyCode == RIGHT_ARROW_KEYCODE) {
+        let current = selected[0];
+        let next = current == itemsQuantity[0] - 1 ? 0 : current + 1;
+        showNextOrPrevious(next);
+    }
+});
 
 async function getHDSprite(i) {
     let response = await fetch(pokemonURLs[i]);
