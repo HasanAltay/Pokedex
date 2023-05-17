@@ -5,43 +5,59 @@ function openDetails(i) {
     details.style.display = "block";
     let boxColor = document.getElementById("box" + i).style.backgroundColor;
     document.getElementById("details").innerHTML = /*html*/ `
-    <div class="details_background" id="details_bg">
-                <div class="details_top_frame" id="details_top">
-                    <div class="details_infos">
-                        <div class="details_title">
-                            <span>${capitalize(pokemonNames[i])}</span>
-                            <div class="counter_details" id="counter">#${(i + 1)
-                                .toString()
-                                .padStart(3, "0")}</div>
-                        </div>
-                        <div class="flex">
-                            <div class="details_abilities">
-                                <div id="ability1" class="ab_details">${capitalize(
-                                    pokemonTypes1[i]
-                                )}</div>   
-                            </div>
-                            <div class="details_abilities">
-                                <div id="ability2" class="ab_details">${capitalize(
-                                    pokemonTypes2[i]
-                                )}</div>
-                                <div class="ab_details"></div>
-                            </div>
-                        </div>
-                        <div class="center">
-                            <div id="poke_img_hd"></div>
-                            <img class="details_ball_box" src="./img/pokeball.webp">
-                        </div>   
+        <div class="details_background" id="details_bg">
+            <div class="details_top_frame" id="details_top">
+                <div class="details_infos">
+                    <div class="details_title">
+                        <span>${capitalize(pokemonNames[i])}</span>
+                        <div class="counter_details" id="counter">#${(i + 1)
+            .toString()
+            .padStart(3, "0")}</div>
                     </div>
-                </div>
-                <div class="details_bottom_frame" id="details_bottom">
+                    <div class="flex">
+                        <div class="details_abilities">
+                            <div id="ability1" class="ab_details">${capitalize(
+                pokemonTypes1[i]
+            )}</div>   
+                        </div>
+                        <div class="details_abilities">
+                            <div id="ability2" class="ab_details">${capitalize(
+                pokemonTypes2[i]
+            )}</div>
+                            <div class="ab_details"></div>
+                        </div>
+                    </div>
+                    <div class="center">
+                        <div id="poke_img_hd"></div>
+                        <img class="details_ball_box" src="./img/pokeball.webp">
+                    </div>   
                 </div>
             </div>
+            <div class="details_bottom_frame" id="details_bottom">
+            </div>
+        </div>
+        <div class="left_right_navigation" id="left_right_navigation">
+            <button onclick="showNextOrPrevious(${i-1})"><img class="left_btn" src="./img/up-arrow.png"></button>
+            <button onclick="showNextOrPrevious(${i+1})"><img class="right_btn" src="./img/up-arrow.png"></button>
+        </div
     `;
     document.getElementById("details_bg").style.backgroundColor = boxColor;
     document.getElementById("navi_btn_1").style.visibility = "visible";
+    document.getElementById("left_right_navigation").style.visibility = "visible";
     naviInvert();
     about();
     getHDSprite(i);
+}
+
+function showNextOrPrevious(i) {
+    let shownItems = itemsQuantity[0];
+    if (i == -1) {
+        i = shownItems -1;
+    }
+    if (i == shownItems) {
+        i = 0;
+    }
+    openDetails(i);
 }
 
 async function getHDSprite(i) {

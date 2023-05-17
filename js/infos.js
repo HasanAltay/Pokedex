@@ -1,4 +1,5 @@
 function renderAbout() {
+  document.getElementById("left_right_navigation").style.visibility = "hidden";
   let infos = document.getElementById('infos');
   infos.innerHTML = `
   <div class="text">

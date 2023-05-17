@@ -866,6 +866,36 @@ and -moz- (Firefox) to override default look) */
   text-align: right;
 }
 
+.left_right_navigation {
+  visibility: hidden;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  left: 50%;
+  top: 42%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 70px;
+  z-index: 90;
+}
+.left_right_navigation button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  padding: 30px;
+}
+.left_right_navigation button .left_btn {
+  transform: rotate(-90deg);
+  filter: invert(1);
+}
+.left_right_navigation button .right_btn {
+  transform: rotate(90deg);
+  filter: invert(1);
+}
+.left_right_navigation button:active {
+  transform: scale(0.9);
+}
+
 .content {
   display: flex;
   flex-wrap: wrap;
